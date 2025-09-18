@@ -38,6 +38,8 @@ open Lean in
   modifyEnv (fun env => Lake.packageDepAttr.ext.addEntry env gameServerName)
   : Elab.Command.CommandElabM Unit)
 
+require "leanprover-community" / mathlib @ git leanVersion
+
 /-!
 # USER DEPENDENCIES
 
