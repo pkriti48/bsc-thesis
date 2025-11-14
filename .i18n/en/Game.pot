@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-17\n"
+"POT-Creation-Date: 2025-11-14\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,37 +20,27 @@ msgstr ""
 msgid "level completed! 🎉"
 msgstr ""
 
-#: Game
-msgid "Hello World Game"
-msgstr ""
-
-#: Game
-msgid "Here you can put additional information about the game. It is accessible from the starting through the drop-down menu.\n"
-"\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
-"\n"
-"Use **markdown**."
-msgstr ""
-
 #. §0: `«{g}»`
 #: Game.Levels.DemoWorld.L01_HelloWorld
 msgid "You should use §0 now."
-msgstr ""
-
-#: Game
-msgid "This text appears on the starting page where one selects the world/level to play. You can use **markdown**."
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game
-msgid "You should use this game as a template for your own game and add your own levels."
-msgstr ""
-
 #: Game.Levels.DemoWorld.L01_HelloWorld
 msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game
+msgid "Welcome to the Pumping Lemma Game!\n"
+"\n"
+"In this game,"
+msgstr ""
+
+#: Game
+msgid "In this game, you prove some facts about formal languages and regular languages later on. Finally, you prove some facts about the Pumping Lemma and use them to prove that the language a^nb^n is not regular."
 msgstr ""
 
 #: Game.Levels.DemoWorld
@@ -59,6 +49,14 @@ msgstr ""
 
 #: Game.Levels.DemoWorld.L01_HelloWorld
 msgid "This text is shown as first message when the level is played. You can insert hints in the proof below. They will appear in this side panel depending on the proof a user provides."
+msgstr ""
+
+#: Game
+msgid "A playful way to learn about the Pumping Lemma"
+msgstr ""
+
+#: Game
+msgid "The Pumping Lemma Game"
 msgstr ""
 
 #. §0: `«{h}»`
@@ -72,5 +70,11 @@ msgid "Demo World"
 msgstr ""
 
 #: Game
-msgid "Game Template"
+msgid "*Game Version: 1.0*\n"
+"\n"
+"## Progress saving\n"
+"\n"
+"The game stores your progress in your local browser storage. If you delete it, your progress will be lost!\n"
+"\n"
+"Warning: In most browsers, deleting cookies will also clear the local storage (or \"local site data\"). Make sure to download your game progress first!"
 msgstr ""
