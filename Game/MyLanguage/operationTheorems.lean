@@ -132,6 +132,42 @@ theorem all_char_in_concatSelfNTimes_char {input_char : Character} {n : Nat} :
       rfl
       exact char_in_tail
 
+theorem count_char_in_append {char : Character} {word1 word2 : Word} :
+countCharInWord char (append word1 word2) = countCharInWord char word1 + countCharInWord char word2 := by
+  induction word1 generalizing word2 with
+  | nil =>
+    rewrite [append]
+    rewrite [countCharInWord]
+    rewrite [zero_add]
+    rfl
+  | cons head tail ih =>
+    simp [append]
+    simp [countCharInWord]
+    simp [ih]
+    rewrite [add_assoc]
+    rfl
+
+theorem count_char_in_concatSelfNTimes {char_count char : Character} {n : Nat} :
+countCharInWord char_count (concatSelfNTimes char n) = (if char = char_count then n else 0) := by
+  induction n with
+  | zero =>
+    rewrite [concatSelfNTimes]
+    rewrite [countCharInWord]
+    simp
+  | succ k ih =>
+    rewrite [concatSelfNTimes]
+    rewrite [countCharInWord]
+    rewrite [ih]
+    have h : (char = char_count) ∨ (char ≠ char_count) := Decidable.em (char = char_count)
+    cases h with
+    | inl left =>
+      rewrite [left]
+      simp
+      rewrite [add_comm]
+      rfl
+    | inr right =>
+      simp [right]
+
 theorem length_take_drop {word : Word} {index : Nat} :
 length (take word index) + length (drop word index) = length word := by
   induction word generalizing index with
@@ -182,6 +218,31 @@ append (take word index) (drop word index) = word := by
       simp [append]
       apply a_ih
 
+theorem take_append {word1 word2 : Word} :
+take (append word1 word2) (length word1 + length word2) = append word1 word2 := by
+  induction word1 with
+  | nil =>
+    rewrite [append]
+    rewrite [length]
+    rewrite [zero_add]
+    induction word2 with
+    | nil =>
+      rewrite [length]
+      simp [take]
+    | cons head tail ih  =>
+      rewrite [length]
+      simp [take]
+      exact ih
+  | cons head tail ih =>
+    rewrite [append]
+    rewrite [length]
+    simp [take]
+    rewrite [<- add_comm (length tail), add_comm]
+    rewrite [<- add_assoc]
+    simp
+    rewrite [add_comm]
+    exact ih
+
 theorem take_append_u_v_eq_take_u {u v : Word} {index : Nat} {h : index ≤ length u} :
 take (append u v) index = take u index := by
   induction u generalizing index with
@@ -222,30 +283,94 @@ theorem take_concatSelfNTimes_n_k_eq_concatSelfNTimes_k {char : Character} {leng
       rewrite [Nat.succ_eq_add_one, Nat.succ_eq_add_one]
       exact h
 
-theorem take_append {word1 word2 : Word} :
-take (append word1 word2) (length word1 + length word2) = append word1 word2 := by
-  induction word1 with
+theorem drop_all {word : Word} {index : Nat} {h : index = length word} : drop word index = nil := by
+  induction word generalizing index with
+  | nil => simp [drop]
+  | cons head tail ih =>
+    rewrite [length] at h
+    rewrite [h]
+    simp [drop]
+    rewrite [ih]
+    rfl
+    rfl
+
+theorem drop_append {word1 word2 : Word} {index : Nat} {h : index ≤ length word1} :
+drop (append word1 word2) index = append (drop word1 index) word2 := by
+  induction word1 generalizing index with
+  | nil =>
+    rewrite [length, Nat.le_zero_eq] at h
+    rewrite [h, append]
+    simp [drop]
+    rewrite [append]
+    induction word2 with
+    | nil => simp [drop]
+    | cons head tail ih => simp [drop]
+  | cons head tail ih =>
+    rewrite [append]
+    cases index with
+    | zero =>
+      simp [drop]
+      rewrite [append]
+      rfl
+    | succ k =>
+      simp [drop]
+      rewrite [ih]
+      rfl
+      rewrite [length] at h
+      rewrite [<- add_comm (length tail)] at h
+      rewrite [<- Nat.succ_eq_add_one k, <- Nat.succ_eq_add_one (length tail)] at h
+      simp at h
+      exact h
+
+theorem drop_append' {word1 word2 : Word} {index : Nat} {h : length word1 < index} :
+drop (append word1 word2) index = drop word2 (index - length word1) := by
+  induction word1 generalizing index with
   | nil =>
     rewrite [append]
     rewrite [length]
-    rewrite [zero_add]
-    induction word2 with
-    | nil =>
-      rewrite [length]
-      simp [take]
-    | cons head tail ih  =>
-      rewrite [length]
-      simp [take]
-      exact ih
+    rewrite [Nat.sub_zero]
+    rfl
   | cons head tail ih =>
-    rewrite [append]
-    rewrite [length]
-    simp [take]
-    rewrite [<- add_comm (length tail), add_comm]
-    rewrite [<- add_assoc]
-    simp
-    rewrite [add_comm]
-    exact ih
+    cases index with
+    | zero =>
+      cases h
+    | succ k =>
+      rewrite [append]
+      simp [drop]
+      rewrite [ih]
+      rewrite [length]
+      rewrite [<- add_comm (length tail)]
+      repeat rewrite [<- Nat.succ_eq_add_one]
+      rewrite [Nat.succ_sub_succ]
+      rfl
+      rewrite [length] at h
+      rewrite [<- add_comm (length tail)] at h
+      simp at h
+      exact h
+
+theorem drop_concatSelfNTimes {char : Character} {length index : Nat} {h : index ≤ length} :
+drop (concatSelfNTimes char length) index = concatSelfNTimes char (length - index) := by
+  induction length generalizing index with
+  | zero =>
+    rewrite [Nat.le_zero_eq] at h
+    rewrite [h]
+    rewrite [Nat.sub_zero]
+    rewrite [concatSelfNTimes]
+    simp [drop]
+  | succ k ih =>
+    cases index with
+    | zero =>
+      rewrite [Nat.sub_zero]
+      rewrite [concatSelfNTimes]
+      simp [drop]
+    | succ =>
+      rewrite [Nat.add_sub_add_right]
+      rewrite [concatSelfNTimes]
+      simp [drop]
+      rewrite [ih]
+      rfl
+      simp at h
+      exact h
 
 theorem length_splitAt {word : Word} {index : Nat} :
 let splits := splitAt word index

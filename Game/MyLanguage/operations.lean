@@ -32,6 +32,11 @@ def concatSelfNTimes (char : Character) (n : Nat): Word :=
   | .zero => .nil
   | .succ k => Word.cons char (concatSelfNTimes char k)
 
+def countCharInWord (char : Character) (word : Word) : Nat :=
+  match word with
+  | .nil => 0
+  | .cons head tail => (if head = char then 1 else 0) + countCharInWord char tail
+
 def take (word : Word) (index : Nat) : Word :=
   if index > 0 then
     match word, index with

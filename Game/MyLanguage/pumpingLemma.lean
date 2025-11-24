@@ -13,9 +13,67 @@ def pumpingLemma (lang : Lang) :=
   ∀ (i : Nat), (append (append u (appendSelfNTimes v i)) w) ∈ lang.l
 
 def anBnLang : Lang :=
-  {l := { z | ∃ n : Nat, z = append (concatSelfNTimes Character.a n) (concatSelfNTimes Character.b n)}}
+  {l := { z | ∃ j : Nat, z = append (concatSelfNTimes Character.a j) (concatSelfNTimes Character.b j)}}
+
+theorem count_a_eq_count_b_in_anBnLang {word : Word} :
+word ∈ anBnLang.l -> countCharInWord Character.a word = countCharInWord Character.b word := by
+  intro h
+  rcases h with ⟨n⟩
+  rewrite [h]
+  simp [count_char_in_append]
+  repeat rewrite [count_char_in_concatSelfNTimes]
+  simp
+
+theorem word_count_as {char : Character} {word : Word}
+{h : ∀ char : Character, inWord char word -> char = Character.a} :
+countCharInWord Character.a word = length word := by
+  induction word with
+  | nil =>
+    rewrite [countCharInWord]
+    rewrite [length]
+    rfl
+  | cons head tail ih =>
+    simp [inWord] at h
+    have h_head : head = Character.a := by
+      apply h
+      simp
+    simp [h_head]
+    simp [countCharInWord]
+    rewrite [ih]
+    rewrite [length]
+    rfl
+    have h_tail : ∀ char, inWord char tail → char = Character.a := by
+      intros ch h_ch
+      apply h
+      apply Or.inr
+      exact h_ch
+    exact h_tail
+
+theorem word_count_bs {char : Character} {word : Word}
+{h : ∀ char : Character, inWord char word -> char = Character.a} :
+countCharInWord Character.b word = 0 := by
+  induction word with
+  | nil =>
+    rewrite [countCharInWord]
+    rfl
+  | cons head tail ih =>
+    simp [inWord] at h
+    have h_head : head = Character.a := by
+      apply h
+      simp
+    simp [h_head]
+    simp [countCharInWord]
+    rewrite [ih]
+    rfl
+    have h_tail : ∀ char, inWord char tail → char = Character.a := by
+      intros ch h_ch
+      apply h
+      apply Or.inr
+      exact h_ch
+    exact h_tail
 
 theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
+  -- wenn word in lang anbn dann folgt, dass die Anzahl von as und bs ist gleich
   intro h
   rewrite [pumpingLemma] at h
   -- Sei n ∈ ℕ ∧ n ≠ 0 beliebig.
@@ -44,7 +102,7 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     simp [k]
     rewrite [<- length_append]
     exact length_u_v
-  have u_v_eq_k_as : append u v = take a_n k := by
+  have u_v_all_a : append u v = take a_n k := by
     have helper := congrArg (fun s => take s k) z_eq
     simp at helper
     rewrite [take_append_u_v_eq_take_u, take_append_u_v_eq_take_u] at helper
@@ -56,11 +114,57 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     simp [a_n]
     rewrite [length_concatSelfNTimes]
     exact k_leq_n
+  have length_w : length w = length z - k := by
+      simp [z_eq, k]
+      repeat rewrite [length_append]
+      simp
+  have length_u_lt_k : length u < k := by
+    simp [k]
+    rewrite [<- add_zero 1] at length_v
+    rewrite [add_comm] at length_v
+    rewrite [<- Nat.succ_eq_add_one] at length_v
+    exact Nat.lt_of_succ_le length_v
+  have w_eq_sub_n_k_as_n_bs : w = append (concatSelfNTimes Character.a (n - k)) b_n := by
+    have helper := congrArg (fun s => drop s k) z_eq
+    simp at helper
+    simp [z] at helper
+    simp [z, a_n, b_n] at z_eq
+    rewrite [drop_append] at helper
+    rewrite [drop_append] at helper
+    rewrite [drop_append'] at helper
+    have : k - length u = length v := by simp [k]
+    simp [this] at helper
+    have v_drop_all: drop v (length v) = nil := by
+      apply drop_all
+      rfl
+    simp [v_drop_all] at helper
+    rewrite [append] at helper
+    simp [a_n] at helper
+    rewrite [drop_concatSelfNTimes] at helper
+    rewrite [helper]
+    rfl
+    exact k_leq_n
+    exact length_u_lt_k
+    simp [k]
+    rewrite [length_append]
+    rfl
+    simp [a_n, k]
+    rewrite [length_concatSelfNTimes]
+    rewrite [<- length_append]
+    exact length_u_v
   -- |v| ≥ 1 und u(v^i)w ∈ L für jedes i ∈ ℕ.
+  have u_all_a : ∀ char : Character, inWord char u -> char = Character.a := by
+    intros char h
+    apply (char_in_left_subset_is_in_append (right := v)) at h
+    rewrite [u_v_all_a] at h
+    rewrite [take_concatSelfNTimes_n_k_eq_concatSelfNTimes_k] at h
+    apply all_char_in_concatSelfNTimes_char at h
+    exact h
+    exact k_leq_n
   have v_all_a : ∀ char : Character, inWord char v -> char = Character.a := by
     intros char h
-    apply char_in_right_subset_is_in_append at h
-    rewrite [u_v_eq_k_as] at h
+    apply (char_in_right_subset_is_in_append (left := u)) at h
+    rewrite [u_v_all_a] at h
     rewrite [take_concatSelfNTimes_n_k_eq_concatSelfNTimes_k] at h
     apply all_char_in_concatSelfNTimes_char at h
     exact h
@@ -77,47 +181,85 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     simp [z_eq]
     rewrite [length_append, length_append]
     rfl
+  have length_w_eq_sub_length_z_k : length w = length z - k := by
+    simp [z_eq]
+    simp [length_append]
+    simp [k]
+  have length_w_geq_n : length w ≥ n := by
+    rewrite [length_w_eq_sub_length_z_k]
+    simp [length_z_eq_2n]
+    have derive_n_leq_sub_2n_k := Nat.sub_le_sub_left k_leq_n (2 * n)
+    rewrite [two_mul] at derive_n_leq_sub_2n_k
+    simp at derive_n_leq_sub_2n_k
+    rewrite [two_mul]
+    exact derive_n_leq_sub_2n_k
+  have w_count_as : countCharInWord Character.a w = length w - n := by
+    simp [w_eq_sub_n_k_as_n_bs]
+    rewrite [count_char_in_append]
+    simp [count_char_in_concatSelfNTimes]
+    rewrite [length_append]
+    rewrite [length_concatSelfNTimes]
+    simp [b_n]
+    rewrite [length_concatSelfNTimes]
+    simp [count_char_in_concatSelfNTimes]
+  have w_count_bs : countCharInWord Character.b w = n := by
+    simp [w_eq_sub_n_k_as_n_bs]
+    rewrite [count_char_in_append]
+    simp [b_n]
+    simp [count_char_in_concatSelfNTimes]
+  have v_count_as : countCharInWord Character.a v = length v := by
+    rewrite [word_count_as]
+    rfl
+    exact Character.a
+    exact v_all_a
+  have v_count_bs : countCharInWord Character.b v = 0 := by
+    rewrite [word_count_bs]
+    rfl
+    exact Character.b
+    exact v_all_a
+  have u_count_as : countCharInWord Character.a u = length u := by
+    rewrite [word_count_as]
+    rfl
+    exact Character.a
+    exact u_all_a
+  have u_count_bs : countCharInWord Character.b u = 0 := by
+    rewrite [word_count_bs]
+    rfl
+    exact Character.b
+    exact u_all_a
   -- Wenn wir nun i=2 wählen, gilt uv^2w = (a^r)(a^s)(a^s)(a^t)(b^n) ∉ L, da s ≥ 1.
   let z_pumped := append (append u (appendSelfNTimes v 2)) w
-  have z_pumped_in_anBnLang : z_pumped ∈ anBnLang.l := by
+  have z_pumped_in_lang : z_pumped ∈ anBnLang.l := by
     specialize pump_word 2
     simp [z_pumped]
     exact pump_word
   --Wir zeigen nun: |a| ≥ |b| mit |a| = n+s und |b| = n. Damit liegt z_pumped nicht in anBnLang.
-  have more_as_than_bs_in_z_pumped : (length z_pumped) - (length b_n) ≥ 1 := by
-    simp [z_pumped, b_n]
-    simp [appendSelfNTimes]
-    rewrite [append_nil]
-    simp [length_append]
-    rewrite [<- add_assoc]
-    rewrite [Nat.add_assoc (length u + length v)]
-    rewrite [<- Nat.add_comm (length w)]
-    rewrite [<- Nat.add_assoc]
-    simp [length_u_v_w_eq_2n]
-    rewrite [length_concatSelfNTimes]
-    rewrite [two_mul]
-    rewrite [add_assoc]
-    rewrite [Nat.add_sub_cancel_left]
-    linarith
-  have ⟨j, h_j⟩ := z_pumped_in_anBnLang
-  have length_z_eq_length_z_pumped : 2 * n = 2 * j := by
-    simp [<- length_z_eq_2n]
-    simp [z_eq]
-    simp [length_append]
-    have length_z_pumped_eq_2j : length z_pumped = 2 * j := by
-      simp [h_j]
-      simp [length_append]
-      simp [length_concatSelfNTimes]
-      rewrite [<- two_mul]
+  apply count_a_eq_count_b_in_anBnLang at z_pumped_in_lang
+  have more_as_than_bs_in_z_pumped : (countCharInWord Character.b z_pumped) < countCharInWord Character.a z_pumped := by
+    simp [z_pumped]
+    repeat rewrite [appendSelfNTimes]
+    repeat rewrite [append_nil]
+    repeat rewrite [count_char_in_append]
+    simp [w_count_as]
+    simp [w_count_bs]
+    simp [v_count_as]
+    simp [v_count_bs]
+    simp [u_count_as]
+    simp [u_count_bs]
+    have : u.length + (v.length + v.length) + (w.length - n) = n + length v := by
+      rewrite [<- Nat.add_sub_assoc]
+      rewrite [<- Nat.add_left_comm]
+      rewrite [Nat.add_assoc]
+      simp [length_u_v_w_eq_2n]
+      rewrite [two_mul]
+      rewrite [<- Nat.add_assoc]
+      rewrite [Nat.add_sub_self_right]
+      rewrite [add_comm]
       rfl
-    have length_u_v_v_w_pumped_eq_2j : length u + length v + length v + length w = 2 * j := by
-      simp [<- length_z_pumped_eq_2j]
-      simp [z_pumped]
-      simp [appendSelfNTimes]
-      rewrite [append_nil]
-      simp [length_append]
-      rewrite [<- add_assoc]
-      rfl
-    simp [<- length_u_v_v_w_pumped_eq_2j]
-    sorry
-  sorry
+      exact length_w_geq_n
+    simp [this]
+    rewrite [<- add_zero 1] at length_v
+    rewrite [add_comm] at length_v
+    rewrite [<- Nat.succ_eq_add_one] at length_v
+    exact Nat.lt_of_succ_le length_v
+  linarith
