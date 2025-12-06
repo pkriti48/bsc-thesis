@@ -3,7 +3,6 @@ import Game.MyLanguage.FormalLanguage
 import Game.MyLanguage.Operations
 import Game.MyLanguage.OperationTheorems
 import Game.MyLanguage.PumpingLemma
-import Game.Doc.Docs
 
 -- import Mathlib.Tactic.Common
 
