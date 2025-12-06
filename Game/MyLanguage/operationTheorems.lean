@@ -1,38 +1,38 @@
-import Game.MyLanguage.formalLanguage
-import Game.MyLanguage.operations
+import Game.MyLanguage.FormalLanguage
+import Game.MyLanguage.Operations
 
 namespace Word
 
 theorem length_append {word_1 : Word} {word_2 : Word } :
-length (append word_1 word_2) = length word_1 + length word_2 := by
+length (word_1 ++ word_2) = length word_1 + length word_2 := by
   induction word_1 with
   | nil =>
     rewrite [append, length]
     rewrite [add_comm, add_zero]
     rfl
-  | cons =>
+  | cons head tail ih=>
     rewrite [append, length, length]
-    rewrite [a_ih, <- add_assoc]
+    rewrite [ih, <- add_assoc]
     rfl
 
-theorem append_nil {word : Word} : append word .nil = word := by
+theorem append_nil {word : Word} : (word ++ Word.nil) = word := by
   induction word with
   | nil => rfl
-  | cons =>
-    rewrite [append, a_ih]
+  | cons head tail ih =>
+    rewrite [append, ih]
     rfl
 
-theorem length_appendSelfNTimes {word : Word} {n : Nat} :
-length (appendSelfNTimes word n) = Nat.mul (length word) n := by
+theorem length_replicateWord {word : Word} {n : Nat} :
+length (replicateWord word n) = Nat.mul (length word) n := by
   induction n with
   | zero =>
-    rewrite [appendSelfNTimes]
+    rewrite [replicateWord]
     rewrite [length]
     rewrite [Nat.mul_eq]
     rewrite [Nat.mul_zero]
     rfl
   | succ k ih =>
-    rewrite [appendSelfNTimes]
+    rewrite [replicateWord]
     rewrite [length_append]
     rewrite [Nat.mul_eq]
     rewrite [Nat.mul_succ]
@@ -45,46 +45,48 @@ theorem length_concat {word : Word} {char : Character} :
 length (concat word char) = (length word) + 1 := by
   induction word with
   | nil =>
-    rewrite [concat, length, length, length]
-    rewrite [add_zero, add_comm, add_zero]
-    rfl
-  | cons =>
-    rewrite [concat, length, length]
-    rewrite [a_ih, add_assoc]
+    rewrite [concat]
+    repeat rewrite [length]
+    apply add_comm
+  | cons head tail ih =>
+    rewrite [concat]
+    repeat rewrite [length]
+    rewrite [ih]
+    rewrite [add_assoc]
     rfl
 
-theorem length_concatSelfNTimes {char : Character} {n : Nat} :
-length (concatSelfNTimes char n) = n := by
+theorem length_replicateChar {char : Character} {n : Nat} :
+length (replicateChar char n) = n := by
   induction n with
   | zero =>
-    rewrite [concatSelfNTimes]
+    rewrite [replicateChar]
     rewrite [length]
     rfl
   | succ k ih =>
-    rewrite [concatSelfNTimes]
+    rewrite [replicateChar]
     rewrite [length]
     rewrite [ih]
     rewrite [add_comm]
     rfl
 
-theorem append_concatSelfNTimes {char : Character} {m n : Nat} :
-append (concatSelfNTimes char m) (concatSelfNTimes char n) = concatSelfNTimes char (m + n) := by
+theorem append_replicateChar {char : Character} {m n : Nat} :
+((replicateChar char m) ++ replicateChar char n) = replicateChar char (m + n) := by
 induction m with
 | zero =>
-  rewrite [concatSelfNTimes]
+  rewrite [replicateChar]
   rewrite [append]
   rewrite [zero_add]
   rfl
 | succ =>
-  rewrite [concatSelfNTimes]
+  rewrite [replicateChar]
   rewrite [append]
   rewrite [a]
   rewrite [Nat.succ_add]
-  rewrite [concatSelfNTimes]
+  rewrite [replicateChar]
   rfl
 
 theorem char_in_left_subset_is_in_append {left right : Word} {char : Character} :
-inWord char left -> inWord char (append left right) := by
+inWord char left -> inWord char (left ++ right) := by
   induction left generalizing right with intros h
   | nil =>
     exfalso
@@ -100,7 +102,7 @@ inWord char left -> inWord char (append left right) := by
       exact char_in_tail
 
 theorem char_in_right_subset_is_in_append {left right : Word} {char : Character} :
-inWord char right -> inWord char (append left right) := by
+inWord char right -> inWord char (left ++ right) := by
   induction left generalizing right with intros h
   | nil =>
     rewrite [append]
@@ -112,16 +114,16 @@ inWord char right -> inWord char (append left right) := by
     apply ih at h
     exact h
 
-theorem all_char_in_concatSelfNTimes_char {input_char : Character} {n : Nat} :
-∀ char : Character, inWord char (concatSelfNTimes input_char n) -> char = input_char := by
+theorem all_char_in_replicateChar_char {input_char : Character} {n : Nat} :
+∀ char : Character, inWord char (replicateChar input_char n) -> char = input_char := by
   intros char h
   induction n with
   | zero =>
-    rewrite [concatSelfNTimes] at h
+    rewrite [replicateChar] at h
     exfalso
     apply h
   | succ =>
-    rewrite [concatSelfNTimes] at h
+    rewrite [replicateChar] at h
     rewrite [inWord] at h
     cases h with
     | inl input_char_eq_char =>
@@ -133,7 +135,7 @@ theorem all_char_in_concatSelfNTimes_char {input_char : Character} {n : Nat} :
       exact char_in_tail
 
 theorem count_char_in_append {char : Character} {word1 word2 : Word} :
-countCharInWord char (append word1 word2) = countCharInWord char word1 + countCharInWord char word2 := by
+countCharInWord char (word1 ++ word2) = countCharInWord char word1 + countCharInWord char word2 := by
   induction word1 generalizing word2 with
   | nil =>
     rewrite [append]
@@ -147,15 +149,15 @@ countCharInWord char (append word1 word2) = countCharInWord char word1 + countCh
     rewrite [add_assoc]
     rfl
 
-theorem count_char_in_concatSelfNTimes {char_count char : Character} {n : Nat} :
-countCharInWord char_count (concatSelfNTimes char n) = (if char = char_count then n else 0) := by
+theorem count_char_in_replicateChar {char_count char : Character} {n : Nat} :
+countCharInWord char_count (replicateChar char n) = (if char = char_count then n else 0) := by
   induction n with
   | zero =>
-    rewrite [concatSelfNTimes]
+    rewrite [replicateChar]
     rewrite [countCharInWord]
     simp
   | succ k ih =>
-    rewrite [concatSelfNTimes]
+    rewrite [replicateChar]
     rewrite [countCharInWord]
     rewrite [ih]
     have h : (char = char_count) ∨ (char ≠ char_count) := Decidable.em (char = char_count)
@@ -194,7 +196,7 @@ length (take word index) + length (drop word index) = length word := by
       simp [a_ih]
 
 theorem append_take_drop {word : Word} {index : Nat} :
-append (take word index) (drop word index) = word := by
+((take word index) ++ drop word index) = word := by
   induction word generalizing index with
   | nil =>
     rewrite [drop]
@@ -219,7 +221,7 @@ append (take word index) (drop word index) = word := by
       apply a_ih
 
 theorem take_append {word1 word2 : Word} :
-take (append word1 word2) (length word1 + length word2) = append word1 word2 := by
+take (word1 ++ word2) (length word1 + length word2) = append word1 word2 := by
   induction word1 with
   | nil =>
     rewrite [append]
@@ -244,7 +246,7 @@ take (append word1 word2) (length word1 + length word2) = append word1 word2 := 
     exact ih
 
 theorem take_append_u_v_eq_take_u {u v : Word} {index : Nat} {h : index ≤ length u} :
-take (append u v) index = take u index := by
+take (u ++ v) index = take u index := by
   induction u generalizing index with
   | nil =>
     rewrite [length, Nat.le_zero_eq] at h
@@ -261,22 +263,21 @@ take (append u v) index = take u index := by
       apply Nat.le_of_succ_le_succ
       exact h
 
-theorem take_concatSelfNTimes_n_k_eq_concatSelfNTimes_k {char : Character} {length index : Nat}
-{h : index ≤ length } : take (concatSelfNTimes char length) index = concatSelfNTimes char index := by
+theorem take_replicateChar_n_k_eq_replicateChar_k {char : Character} {length index : Nat}
+{h : index ≤ length } : take (replicateChar char length) index = replicateChar char index := by
   induction length generalizing index with
   | zero =>
     rewrite [Nat.le_zero_eq] at h
     rewrite [h]
-    rewrite [concatSelfNTimes]
+    rewrite [replicateChar]
     rfl
   | succ n ih =>
     cases index with
     | zero =>
-      rewrite [concatSelfNTimes]
+      rewrite [replicateChar]
       simp [take]
     | succ =>
-      rewrite [concatSelfNTimes]
-      rewrite [concatSelfNTimes]
+      repeat rewrite [replicateChar]
       simp [take]
       apply ih
       apply Nat.le_of_succ_le_succ
@@ -295,7 +296,7 @@ theorem drop_all {word : Word} {index : Nat} {h : index = length word} : drop wo
     rfl
 
 theorem drop_append {word1 word2 : Word} {index : Nat} {h : index ≤ length word1} :
-drop (append word1 word2) index = append (drop word1 index) word2 := by
+drop (word1 ++ word2) index = (drop word1 index) ++ word2 := by
   induction word1 generalizing index with
   | nil =>
     rewrite [length, Nat.le_zero_eq] at h
@@ -323,7 +324,7 @@ drop (append word1 word2) index = append (drop word1 index) word2 := by
       exact h
 
 theorem drop_append' {word1 word2 : Word} {index : Nat} {h : length word1 < index} :
-drop (append word1 word2) index = drop word2 (index - length word1) := by
+drop (word1 ++ word2) index = drop word2 (index - length word1) := by
   induction word1 generalizing index with
   | nil =>
     rewrite [append]
@@ -348,24 +349,24 @@ drop (append word1 word2) index = drop word2 (index - length word1) := by
       simp at h
       exact h
 
-theorem drop_concatSelfNTimes {char : Character} {length index : Nat} {h : index ≤ length} :
-drop (concatSelfNTimes char length) index = concatSelfNTimes char (length - index) := by
+theorem drop_replicateChar {char : Character} {length index : Nat} {h : index ≤ length} :
+drop (replicateChar char length) index = replicateChar char (length - index) := by
   induction length generalizing index with
   | zero =>
     rewrite [Nat.le_zero_eq] at h
     rewrite [h]
     rewrite [Nat.sub_zero]
-    rewrite [concatSelfNTimes]
+    rewrite [replicateChar]
     simp [drop]
   | succ k ih =>
     cases index with
     | zero =>
       rewrite [Nat.sub_zero]
-      rewrite [concatSelfNTimes]
+      rewrite [replicateChar]
       simp [drop]
     | succ =>
       rewrite [Nat.add_sub_add_right]
-      rewrite [concatSelfNTimes]
+      rewrite [replicateChar]
       simp [drop]
       rewrite [ih]
       rfl

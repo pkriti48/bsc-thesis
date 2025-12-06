@@ -1,4 +1,4 @@
-import Game.MyLanguage.formalLanguage
+import Game.MyLanguage.FormalLanguage
 
 namespace Word
 
@@ -6,6 +6,8 @@ def inWord (char : Character) (word : Word) : Prop :=
   match word with
   | .nil => False
   | .cons head tail => head = char ∨ (inWord char tail)
+
+notation char "∈w" word => inWord char word
 
 def length (word : Word) : Nat :=
   match word with
@@ -17,20 +19,24 @@ def append (word_1 : Word) (word_2 : Word) : Word :=
   | .nil => word_2
   | .cons head tail => .cons head (append tail word_2)
 
-def appendSelfNTimes (word : Word) (n : Nat) : Word :=
+notation word_1 " ++ " word_2 => append word_1 word_2
+
+def replicateWord (word : Word) (n : Nat) : Word :=
   match n with
   | .zero => .nil
-  | .succ k => append word (appendSelfNTimes word k)
+  | .succ k => word ++ (replicateWord word k)
 
 def concat (word : Word) (char : Character) : Word :=
   match word with
   | .nil => .cons char .nil
   | .cons head tail => .cons head (concat tail char)
 
-def concatSelfNTimes (char : Character) (n : Nat): Word :=
+notation head "::" tail => concat head tail
+
+def replicateChar (char : Character) (n : Nat): Word :=
   match n with
   | .zero => .nil
-  | .succ k => Word.cons char (concatSelfNTimes char k)
+  | .succ k => Word.cons char (replicateChar char k)
 
 def countCharInWord (char : Character) (word : Word) : Nat :=
   match word with
@@ -65,7 +71,7 @@ def addCharAt (word : Word) (char : Character) (index : Nat) : Word :=
     let splits := splitAt word index
     match word with
     | .nil => .cons char .nil
-    | _ => append (concat splits.fst char) splits.snd
+    | _ => (splits.fst :: char) ++ splits.snd
 
 def removeCharAt (word : Word) (index : Nat) : Word :=
   if index > length word then

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-14\n"
+"POT-Creation-Date: 2025-12-02\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -12,61 +12,97 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Hello World"
-msgstr ""
-
 #: GameServer.RpcHandlers
 msgid "level completed! 🎉"
-msgstr ""
-
-#. §0: `«{g}»`
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use §0 now."
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This last message appears if the level is solved."
+#. §0: ```length```
+#. §1: ```append```
+#. §2: ```concat```
+#: Game.Levels.Preliminaries
+msgid "In this world, you will prove some facts about basic functions like §0, §1,\n"
+"§2, etc.\n"
+"\n"
+"Let's get started!"
 msgstr ""
 
 #: Game
 msgid "Welcome to the Pumping Lemma Game!\n"
 "\n"
-"In this game,"
+"In this game, we build a definition of a language in terms of formal languages. For this language,\n"
+"we prove various facts about appending two words or concating a character to a word, etc.\n"
+"These lemmas are then used to build the Pumping Lemma for regular languages.\n"
+"Finally, this Pumping Lemma is applied to some languages to show that those languages are not regular.\n"
+"\n"
+"This game should help you to dig deep into the definition of the Pumping Lemma. It should help you\n"
+"to understand the Pumping Lemma better by deriving several facts you might not think of when writing\n"
+"the proof on paper.\n"
+"\n"
+"Good luck and enjoy learning about the Pumping Lemma!"
+msgstr ""
+
+#. §0: ```word_1```
+#: Game.Levels.Preliminaries.L01_LengthAppend
+msgid "You can start by induction on §0."
+msgstr ""
+
+#: Game.Levels.Preliminaries.L01_LengthAppend
+msgid "This last message appears if the level is solved."
 msgstr ""
 
 #: Game
-msgid "In this game, you prove some facts about formal languages and regular languages later on. Finally, you prove some facts about the Pumping Lemma and use them to prove that the language a^nb^n is not regular."
+msgid "In this game, you prove some facts about the Language structure specifically defined\n"
+"for this game and later on other facts about the Pumping Lemma. Finally, you use these lemmas to\n"
+"prove that the provided examples fo languages are not regular languages."
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
+#. §0: ```simp```
+#. §1: ```rewrite [add_comm]```
+#. §2: ```rewrite [add_zero]```
+#: Game.Levels.Preliminaries.L01_LengthAppend
+msgid "You can also use the §0 tactic instead of §1 followed by\n"
+"§2."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This text is shown as first message when the level is played. You can insert hints in the proof below. They will appear in this side panel depending on the proof a user provides."
+#. §0: ```repeat```
+#. §1: ```repeat rewrite [length]```
+#: Game.Levels.Preliminaries.L01_LengthAppend
+msgid "Another way to solve this proof step is to use the §0 tactic. You can type\n"
+"§1."
+msgstr ""
+
+#. §0: ```word_1```
+#. §1: ```word_2```
+#. §2: ```word_1```
+#. §3: ```word_2```
+#: Game.Levels.Preliminaries.L01_LengthAppend
+msgid "In this first level, you will prove the following:\n"
+"  When we append the two words §0 and §1, then the length of the word we obtain\n"
+"  is equal to the length of §2 and §3 added."
 msgstr ""
 
 #: Game
 msgid "A playful way to learn about the Pumping Lemma"
 msgstr ""
 
+#: Game.Levels.Preliminaries.L01_LengthAppend
+msgid "At this point, you can rewrite the induction "
+msgstr ""
+
 #: Game
 msgid "The Pumping Lemma Game"
 msgstr ""
 
-#. §0: `«{h}»`
-#. §1: `«{g}»`
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You can either start using §0 or §1."
+#: Game.Levels.Preliminaries.L01_LengthAppend
+msgid "Length Append"
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "Demo World"
+#: Game.Levels.Preliminaries
+msgid "The Preliminaries World"
 msgstr ""
 
 #: Game
@@ -74,7 +110,9 @@ msgid "*Game Version: 1.0*\n"
 "\n"
 "## Progress saving\n"
 "\n"
-"The game stores your progress in your local browser storage. If you delete it, your progress will be lost!\n"
+"The game stores your progress in your local browser storage.\n"
+"If you delete it, your progress will be lost!\n"
 "\n"
-"Warning: In most browsers, deleting cookies will also clear the local storage (or \"local site data\"). Make sure to download your game progress first!"
+"Warning: In most browsers, deleting cookies will also clear the local storage\n"
+"(or \"local site data\"). Make sure to download your game progress first!"
 msgstr ""

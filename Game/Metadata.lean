@@ -1,4 +1,10 @@
 import GameServer
+import Game.MyLanguage.FormalLanguage
+import Game.MyLanguage.Operations
+import Game.MyLanguage.OperationTheorems
+import Game.MyLanguage.PumpingLemma
+import Game.Doc.Docs
+
 -- import Mathlib.Tactic.Common
 
 /-! Use this file to add things that should be available in all levels.

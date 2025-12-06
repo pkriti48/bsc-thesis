@@ -1,19 +1,19 @@
-import Game.MyLanguage.formalLanguage
-import Game.MyLanguage.operations
-import Game.MyLanguage.operationTheorems
+import Game.MyLanguage.FormalLanguage
+import Game.MyLanguage.Operations
+import Game.MyLanguage.OperationTheorems
 
 namespace Word
 
-def pumpingLemma (lang : Lang) :=
+def pumpingProperty (lang : Lang) :=
   ∃ (n : Nat) (H : n > 0),
   ∀ z : Word, z ∈ lang.l ∧ length z ≥ n →
-  ∃ u v w : Word, z = append (append u v) w ∧
-  length (append u v) ≤ n ∧
+  ∃ u v w : Word, z = ((u ++ v) ++ w) ∧
+  length (u ++ v) ≤ n ∧
   length v ≥ 1 ∧
-  ∀ (i : Nat), (append (append u (appendSelfNTimes v i)) w) ∈ lang.l
+  ∀ (i : Nat), ((u ++ (replicateWord v i)) ++ w) ∈ lang.l
 
 def anBnLang : Lang :=
-  {l := { z | ∃ j : Nat, z = append (concatSelfNTimes Character.a j) (concatSelfNTimes Character.b j)}}
+  {l := { z | ∃ j : Nat, z = (replicateChar Character.a j) ++ (replicateChar Character.b j)}}
 
 theorem count_a_eq_count_b_in_anBnLang {word : Word} :
 word ∈ anBnLang.l -> countCharInWord Character.a word = countCharInWord Character.b word := by
@@ -21,7 +21,7 @@ word ∈ anBnLang.l -> countCharInWord Character.a word = countCharInWord Charac
   rcases h with ⟨n⟩
   rewrite [h]
   simp [count_char_in_append]
-  repeat rewrite [count_char_in_concatSelfNTimes]
+  repeat rewrite [count_char_in_replicateChar]
   simp
 
 theorem word_count_as {char : Character} {word : Word}
@@ -72,16 +72,16 @@ countCharInWord Character.b word = 0 := by
       exact h_ch
     exact h_tail
 
-theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
+theorem lang_not_regular : ¬ pumpingProperty anBnLang := by
   -- wenn word in lang anbn dann folgt, dass die Anzahl von as und bs ist gleich
   intro h
-  rewrite [pumpingLemma] at h
+  rewrite [pumpingProperty] at h
   -- Sei n ∈ ℕ ∧ n ≠ 0 beliebig.
   rcases h with ⟨n, h_n, h_word⟩
   -- Wir wählen z ∈ L als z = (a^n)(b^n) mit |z| ≥ n.
-  let a_n := concatSelfNTimes Character.a n
-  let b_n := concatSelfNTimes Character.b n
-  let z := append a_n b_n
+  let a_n := replicateChar Character.a n
+  let b_n := replicateChar Character.b n
+  let z := a_n ++ b_n
   have z_in_lang : z ∈ anBnLang.l := by
     unfold anBnLang
     simp
@@ -89,8 +89,8 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
   have length_z : length z ≥ n := by
     simp [z, a_n, b_n]
     rewrite [length_append]
-    rewrite [length_concatSelfNTimes]
-    rewrite [length_concatSelfNTimes]
+    rewrite [length_replicateChar]
+    rewrite [length_replicateChar]
     apply le_add_right
     rfl
   -- Sei z = uvw eine beliebige Zerlegung von z, ...
@@ -102,7 +102,7 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     simp [k]
     rewrite [<- length_append]
     exact length_u_v
-  have u_v_all_a : append u v = take a_n k := by
+  have u_v_all_a : (u ++ v) = take a_n k := by
     have helper := congrArg (fun s => take s k) z_eq
     simp at helper
     rewrite [take_append_u_v_eq_take_u, take_append_u_v_eq_take_u] at helper
@@ -112,7 +112,7 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     rewrite [length_append]
     simp [k]
     simp [a_n]
-    rewrite [length_concatSelfNTimes]
+    rewrite [length_replicateChar]
     exact k_leq_n
   have length_w : length w = length z - k := by
       simp [z_eq, k]
@@ -124,7 +124,7 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     rewrite [add_comm] at length_v
     rewrite [<- Nat.succ_eq_add_one] at length_v
     exact Nat.lt_of_succ_le length_v
-  have w_eq_sub_n_k_as_n_bs : w = append (concatSelfNTimes Character.a (n - k)) b_n := by
+  have w_eq_sub_n_k_as_n_bs : w = append (replicateChar Character.a (n - k)) b_n := by
     have helper := congrArg (fun s => drop s k) z_eq
     simp at helper
     simp [z] at helper
@@ -140,7 +140,7 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     simp [v_drop_all] at helper
     rewrite [append] at helper
     simp [a_n] at helper
-    rewrite [drop_concatSelfNTimes] at helper
+    rewrite [drop_replicateChar] at helper
     rewrite [helper]
     rfl
     exact k_leq_n
@@ -149,7 +149,7 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     rewrite [length_append]
     rfl
     simp [a_n, k]
-    rewrite [length_concatSelfNTimes]
+    rewrite [length_replicateChar]
     rewrite [<- length_append]
     exact length_u_v
   -- |v| ≥ 1 und u(v^i)w ∈ L für jedes i ∈ ℕ.
@@ -157,23 +157,23 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     intros char h
     apply (char_in_left_subset_is_in_append (right := v)) at h
     rewrite [u_v_all_a] at h
-    rewrite [take_concatSelfNTimes_n_k_eq_concatSelfNTimes_k] at h
-    apply all_char_in_concatSelfNTimes_char at h
+    rewrite [take_replicateChar_n_k_eq_replicateChar_k] at h
+    apply all_char_in_replicateChar_char at h
     exact h
     exact k_leq_n
   have v_all_a : ∀ char : Character, inWord char v -> char = Character.a := by
     intros char h
     apply (char_in_right_subset_is_in_append (left := u)) at h
     rewrite [u_v_all_a] at h
-    rewrite [take_concatSelfNTimes_n_k_eq_concatSelfNTimes_k] at h
-    apply all_char_in_concatSelfNTimes_char at h
+    rewrite [take_replicateChar_n_k_eq_replicateChar_k] at h
+    apply all_char_in_replicateChar_char at h
     exact h
     exact k_leq_n
   -- Dann ist u = a^r, v = a^s mit r + s ≤ n, s ≥ 1 und w = (a^t)(b^n) mit r + s + t = n.
   have length_z_eq_2n : length z = 2 * n := by
     simp [z, a_n, b_n]
     rewrite [length_append]
-    rewrite [length_concatSelfNTimes, length_concatSelfNTimes]
+    rewrite [length_replicateChar, length_replicateChar]
     rewrite [<- two_mul]
     rfl
   have length_u_v_w_eq_2n : length u + length v + length w = 2 * n := by
@@ -196,17 +196,17 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
   have w_count_as : countCharInWord Character.a w = length w - n := by
     simp [w_eq_sub_n_k_as_n_bs]
     rewrite [count_char_in_append]
-    simp [count_char_in_concatSelfNTimes]
+    simp [count_char_in_replicateChar]
     rewrite [length_append]
-    rewrite [length_concatSelfNTimes]
+    rewrite [length_replicateChar]
     simp [b_n]
-    rewrite [length_concatSelfNTimes]
-    simp [count_char_in_concatSelfNTimes]
+    rewrite [length_replicateChar]
+    simp [count_char_in_replicateChar]
   have w_count_bs : countCharInWord Character.b w = n := by
     simp [w_eq_sub_n_k_as_n_bs]
     rewrite [count_char_in_append]
     simp [b_n]
-    simp [count_char_in_concatSelfNTimes]
+    simp [count_char_in_replicateChar]
   have v_count_as : countCharInWord Character.a v = length v := by
     rewrite [word_count_as]
     rfl
@@ -228,7 +228,7 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
     exact Character.b
     exact u_all_a
   -- Wenn wir nun i=2 wählen, gilt uv^2w = (a^r)(a^s)(a^s)(a^t)(b^n) ∉ L, da s ≥ 1.
-  let z_pumped := append (append u (appendSelfNTimes v 2)) w
+  let z_pumped := (u ++ (replicateWord v 2)) ++ w
   have z_pumped_in_lang : z_pumped ∈ anBnLang.l := by
     specialize pump_word 2
     simp [z_pumped]
@@ -237,7 +237,7 @@ theorem lang_not_regular : ¬ pumpingLemma anBnLang := by
   apply count_a_eq_count_b_in_anBnLang at z_pumped_in_lang
   have more_as_than_bs_in_z_pumped : (countCharInWord Character.b z_pumped) < countCharInWord Character.a z_pumped := by
     simp [z_pumped]
-    repeat rewrite [appendSelfNTimes]
+    repeat rewrite [replicateWord]
     repeat rewrite [append_nil]
     repeat rewrite [count_char_in_append]
     simp [w_count_as]
