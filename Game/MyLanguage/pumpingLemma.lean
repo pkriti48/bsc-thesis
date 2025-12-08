@@ -1,4 +1,4 @@
-import Game.MyLanguage.FormalLanguage
+import Game.MyLanguage.Language
 import Game.MyLanguage.Operations
 import Game.MyLanguage.OperationTheorems
 

@@ -1,4 +1,4 @@
-import Game.MyLanguage.FormalLanguage
+import Game.MyLanguage.Language
 
 namespace Word
 

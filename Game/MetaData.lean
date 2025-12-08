@@ -1,5 +1,5 @@
 import GameServer
-import Game.MyLanguage.FormalLanguage
+import Game.MyLanguage.Language
 import Game.MyLanguage.Operations
 import Game.MyLanguage.OperationTheorems
 import Game.MyLanguage.PumpingLemma
