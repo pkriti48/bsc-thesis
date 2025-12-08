@@ -1,8 +1,8 @@
 import Game.MetaData
 namespace Word
 
-World "Preliminaries"
-Level 2
+World "The Append and Concat World"
+Level 3
 
 Title "Length Concat"
 
@@ -11,7 +11,7 @@ Introduction "In this level, you will prove the following:
   is equal to 1 added to the length of ```word```."
 
 Statement length_concat (word : Word) (char : Character) : length (word :: char) = length word + 1 := by
-  Hint "You can start by induction on ```word```."
+  Hint "You should start by induction on ```word```."
   induction word with
   | nil =>
     rewrite [concat]

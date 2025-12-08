@@ -2,8 +2,8 @@ import Game.MetaData
 
 namespace Word
 
-World "Preliminaries"
-Level 1
+World "The Append and Concat World"
+Level 2
 
 Title "Length Append"
 
@@ -12,12 +12,15 @@ Introduction "In this first level, you will prove the following:
   is equal to the length of ```word_1``` and ```word_2``` added."
 
 Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = length word_1 + length word_2 := by
-  Hint "You can start by induction on ```word_1```."
+  Hint "You should start by induction on ```word_1```."
   induction word_1 with
   | nil =>
     rewrite [append]
     rewrite [length]
     Branch
+      Branch
+        rewrite [zero_add]
+        rfl
       rewrite [add_comm]
       rewrite [add_zero]
       rfl
@@ -32,19 +35,20 @@ Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = len
     Hint "Another way to solve this proof step is to use the ```repeat``` tactic. You can type
     ```repeat rewrite [length]```."
     repeat rewrite [length]
-    Hint "At this point, you can rewrite the induction "
+    Hint "At this point, you can rewrite your proof goal into the induction hypothesis."
     rewrite [ih]
     rewrite [<- add_assoc]
     rfl
 
+TacticDoc «repeat»
 TacticDoc rewrite
 TacticDoc rfl
 TacticDoc induction
 
-NewTactic rewrite rfl induction
-NewTheorem Nat.add_assoc Nat.add_comm Nat.add_zero
+NewTactic «repeat» rewrite rfl induction
+NewTheorem add_assoc add_comm add_zero zero_add
 NewDefinition Word.nil Word.cons Word.length Word.append
 
-Conclusion "This last message appears if the level is solved."
+Conclusion "From now on, you can use the lemma ```length_append``` to prove the goals in the upcoming levels."
 
 /- Use these commands to add items to the game's inventory. -/
