@@ -1,6 +1,6 @@
-import Game.MyLanguage.Language
-import Game.MyLanguage.Operations
-import Game.MyLanguage.OperationTheorems
+import Game.MyLang.Lang
+import Game.MyLang.Operations
+import Game.MyLang.OperationTheorems
 
 namespace Word
 

@@ -1,5 +1,5 @@
-import Game.MyLanguage.Language
-import Game.MyLanguage.Operations
+import Game.MyLang.Lang
+import Game.MyLang.Operations
 
 namespace Word
 

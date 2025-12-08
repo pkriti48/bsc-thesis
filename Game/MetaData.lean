@@ -1,8 +1,8 @@
 import GameServer
-import Game.MyLanguage.Language
-import Game.MyLanguage.Operations
-import Game.MyLanguage.OperationTheorems
-import Game.MyLanguage.PumpingLemma
+import Game.MyLang.Lang
+import Game.MyLang.Operations
+import Game.MyLang.OperationTheorems
+import Game.MyLang.PumpingLemma
 
 -- import Mathlib.Tactic.Common
 
