@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-02\n"
+"POT-Creation-Date: 2025-12-08\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -12,22 +12,18 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
+#: Game.Levels.Preliminaries.L01_LengthAppend
+#: Game.Levels.Preliminaries.L01_LengthAppend
+#: Game.Levels.Preliminaries.L01_LengthAppend
+msgid ""
+msgstr ""
+
 #: GameServer.RpcHandlers
 msgid "level completed! 🎉"
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
-msgstr ""
-
-#. §0: ```length```
-#. §1: ```append```
-#. §2: ```concat```
-#: Game.Levels.Preliminaries
-msgid "In this world, you will prove some facts about basic functions like §0, §1,\n"
-"§2, etc.\n"
-"\n"
-"Let's get started!"
 msgstr ""
 
 #: Game
@@ -99,6 +95,15 @@ msgstr ""
 
 #: Game.Levels.Preliminaries.L01_LengthAppend
 msgid "Length Append"
+msgstr ""
+
+#. §0: ```append```
+#. §1: ```concat```
+#: Game.Levels.Preliminaries
+msgid "In this world, you will prove some facts about basic functions like  §0 or\n"
+"§1, etc.\n"
+"\n"
+"Let's get started!"
 msgstr ""
 
 #: Game.Levels.Preliminaries
