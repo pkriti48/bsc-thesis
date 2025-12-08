@@ -1,5 +1,4 @@
 import Game.Levels.ExtendWords
-import Game.Levels.ShortenWords
 
 -- Here's what we'll put on the title screen
 Title "The Pumping Lemma Game"

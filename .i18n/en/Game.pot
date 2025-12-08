@@ -8,13 +8,10 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: GameServer.RpcHandlers
-msgid "level completed with warnings… 🎭"
-msgstr ""
-
-#: Game.Levels.Preliminaries.L01_LengthAppend
-#: Game.Levels.Preliminaries.L01_LengthAppend
-#: Game.Levels.Preliminaries.L01_LengthAppend
+#: Game.Levels.ExtendWords.L02_LengthAppend
+#: Game.Levels.ExtendWords.L02_LengthAppend
+#: Game.Levels.ExtendWords.L02_LengthAppend
+#: Game.Levels.ExtendWords.L02_LengthAppend
 msgid ""
 msgstr ""
 
@@ -24,6 +21,88 @@ msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
+msgstr ""
+
+#. §0: ```rfl```
+#. §1: ```=```
+#: Game.Levels.ExtendWords.L03_LengthConcat
+msgid "Lean is very precise, so you cannot use the §0 tactic at this point yet. To make the\n"
+"expressions equal on both sides of the §1 sign, you have to use the commutative\n"
+"property of the mathematical addition."
+msgstr ""
+
+#. §0: ```repeat```
+#. §1: ```repeat rewrite [length]```
+#: Game.Levels.ExtendWords.L02_LengthAppend
+msgid "Another way to solve this proof step is to use the §0 tactic. You can type\n"
+"§1."
+msgstr ""
+
+#. §0: ```simp```
+#. §1: ```rewrite [add_comm]```
+#. §2: ```rewrite [add_zero]```
+#: Game.Levels.ExtendWords.L02_LengthAppend
+msgid "You can also use the §0 tactic instead of §1 followed by\n"
+"§2."
+msgstr ""
+
+#. §0: ```length_append```
+#: Game.Levels.ExtendWords.L02_LengthAppend
+msgid "From now on, you can use the lemma §0 to prove the goals in the upcoming levels."
+msgstr ""
+
+#: Game.Levels.ExtendWords.L01_AppendNil
+msgid "Append an Empty Word to a Non-Empty Word"
+msgstr ""
+
+#: Game
+msgid "A playful way to learn about the Pumping Lemma"
+msgstr ""
+
+#. §0: ```append```
+#. §1: ```concat```
+#: Game.Levels.ExtendWords
+msgid "Welcome to the Append and Concat World!\n"
+"\n"
+"In this world, you will start by proving some facts about the basic functions §0 and\n"
+"§1. Later on, in this world you will prove some facts about combining these functions\n"
+"with each other etc.\n"
+"\n"
+"Let's get started!"
+msgstr ""
+
+#. §0: ```nil```
+#: Game.Levels.ExtendWords.L01_AppendNil
+msgid "In this level, you will prove that appending §0 to a word results in the word itself."
+msgstr ""
+
+#: Game
+msgid "*Game Version: 1.0*\n"
+"\n"
+"## Progress saving\n"
+"\n"
+"The game stores your progress in your local browser storage.\n"
+"If you delete it, your progress will be lost!\n"
+"\n"
+"Warning: In most browsers, deleting cookies will also clear the local storage\n"
+"(or \"local site data\"). Make sure to download your game progress first!"
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "level completed with warnings… 🎭"
+msgstr ""
+
+#: Game.Levels.ExtendWords.L03_LengthConcat
+msgid "Length Concat"
+msgstr ""
+
+#. §0: ```char```
+#. §1: ```word```
+#. §2: ```word```
+#: Game.Levels.ExtendWords.L03_LengthConcat
+msgid "In this level, you will prove the following:\n"
+"  When we concatenate a character §0 to a word §1, then the length of the word we obtain\n"
+"  is equal to 1 added to the length of §2."
 msgstr ""
 
 #: Game
@@ -41,13 +120,19 @@ msgid "Welcome to the Pumping Lemma Game!\n"
 "Good luck and enjoy learning about the Pumping Lemma!"
 msgstr ""
 
-#. §0: ```word_1```
-#: Game.Levels.Preliminaries.L01_LengthAppend
-msgid "You can start by induction on §0."
+#: Game.Levels.ExtendWords.L01_AppendNil
+#: Game.Levels.ExtendWords.L03_LengthConcat
+msgid "This last message appears if the level is solved."
 msgstr ""
 
-#: Game.Levels.Preliminaries.L01_LengthAppend
-msgid "This last message appears if the level is solved."
+#: Game.Levels.ExtendWords.L02_LengthAppend
+msgid "At this point, you can rewrite your proof goal into the induction hypothesis."
+msgstr ""
+
+#. §0: ```repeat```
+#: Game.Levels.ExtendWords.L03_LengthConcat
+msgid "Another way to solve this proof step is to use the §0 tactic as you might have\n"
+"also done in the previous level."
 msgstr ""
 
 #: Game
@@ -56,68 +141,30 @@ msgid "In this game, you prove some facts about the Language structure specifica
 "prove that the provided examples fo languages are not regular languages."
 msgstr ""
 
-#. §0: ```simp```
-#. §1: ```rewrite [add_comm]```
-#. §2: ```rewrite [add_zero]```
-#: Game.Levels.Preliminaries.L01_LengthAppend
-msgid "You can also use the §0 tactic instead of §1 followed by\n"
-"§2."
-msgstr ""
-
-#. §0: ```repeat```
-#. §1: ```repeat rewrite [length]```
-#: Game.Levels.Preliminaries.L01_LengthAppend
-msgid "Another way to solve this proof step is to use the §0 tactic. You can type\n"
-"§1."
-msgstr ""
-
 #. §0: ```word_1```
 #. §1: ```word_2```
 #. §2: ```word_1```
 #. §3: ```word_2```
-#: Game.Levels.Preliminaries.L01_LengthAppend
+#: Game.Levels.ExtendWords.L02_LengthAppend
 msgid "In this first level, you will prove the following:\n"
 "  When we append the two words §0 and §1, then the length of the word we obtain\n"
 "  is equal to the length of §2 and §3 added."
 msgstr ""
 
 #: Game
-msgid "A playful way to learn about the Pumping Lemma"
-msgstr ""
-
-#: Game.Levels.Preliminaries.L01_LengthAppend
-msgid "At this point, you can rewrite the induction "
-msgstr ""
-
-#: Game
 msgid "The Pumping Lemma Game"
 msgstr ""
 
-#: Game.Levels.Preliminaries.L01_LengthAppend
+#. §0: ```word_1```
+#: Game.Levels.ExtendWords.L02_LengthAppend
+#: Game.Levels.ExtendWords.L03_LengthConcat
+msgid "You should start by induction on §0."
+msgstr ""
+
+#: Game.Levels.ExtendWords.L02_LengthAppend
 msgid "Length Append"
 msgstr ""
 
-#. §0: ```append```
-#. §1: ```concat```
-#: Game.Levels.Preliminaries
-msgid "In this world, you will prove some facts about basic functions like  §0 or\n"
-"§1, etc.\n"
-"\n"
-"Let's get started!"
-msgstr ""
-
-#: Game.Levels.Preliminaries
-msgid "The Preliminaries World"
-msgstr ""
-
-#: Game
-msgid "*Game Version: 1.0*\n"
-"\n"
-"## Progress saving\n"
-"\n"
-"The game stores your progress in your local browser storage.\n"
-"If you delete it, your progress will be lost!\n"
-"\n"
-"Warning: In most browsers, deleting cookies will also clear the local storage\n"
-"(or \"local site data\"). Make sure to download your game progress first!"
+#: Game.Levels.ExtendWords
+msgid "The Append and Concat World"
 msgstr ""
