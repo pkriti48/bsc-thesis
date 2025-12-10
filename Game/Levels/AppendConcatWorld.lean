@@ -4,7 +4,7 @@ import Game.Levels.AppendConcatWorld.L03_LengthConcat
 import Game.Levels.AppendConcatWorld.L04_LengthReplicateChar
 import Game.Levels.AppendConcatWorld.L05_LengthReplicateWord
 
-World "Extend Words"
+World "The Append and Concat World"
 Title "The Append and Concat World"
 
 Introduction "
