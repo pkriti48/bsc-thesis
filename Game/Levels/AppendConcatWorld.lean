@@ -1,8 +1,8 @@
-import Game.Levels.AppendConcatWorld.L01_AppendNil
-import Game.Levels.AppendConcatWorld.L02_LengthAppend
-import Game.Levels.AppendConcatWorld.L03_LengthConcat
-import Game.Levels.AppendConcatWorld.L04_LengthReplicateChar
-import Game.Levels.AppendConcatWorld.L05_LengthReplicateWord
+import Game.Levels.AppendConcatWorld.L01_LengthAppend
+import Game.Levels.AppendConcatWorld.L02_LengthConcat
+import Game.Levels.AppendConcatWorld.L03_LengthReplicateChar
+import Game.Levels.AppendConcatWorld.L04_LengthReplicateWord
+import Game.Levels.AppendConcatWorld.L05_AppendNil
 
 World "The Append and Concat World"
 Title "The Append and Concat World"
