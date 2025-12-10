@@ -1,4 +1,4 @@
-import Game.Levels.ExtendWords
+import Game.Levels.AppendConcatWorld
 
 -- Here's what we'll put on the title screen
 Title "The Pumping Lemma Game"

@@ -16,7 +16,7 @@ equals to a word consisting of ```n``` copies of ```word```. Thus, the length of
 When a word consists of ```n``` copies of a word ```word```, then the length of such a word is
 ```n```.
 -/
-TheoremDoc lenght_replicateWord as "length_replicateWord" in "Word"
+TheoremDoc length_replicateWord as "length_replicateWord" in "Word"
 
 Statement length_replicateWord (word : Word) (n : Nat):
 length (replicateWord word n) = (length word) * n := by

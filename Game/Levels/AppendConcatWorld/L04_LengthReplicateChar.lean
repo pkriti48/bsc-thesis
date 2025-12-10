@@ -15,7 +15,7 @@ equals to a word consisting of ```n``` copies of ```char```. Thus, the length of
 When a word consists of ```n``` copies of a character ```char```, then the length of such a word is
 ```n```.
 -/
-TheoremDoc lenght_replicateChar as "length_replicateChar" in "Word"
+TheoremDoc length_replicateChar as "length_replicateChar" in "Word"
 
 Statement length_replicateChar (char : Character) (n : Nat): length (replicateChar char n) = n := by
   Hint "You should start by induction on ```n```."

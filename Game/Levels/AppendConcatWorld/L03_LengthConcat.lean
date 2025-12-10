@@ -16,7 +16,7 @@ Introduction "In this level, you will prove that concatenating a character ```ch
 Basically, the length of a word ```word :: char``` corresponds to ```one``` added to the length of
 the respective word.
 -/
-TheoremDoc lenght_concat as "length_concat" in "Word"
+TheoremDoc length_concat as "length_concat" in "Word"
 
 Statement length_concat (word : Word) (char : Character) : length (word :: char) = length word + 1 := by
   Hint "You should start by induction on ```word```."

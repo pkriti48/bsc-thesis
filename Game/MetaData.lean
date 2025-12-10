@@ -1,7 +1,6 @@
 import GameServer
 import Game.MyLang.Lang
 import Game.MyLang.Operations
-import Game.MyLang.OperationTheorems
 import Game.MyLang.PumpingLemma
 import Game.Doc.Docs
 
