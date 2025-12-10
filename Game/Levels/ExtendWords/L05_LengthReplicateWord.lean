@@ -11,31 +11,28 @@ equals to a word consisting of ```n``` copies of ```word```. Thus, the length of
 ```(length word) n```."
 
 /--
-```length_replicateChar``` proves ```length (replicateChar char n) = n```.
+```length_replicateWord``` proves ```length (replicateWord word n) = n```.
 
-When a word consists of ```n``` copies of a character ```char```, then the length of such a word is
+When a word consists of ```n``` copies of a word ```word```, then the length of such a word is
 ```n```.
 -/
-TheoremDoc lenght_replicateChar as "length_replicateChar" in "Word"
+TheoremDoc lenght_replicateWord as "length_replicateWord" in "Word"
 
-Statement length_replicateChar (char : Character) (n : Nat):
+Statement length_replicateWord (word : Word) (n : Nat):
 length (replicateWord word n) = (length word) * n := by
   Hint "You should start by induction on ```n```."
   induction n with
   | zero =>
     rewrite [replicateWord]
     rewrite [length]
-    rewrite [Nat.mul_eq]
-    rewrite [Nat.mul_zero]
+    rewrite [mul_zero]
     rfl
   | succ k ih =>
     rewrite [replicateWord]
     Hint "At this point, you can use the lemma ```length_append``` to simplify your current goal."
     rewrite [length_append]
-    rewrite [Nat.mul_eq]
     rewrite [Nat.mul_succ]
     rewrite [ih]
-    simp
     rewrite [add_comm]
     rfl
 
