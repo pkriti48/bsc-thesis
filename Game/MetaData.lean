@@ -4,6 +4,8 @@ import Game.MyLang.Operations
 import Game.MyLang.PumpingLemma
 import Game.Doc.Docs
 
+import Std.Tactic
+
 -- import Mathlib.Tactic.Common
 
 /-! Use this file to add things that should be available in all levels.

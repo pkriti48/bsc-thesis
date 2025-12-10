@@ -44,5 +44,8 @@ Statement length_concat (word : Word) (char : Character) : length (word :: char)
     rewrite [add_assoc]
     rfl
 
+NewTactic apply
+NewDefinition Word.concat add_comm
+
 Conclusion "Well done! Next, you will prove the length of a bit more complex functions based on the
 functions you encountered so far."

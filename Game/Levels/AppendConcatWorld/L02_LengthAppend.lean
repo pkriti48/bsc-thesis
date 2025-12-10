@@ -45,6 +45,9 @@ Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = len
 
 TheoremTab "Word"
 
+NewTactic «repeat» simp
+NewDefinition Word.length zero_add add_assoc
+
 Conclusion "With this proof, you proved the equality of the terms ```length (word_1 ++ word_2)```
 and ```length word_1 + length word_2```. From now onwards, you can rewrite both terms to one another
 whenever necessary."

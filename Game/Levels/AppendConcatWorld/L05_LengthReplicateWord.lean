@@ -36,5 +36,7 @@ length (replicateWord word n) = (length word) * n := by
     rewrite [add_comm]
     rfl
 
+NewDefinition replicateWord mul_zero Nat.mul_succ
+
 Conclusion "Hurra! You did it! You successfully proved the statements in the level 1. Let's move on
 to World 2."

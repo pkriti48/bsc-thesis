@@ -38,6 +38,7 @@ Statement append_nil (word : Word) : (word ++ nil) = word := by
 TheoremTab "Word"
 
 NewTactic induction rfl rewrite
+NewDefinition Word.nil Word.cons Word.append
 
 Conclusion "Using this lemma, you can simplify any term of the form ```word ++ nil``` to the term
 ```word``` in any upcoming level. Let's move on to the next proof!"

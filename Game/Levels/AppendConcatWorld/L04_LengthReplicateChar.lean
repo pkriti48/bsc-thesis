@@ -32,4 +32,6 @@ Statement length_replicateChar (char : Character) (n : Nat): length (replicateCh
     rewrite [add_comm]
     rfl
 
+NewDefinition replicateChar
+
 Conclusion "Very good! Let's move forward to the next and last proof of the first world."
