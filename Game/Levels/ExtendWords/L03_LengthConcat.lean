@@ -4,14 +4,14 @@ namespace Word
 World "The Append and Concat World"
 Level 3
 
-Title "Length Concat"
+Title "Length of a Character Appended to a Word"
 
-Introduction "In this level, you will prove the following:
-  When we concatenate a character ```char``` to a word ```word```, then the length of the word we obtain
-  is equal to 1 added to the length of ```word```."
+Introduction "In this level, you will prove that concatenating a character ```char``` to a word
+```word``` means, that the length of the word obtained is equal to 1 added to the length of
+```word```."
 
 /--
-```length_concat``` proves length (word :: char) = length word + 1.
+```length_concat``` proves ```length (word :: char) = length word + 1```.
 
 Basically, the length of a word ```word :: char``` corresponds to ```one``` added to the length of
 the respective word.
@@ -30,9 +30,9 @@ Statement length_concat (word : Word) (char : Character) : length (word :: char)
     Hint "Another way to solve this proof step is to use the ```repeat``` tactic as you might have
     also done in the previous level."
     repeat rewrite [length]
-    Hint "Lean is very precise, so you cannot use the ```rfl``` tactic at this point yet. To make the
-    expressions equal on both sides of the ```=``` sign, you have to use the commutative
-    property of the mathematical addition."
+    Hint "Lean is very precise, so you cannot use the ```rfl``` tactic yet. To retrieve the
+    equality among the expressions on both sides of the ```=``` sign, you have to use the
+    commutative property of the mathematical addition."
     Branch
       apply add_comm
     rewrite [add_comm]
@@ -44,5 +44,5 @@ Statement length_concat (word : Word) (char : Character) : length (word :: char)
     rewrite [add_assoc]
     rfl
 
-Conclusion "Well done! Now, let's move on to proving the length of a bit more complex functions
-based on the functions you encountered so far."
+Conclusion "Well done! Next, you will prove the length of a bit more complex functions based on the
+functions you encountered so far."

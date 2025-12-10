@@ -5,10 +5,10 @@ namespace Word
 World "The Append and Concat World"
 Level 2
 
-Title "Length Append"
+Title "Length of Two Appended Words"
 
-Introduction "In this level, you will prove the following: When we append the two words ```word_1```
-and ```word_2```, then the length of the word we obtain is equal to the length of ```word_1``` and
+Introduction "In this level, you will prove the following: When the two words ```word_1``` and
+```word_2``` are appended, the length of the word obtained is equal to the length of ```word_1``` and
 ```word_2``` added together."
 
 /--
