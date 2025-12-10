@@ -10,6 +10,14 @@ Introduction "In this level, you will prove the following:
   When we concatenate a character ```char``` to a word ```word```, then the length of the word we obtain
   is equal to 1 added to the length of ```word```."
 
+/--
+```length_concat``` proves length (word :: char) = length word + 1.
+
+Basically, the length of a word ```word :: char``` corresponds to ```one``` added to the length of
+the respective word.
+-/
+TheoremDoc lenght_concat as "length_concat" in "Word"
+
 Statement length_concat (word : Word) (char : Character) : length (word :: char) = length word + 1 := by
   Hint "You should start by induction on ```word```."
   induction word with
@@ -32,11 +40,9 @@ Statement length_concat (word : Word) (char : Character) : length (word :: char)
   | cons head tail ih =>
     rewrite [concat]
     repeat rewrite [length]
-    rewrite [ih, add_assoc]
+    rewrite [ih]
+    rewrite [add_assoc]
     rfl
 
-NewTactic rewrite rfl induction
-NewTheorem add_comm add_assoc
-NewDefinition Word.concat
-
-Conclusion "This last message appears if the level is solved."
+Conclusion "Well done! Now, let's move on to proving the length of a bit more complex functions
+based on the functions you encountered so far."

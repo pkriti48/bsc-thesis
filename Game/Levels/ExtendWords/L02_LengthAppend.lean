@@ -7,9 +7,18 @@ Level 2
 
 Title "Length Append"
 
-Introduction "In this first level, you will prove the following:
-  When we append the two words ```word_1``` and ```word_2```, then the length of the word we obtain
-  is equal to the length of ```word_1``` and ```word_2``` added."
+Introduction "In this level, you will prove the following: When we append the two words ```word_1```
+and ```word_2```, then the length of the word we obtain is equal to the length of ```word_1``` and
+```word_2``` added together."
+
+/--
+```length_append``` proves ```length (word_1 ++ word_2) = length word_1 + length word_2```.
+
+Basically, to retrieve the length of any word ```word_1 ++ word_2``` either by calculating
+```length (word_1 ++ word_2)``` or by calculating ```length word_1``` and ```length word_2```
+individually and add them. Both variants are equivalent to each other.
+-/
+TheoremDoc length_append as "length_append" in "Word"
 
 Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = length word_1 + length word_2 := by
   Hint "You should start by induction on ```word_1```."
@@ -18,37 +27,26 @@ Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = len
     rewrite [append]
     rewrite [length]
     Branch
-      Branch
-        rewrite [zero_add]
-        rfl
-      rewrite [add_comm]
-      rewrite [add_zero]
+      rewrite [zero_add]
       rfl
-    Hint "You can also use the ```simp``` tactic instead of ```rewrite [add_comm]``` followed by
-    ```rewrite [add_zero]```."
+    Hint "You can also use ```simp``` instead of ```rewrite [zero_add]``` followed by ```rfl```."
     simp
   | cons head tail ih =>
     rewrite [append]
     Branch
       rewrite [length]
       rewrite [length]
-    Hint "Another way to solve this proof step is to use the ```repeat``` tactic. You can type
+    Hint "You can also solve this step by using the ```repeat``` tactic. You can execute
     ```repeat rewrite [length]```."
     repeat rewrite [length]
-    Hint "At this point, you can rewrite your proof goal into the induction hypothesis."
     rewrite [ih]
     rewrite [<- add_assoc]
     rfl
 
-TacticDoc «repeat»
-TacticDoc rewrite
-TacticDoc rfl
-TacticDoc induction
+TheoremTab "Word"
 
-NewTactic «repeat» rewrite rfl induction
-NewTheorem add_assoc add_comm add_zero zero_add
-NewDefinition Word.nil Word.cons Word.length Word.append
-
-Conclusion "From now on, you can use the lemma ```length_append``` to prove the goals in the upcoming levels."
+Conclusion "With this proof, you proved the equality of the terms ```length (word_1 ++ word_2)```
+and ```length word_1 + length word_2```. From now onwards, you can rewrite both terms to one another
+whenever necessary."
 
 /- Use these commands to add items to the game's inventory. -/
