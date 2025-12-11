@@ -1,4 +1,4 @@
-import Game.MetaData
+import Game.Metadat
 
 namespace Word
 
