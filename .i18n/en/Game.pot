@@ -1,142 +1,20 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-10\n"
+"POT-Creation-Date: 2025-12-11\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: Game.Doc.Docs
-#: Game.Doc.Docs
-msgid ""
-msgstr ""
-
-#: GameServer.RpcHandlers
-msgid "level completed! 🎉"
-msgstr ""
-
-#. §0: ```length_append```
-#: Game.Levels.AppendConcatWorld.L05_LengthReplicateWord
-msgid "At this point, you can use the lemma §0 to simplify your current goal."
-msgstr ""
-
-#. §0: ```word```
-#. §1: ```n```
-#. §2: ```n```
-#. §3: ```word```
-#. §4: ```(length word) n```
-#: Game.Levels.AppendConcatWorld.L05_LengthReplicateWord
-msgid "In this level, you will prove that replicating a word §0 §1 times\n"
-"equals to a word consisting of §2 copies of §3. Thus, the length of this word is\n"
-"§4."
-msgstr ""
-
-#: GameServer.RpcHandlers
-msgid "intermediate goal solved! 🎉"
-msgstr ""
-
-#. §0: ```length_concat```
-#. §1: ```length (word :: char) = length word + 1```
-#. §2: ```word :: char```
-#. §3: ```one```
-#: Game.Levels.AppendConcatWorld.L03_LengthConcat
-msgid "§0 proves §1.\n"
-"\n"
-"Basically, the length of a word §2 corresponds to §3 added to the length of\n"
-"the respective word."
-msgstr ""
-
-#. §0: ```char```
-#. §1: ```n```
-#. §2: ```n```
-#. §3: ```char```
-#. §4: ```n```
-#: Game.Levels.AppendConcatWorld.L04_LengthReplicateChar
-msgid "In this level, you will prove that replicating a character §0 §1 times\n"
-"equals to a word consisting of §2 copies of §3. Thus, the length of this word is §4."
-msgstr ""
-
-#: Game.Levels.AppendConcatWorld.L02_LengthAppend
-msgid "Length of Two Appended Words"
-msgstr ""
-
-#. §0: ```rewrite [append]```
-#: Game.Levels.AppendConcatWorld.L01_AppendNil
-msgid "At this point, you can simplify the proof goal by executing\n"
-"§0."
-msgstr ""
-
-#: Game.Levels.AppendConcatWorld.L01_AppendNil
-msgid "Append an Empty Word to a Non-Empty Word"
-msgstr ""
-
-#: Game
-msgid "A playful way to learn about the Pumping Lemma"
-msgstr ""
-
-#. §0: ```length (word_1 ++ word_2)```
-#. §1: ```length word_1 + length word_2```
-#: Game.Levels.AppendConcatWorld.L02_LengthAppend
-msgid "With this proof, you proved the equality of the terms §0\n"
-"and §1. From now onwards, you can rewrite both terms to one another\n"
-"whenever necessary."
-msgstr ""
-
-#. §0: ```append```
-#. §1: ```concat```
-#: Game.Levels.AppendConcatWorld
-msgid "Welcome to the Append and Concat World!\n"
-"\n"
-"In this world, you will start by proving some facts about the basic functions §0 and\n"
-"§1. Later on, in this world you will prove some facts about combining these functions\n"
-"with each other etc.\n"
-"\n"
-"Let's get started!"
-msgstr ""
-
-#: Game.Levels.AppendConcatWorld.L05_LengthReplicateWord
-msgid "Hurra! You did it! You successfully proved the statements in the level 1. Let's move on\n"
-"to World 2."
-msgstr ""
-
-#: Game.Levels.AppendConcatWorld.L03_LengthConcat
-msgid "Well done! Next, you will prove the length of a bit more complex functions based on the\n"
-"functions you encountered so far."
-msgstr ""
-
-#. §0: ```rewrite replicatChar```
-#: Game.Levels.AppendConcatWorld.L04_LengthReplicateChar
-msgid "At this point, you can §0."
-msgstr ""
-
-#: Game
-msgid "*Game Version: 1.0*\n"
-"\n"
-"## Progress saving\n"
-"\n"
-"The game stores your progress in your local browser storage.\n"
-"If you delete it, your progress will be lost!\n"
-"\n"
-"Warning: In most browsers, deleting cookies will also clear the local storage\n"
-"(or \"local site data\"). Make sure to download your game progress first!"
-msgstr ""
-
-#. §0: ```nil```
-#. §1: ```word```
-#. §2: ```word```
-#: Game.Levels.AppendConcatWorld.L01_AppendNil
-msgid "In the first level of this game, you will prove that appending the empty word §0\n"
-"to a non-empty word §1 results into §2."
-msgstr ""
-
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
-#: Game.Levels.AppendConcatWorld.L04_LengthReplicateChar
-msgid "Length of Character Replicas"
+#: Game.Doc.Docs
+#: Game.Doc.Docs
+msgid ""
 msgstr ""
 
 #. §0: ```word ++ nil```
@@ -146,12 +24,12 @@ msgid "Using this lemma, you can simplify any term of the form §0 to the term\n
 "§1 in any upcoming level. Let's move on to the next proof!"
 msgstr ""
 
-#. §0: ```rfl```
-#. §1: ```=```
-#: Game.Levels.AppendConcatWorld.L03_LengthConcat
-msgid "Lean is very precise, so you cannot use the §0 tactic yet. To retrieve the\n"
-"equality among the expressions on both sides of the §1 sign, you have to use the\n"
-"commutative property of the mathematical addition."
+#: GameServer.RpcHandlers
+msgid "level completed! 🎉"
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
 msgstr ""
 
 #. §0: `rfl`
@@ -192,17 +70,6 @@ msgid "TacticDoc rfl\n"
 "  but merely *definitionally equal*, e.g. §12."
 msgstr ""
 
-#: Game.Levels.AppendConcatWorld.L05_LengthReplicateWord
-msgid "Length of Word Replicas"
-msgstr ""
-
-#. §0: ```repeat```
-#. §1: ```repeat rewrite [length]```
-#: Game.Levels.AppendConcatWorld.L02_LengthAppend
-msgid "You can also solve this step by using the §0 tactic. You can execute\n"
-"§1."
-msgstr ""
-
 #: Game
 msgid "Welcome to the Pumping Lemma Game!\n"
 "\n"
@@ -218,63 +85,36 @@ msgid "Welcome to the Pumping Lemma Game!\n"
 "Good luck and enjoy learning about the Pumping Lemma!"
 msgstr ""
 
-#. §0: ```word_1```
-#. §1: ```word_2```
-#. §2: ```word_1```
-#. §3: ```word_2```
-#: Game.Levels.AppendConcatWorld.L02_LengthAppend
-msgid "In this level, you will prove the following: When the two words §0 and\n"
-"§1 are appended, the length of the word obtained is equal to the length of §2 and\n"
-"§3 added together."
-msgstr ""
-
-#. §0: ```char```
-#. §1: ```word```
-#. §2: ```word```
-#: Game.Levels.AppendConcatWorld.L03_LengthConcat
-msgid "In this level, you will prove that concatenating a character §0 to a word\n"
-"§1 means, that the length of the word obtained is equal to 1 added to the length of\n"
-"§2."
-msgstr ""
-
 #: Game
 msgid "In this game, you prove some facts about the Language structure specifically defined\n"
 "for this game and later on other facts about the Pumping Lemma. Finally, you use these lemmas to\n"
 "prove that the provided examples fo languages are not regular languages."
 msgstr ""
 
-#. §0: ```length_replicateWord```
-#. §1: ```length (replicateWord word n) = n```
-#. §2: ```n```
-#. §3: ```word```
-#. §4: ```n```
-#: Game.Levels.AppendConcatWorld.L05_LengthReplicateWord
-msgid "§0 proves §1.\n"
+#. §0: ```rewrite [append]```
+#: Game.Levels.AppendConcatWorld.L01_AppendNil
+msgid "At this point, you can simplify the proof goal by executing\n"
+"§0."
+msgstr ""
+
+#: Game.Levels.AppendConcatWorld.L01_AppendNil
+msgid "Append an Empty Word to a Non-Empty Word"
+msgstr ""
+
+#: Game
+msgid "A playful way to learn about the Pumping Lemma"
+msgstr ""
+
+#. §0: ```append```
+#. §1: ```concat```
+#: Game.Levels.AppendConcatWorld
+msgid "Welcome to the Append and Concat World!\n"
 "\n"
-"When a word consists of §2 copies of a word §3, then the length of such a word is\n"
-"§4."
-msgstr ""
-
-#: Game.Levels.AppendConcatWorld.L03_LengthConcat
-msgid "Length of a Character Appended to a Word"
-msgstr ""
-
-#. §0: ```repeat```
-#: Game.Levels.AppendConcatWorld.L03_LengthConcat
-msgid "Another way to solve this proof step is to use the §0 tactic as you might have\n"
-"also done in the previous level."
-msgstr ""
-
-#. §0: ```length_replicateChar```
-#. §1: ```length (replicateChar char n) = n```
-#. §2: ```n```
-#. §3: ```char```
-#. §4: ```n```
-#: Game.Levels.AppendConcatWorld.L04_LengthReplicateChar
-msgid "§0 proves §1.\n"
+"In this world, you will start by proving some facts about the basic functions §0 and\n"
+"§1. Later on, in this world you will prove some facts about combining these functions\n"
+"with each other etc.\n"
 "\n"
-"When a word consists of §2 copies of a character §3, then the length of such a word is\n"
-"§4."
+"Let's get started!"
 msgstr ""
 
 #: Game
@@ -296,24 +136,21 @@ msgid "§0 is the proof of §1.\n"
 "bring to the state on the right-hand side, which can be done by using the §5 tactic."
 msgstr ""
 
-#: Game.Levels.AppendConcatWorld.L04_LengthReplicateChar
-msgid "Very good! Let's move forward to the next and last proof of the first world."
-msgstr ""
-
 #. §0: ```word```
 #: Game.Levels.AppendConcatWorld.L01_AppendNil
-#: Game.Levels.AppendConcatWorld.L02_LengthAppend
-#: Game.Levels.AppendConcatWorld.L03_LengthConcat
-#: Game.Levels.AppendConcatWorld.L04_LengthReplicateChar
-#: Game.Levels.AppendConcatWorld.L05_LengthReplicateWord
 msgid "You should start by induction on §0."
 msgstr ""
 
-#. §0: ```simp```
-#. §1: ```rewrite [zero_add]```
-#. §2: ```rfl```
-#: Game.Levels.AppendConcatWorld.L02_LengthAppend
-msgid "You can also use §0 instead of §1 followed by §2."
+#: Game
+msgid "*Game Version: 1.0*\n"
+"\n"
+"## Progress saving\n"
+"\n"
+"The game stores your progress in your local browser storage.\n"
+"If you delete it, your progress will be lost!\n"
+"\n"
+"Warning: In most browsers, deleting cookies will also clear the local storage\n"
+"(or \"local site data\"). Make sure to download your game progress first!"
 msgstr ""
 
 #: Game.Levels.AppendConcatWorld.L01_AppendNil
@@ -321,20 +158,14 @@ msgid "At this point, you can simplify the proof goal by using the induction\n"
 "hypothesis."
 msgstr ""
 
-#: Game.Levels.AppendConcatWorld
-msgid "The Append and Concat World"
+#. §0: ```nil```
+#. §1: ```word```
+#. §2: ```word```
+#: Game.Levels.AppendConcatWorld.L01_AppendNil
+msgid "In the first level of this game, you will prove that appending the empty word §0\n"
+"to a non-empty word §1 results into §2."
 msgstr ""
 
-#. §0: ```length_append```
-#. §1: ```length (word_1 ++ word_2) = length word_1 + length word_2```
-#. §2: ```word_1 ++ word_2```
-#. §3: ```length (word_1 ++ word_2)```
-#. §4: ```length word_1```
-#. §5: ```length word_2```
-#: Game.Levels.AppendConcatWorld.L02_LengthAppend
-msgid "§0 proves §1.\n"
-"\n"
-"Basically, to retrieve the length of any word §2 either by calculating\n"
-"§3 or by calculating §4 and §5\n"
-"individually and add them. Both variants are equivalent to each other."
+#: Game.Levels.AppendConcatWorld
+msgid "The Append and Concat World"
 msgstr ""
