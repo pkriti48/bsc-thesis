@@ -1,4 +1,4 @@
-import Game.Levels.Preliminaries
+import Game.Levels.AppendAndConcat
 
 -- Here's what we'll put on the title screen
 Title "The Pumping Lemma Game"

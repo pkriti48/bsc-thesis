@@ -1,8 +1,8 @@
-import Game.MetaData
+import Game.Levels.AppendAndConcat.L02_LengthAppend
 namespace Word
 
-World "Preliminaries"
-Level 2
+World "AppendAndConcat"
+Level 3
 
 Title "Length Concat"
 
