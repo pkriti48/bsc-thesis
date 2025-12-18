@@ -169,55 +169,55 @@ countCharInWord char_count (replicateChar char n) = (if char = char_count then n
     | inr right =>
       simp [right]
 
-theorem length_take_drop {word : Word} {index : Nat} :
-length (take word index) + length (drop word index) = length word := by
-  induction word generalizing index with
-  | nil =>
-    simp [drop]
-    cases index with
-    | zero =>
-      simp [take]
-      simp [length]
-    | succ =>
-      simp [take]
-      simp [length]
-  | cons =>
-    cases index with
-    | zero =>
-      simp [take]
-      simp [drop]
-      simp [length]
-    | succ =>
-      simp [take]
-      simp [drop]
-      simp [length]
-      rewrite [add_assoc]
-      simp [a_ih]
-
-theorem append_take_drop {word : Word} {index : Nat} :
-((take word index) ++ drop word index) = word := by
-  induction word generalizing index with
-  | nil =>
-    rewrite [drop]
-    rewrite [ite_self]
-    rewrite [append_nil]
-    cases index with
-    | zero =>
-      rewrite [take]
-      rewrite [ite_self]
-      rfl
-    | succ=> simp[take]
-  | cons =>
-    cases index with
-    | zero =>
-      simp [take]
-      simp [drop]
-      simp [append]
-    | succ =>
-      simp [take]
-      simp [drop]
-      simp [append]
-      apply a_ih
+--theorem length_take_drop {word : Word} {index : Nat} :
+--length (take word index) + length (drop word index) = length word := by
+--  induction word generalizing index with
+--  | nil =>
+--    simp [drop]
+--    cases index with
+--    | zero =>
+--      simp [take]
+--      simp [length]
+--    | succ =>
+--      simp [take]
+--      simp [length]
+--  | cons =>
+--    cases index with
+--    | zero =>
+--      simp [take]
+--      simp [drop]
+--      simp [length]
+--    | succ =>
+--      simp [take]
+--      simp [drop]
+--      simp [length]
+--      rewrite [add_assoc]
+--      simp [a_ih]
+--
+--theorem append_take_drop {word : Word} {index : Nat} :
+--((take word index) ++ drop word index) = word := by
+--  induction word generalizing index with
+--  | nil =>
+--    rewrite [drop]
+--    rewrite [ite_self]
+--    rewrite [append_nil]
+--    cases index with
+--    | zero =>
+--      rewrite [take]
+--      rewrite [ite_self]
+--      rfl
+--    | succ=> simp[take]
+--  | cons =>
+--    cases index with
+--    | zero =>
+--      simp [take]
+--      simp [drop]
+--      simp [append]
+--    | succ =>
+--      simp [take]
+--      simp [drop]
+--      simp [append]
+--      apply a_ih
 
 theorem take_append {word1 word2 : Word} :
 take (word1 ++ word2) (length word1 + length word2) = append word1 word2 := by
@@ -372,35 +372,35 @@ drop (replicateChar char length) index = replicateChar char (length - index) := 
       simp at h
       exact h
 
-theorem length_splitAt {word : Word} {index : Nat} :
-let splits := splitAt word index
-length splits.fst + length splits.snd = length word := by
-  simp
-  induction word with
-  | nil =>
-    simp [splitAt]
-    simp [length]
-  | cons =>
-    simp [splitAt]
-    simp [length_take_drop]
-
-theorem length_addCharAt {word : Word} {char : Character} {index : Nat}
-{h : index ≤ length word} : length (addCharAt word char index) = length word + 1 := by
-  induction word with
-  | nil =>
-    rewrite [addCharAt]
-    simp [h.not_lt]
-    rewrite [length]
-    rewrite [length]
-    rewrite [length]
-    rewrite [add_comm]
-    rfl
-  | cons =>
-    rewrite [addCharAt]
-    simp [h.not_lt]
-    simp [splitAt]
-    rewrite [length_append]
-    rewrite [length_concat]
-    rewrite [add_right_comm]
-    rewrite [length_take_drop]
-    rfl
+--theorem length_splitAt {word : Word} {index : Nat} :
+--let splits := splitAt word index
+--length splits.fst + length splits.snd = length word := by
+--  simp
+--  induction word with
+--  | nil =>
+--    simp [splitAt]
+--    simp [length]
+--  | cons =>
+--    simp [splitAt]
+--    simp [length_take_drop]
+--
+--theorem length_addCharAt {word : Word} {char : Character} {index : Nat}
+--{h : index ≤ length word} : length (addCharAt word char index) = length word + 1 := by
+--  induction word with
+--  | nil =>
+--    rewrite [addCharAt]
+--    simp [h.not_lt]
+--    rewrite [length]
+--    rewrite [length]
+--    rewrite [length]
+--    rewrite [add_comm]
+--    rfl
+--  | cons =>
+--    rewrite [addCharAt]
+--    simp [h.not_lt]
+--    simp [splitAt]
+--    rewrite [length_append]
+--    rewrite [length_concat]
+--    rewrite [add_right_comm]
+--    rewrite [length_take_drop]
+--    rfl

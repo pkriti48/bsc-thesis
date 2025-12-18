@@ -1,48 +1,81 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-16\n"
+"POT-Creation-Date: 2025-12-18\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-msgid ""
+#. §0: `n`
+#. §1: `0 + n = n`
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "Zero is the left identity of addition.\n"
+"\n"
+"For any natural number §0, we have §1."
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "level completed! 🎉"
 msgstr ""
 
+#. §0: ```word```
+#. §1: ```n```
+#. §2: ```n```
+#. §3: ```word```
+#. §4: ```(length word) n```
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "In this level, you will prove that replicating a word §0 §1 times\n"
+"equals to a word consisting of §2 copies of §3. Thus, the length of this word is\n"
+"§4."
+msgstr ""
+
+#. §0: ```length_concat```
+#. §1: ```length (word :: char) = length word + 1```
+#. §2: ```word :: char```
+#. §3: ```one```
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "§0 proves §1.\n"
+"\n"
+"Basically, the length of a word §2 corresponds to §3 added to the length of\n"
+"the respective word."
+msgstr ""
+
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#. §0: ```rfl```
-#. §1: ```=```
-#: Game.Levels.AppendAndConcat.L03_LengthConcat
-msgid "Lean is very precise, so you cannot use the §0 tactic at this point yet. To make the\n"
-"expressions equal on both sides of the §1 sign, you have to use the commutative\n"
-"property of the mathematical addition."
+#. §0: ```char```
+#. §1: ```n```
+#. §2: ```n```
+#. §3: ```char```
+#. §4: ```n```
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+msgid "In this level, you will prove that replicating a character §0 §1 times\n"
+"equals to a word consisting of §2 copies of §3. Thus, the length of this word is §4."
 msgstr ""
 
-#. §0: ```simp```
-#. §1: ```rewrite [add_comm]```
-#. §2: ```rewrite [add_zero]```
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-msgid "You can also use the §0 tactic instead of §1 followed by\n"
-"§2."
-msgstr ""
-
-#. §0: ```repeat```
-#. §1: ```repeat rewrite [length]```
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-msgid "Another way to solve this proof step is to use the §0 tactic. You can type\n"
-"§1."
+#. §0: ```nil```
+#. §1: ```word```
+#. §2: ```word```
+#. §3: ```append```
+#. §4: ```char```
+#. §5: ```concat```
+#. §6: ```n```
+#. §7: ```char```
+#. §8: ```n```
+#. §9: ```word```
+#: Game.Levels.AppendAndConcat
+msgid "In the first world of the game, you will start by proving the fact that appending the empty word\n"
+"§0 to any non empty word §1 results in §2.\n"
+"Then you will prove how the length of a word is calculated when two words are connected using\n"
+"§3 or a character §4 is connected to a word using §5.\n"
+"Finally, building upon these lemmas, you will prove how the length of a word looks like when this\n"
+"word corresponds to §6 replicas of a character §7 or §8 replicas of a word\n"
+"§9.\n"
+"\n"
+"Let's get started!"
 msgstr ""
 
 #. §0: ```rewrite [append]```
@@ -57,6 +90,59 @@ msgstr ""
 
 #: Game
 msgid "A playful way to learn about the Pumping Lemma"
+msgstr ""
+
+#. §0: ```length (word_1 ++ word_2)```
+#. §1: ```length word_1 + length word_2```
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "With this proof, you proved the equality of the terms §0\n"
+"and §1. From now onwards, you can rewrite both terms to one another\n"
+"whenever necessary."
+msgstr ""
+
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "Length of a Word Connected to Another Word"
+msgstr ""
+
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "Well done! Next, you will prove the length of a bit more complex functions based on the\n"
+"functions you encountered so far."
+msgstr ""
+
+#. §0: ```rewrite [replicateChar]```
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+msgid "At this point, you can §0."
+msgstr ""
+
+#. §0: `n`
+#. §1: `m`
+#. §2: `k`
+#. §3: `(n + m) + k = n + (m + k)`
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "Addition is associative.\n"
+"\n"
+"For all natural numbers §0, §1, and §2, we have\n"
+"§3."
+msgstr ""
+
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "You did it! You successfully proved the statements in the level 1. Let's move on to\n"
+"World 2."
+msgstr ""
+
+#. §0: `n`
+#. §1: `n * 0 = 0`
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "Zero is an absorbing element for multiplication.\n"
+"\n"
+"For any natural number §0, we have §1."
+msgstr ""
+
+#. §0: ```simp```
+#. §1: ```rewrite [zero_add]```
+#. §2: ```rfl```
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "You can also use the §0 tactic instead of§1 followed by §2."
 msgstr ""
 
 #: Game
@@ -83,6 +169,33 @@ msgstr ""
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
+#. §0: `n`
+#. §1: `m`
+#. §2: `n + m = n + m`
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "Addition is commutative.\n"
+"\n"
+"For all natural numbers §0 and §1, we have §2."
+msgstr ""
+
+#. §0: ```length_append```
+#. §1: ```length (word_1 ++ word_2) = length word_1 + length word_2```
+#. §2: ```word_1 ++ word_2```
+#. §3: ```length (word_1 ++ word_2)```
+#. §4: ```length word_1```
+#. §5: ```length word_2```
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "§0 proves §1.\n"
+"\n"
+"The length of any word §2 can be retrieved either by calculating\n"
+"§3 or by calculating §4 and §5 each\n"
+"individually and add them. Both variants are equivalent to each other."
+msgstr ""
+
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+msgid "Length of Character Replicas"
+msgstr ""
+
 #. §0: ```word ++ nil```
 #. §1: ```word```
 #: Game.Levels.AppendAndConcat.L01_AppendNil
@@ -90,17 +203,16 @@ msgid "Using this lemma, you can simplify any term of the form §0 to the term\n
 "§1 in any upcoming level. Let's move on to the next proof!"
 msgstr ""
 
-#: Game.Levels.AppendAndConcat.L03_LengthConcat
-msgid "Length Concat"
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "Length of Word Replicas"
 msgstr ""
 
-#. §0: ```char```
-#. §1: ```word```
-#. §2: ```word```
-#: Game.Levels.AppendAndConcat.L03_LengthConcat
-msgid "In this level, you will prove the following:\n"
-"  When we concatenate a character §0 to a word §1, then the length of the word we obtain\n"
-"  is equal to 1 added to the length of §2."
+#. §0: ```rfl```
+#. §1: ```=```
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "Lean is very precise, so you cannot use the §0 tactic yet. To retrieve the\n"
+"equality between the expressions on both sides of the §1 sign, you have to use the\n"
+"commutative property of the mathematical addition."
 msgstr ""
 
 #: Game
@@ -118,41 +230,75 @@ msgid "Welcome to the Pumping Lemma Game!\n"
 "Good luck and enjoy learning about the Pumping Lemma!"
 msgstr ""
 
-#. §0: ```word_1```
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-#: Game.Levels.AppendAndConcat.L03_LengthConcat
-msgid "You can start by induction on §0."
-msgstr ""
-
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-#: Game.Levels.AppendAndConcat.L03_LengthConcat
-msgid "This last message appears if the level is solved."
-msgstr ""
-
 #: Game
 msgid "In this game, you prove some facts about the Language structure specifically defined\n"
 "for this game and later on other facts about the Pumping Lemma. Finally, you use these lemmas to\n"
 "prove that the provided examples fo languages are not regular languages."
 msgstr ""
 
+#. §0: ```length_replicateWord```
+#. §1: ```length (replicateWord word n) = n```
+#. §2: ```n```
+#. §3: ```word```
+#. §4: ```n```
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "§0 proves §1.\n"
+"\n"
+"When a word consists of §2 copies of a word §3, then the length of such a word is\n"
+"§4."
+msgstr ""
+
 #. §0: ```repeat```
-#: Game.Levels.AppendAndConcat.L03_LengthConcat
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
 msgid "Another way to solve this proof step is to use the §0 tactic as you might have\n"
 "also done in the previous level."
 msgstr ""
 
-#. §0: ```word_1```
-#. §1: ```word_2```
-#. §2: ```word_1```
-#. §3: ```word_2```
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-msgid "In this first level, you will prove the following:\n"
-"  When we append the two words §0 and §1, then the length of the word we obtain\n"
-"  is equal to the length of §2 and §3 added."
+#. §0: `n`
+#. §1: `m`
+#. §2: `n`
+#. §3: `Nat.succ m`
+#. §4: `n`
+#. §5: `n * m`
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "Multiplication by a successor.\n"
+"\n"
+"For any natural numbers §0 and §1, multiplying §2 by §3\n"
+"is equal to adding §4 to §5."
 msgstr ""
 
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-msgid "At this point, you can rewrite the induction "
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "Length of a Character Connected to a Word"
+msgstr ""
+
+#. §0: ```length_replicateChar```
+#. §1: ```length (replicateChar char n) = n```
+#. §2: ```n```
+#. §3: ```char```
+#. §4: ```n```
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+msgid "§0 proves §1.\n"
+"\n"
+"When a word consists of §2 copies of a character §3, then the length of such a word is\n"
+"§4."
+msgstr ""
+
+#. §0: ```length_append```
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "At this point, you can use the lemma §0, you proved in Level 3, to\n"
+"simplify your current goal."
+msgstr ""
+
+#. §0: `n`
+#. §1: `n + 0 = a`
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "Zero is the right identity of addition.\n"
+"\n"
+"For any natural number §0, we have §1."
+msgstr ""
+
+#: Game
+msgid "The Pumping Lemma Game"
 msgstr ""
 
 #. §0: ```append_nil```
@@ -170,26 +316,17 @@ msgid "§0 is the proof of §1.\n"
 "bring to the state on the right-hand side, which can be done by using the §5 tactic."
 msgstr ""
 
-#: Game
-msgid "The Pumping Lemma Game"
-msgstr ""
-
-#: Game.Levels.AppendAndConcat.L02_LengthAppend
-msgid "Length Append"
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+msgid "Very good! Let's move forward to the next and last proof of the first world."
 msgstr ""
 
 #. §0: ```word```
 #: Game.Levels.AppendAndConcat.L01_AppendNil
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
 msgid "You should start by induction on §0."
-msgstr ""
-
-#. §0: ```append```
-#. §1: ```concat```
-#: Game.Levels.AppendAndConcat
-msgid "In this world, you will prove some facts about basic functions like  §0 or\n"
-"§1, etc.\n"
-"\n"
-"Let's get started!"
 msgstr ""
 
 #: Game.Levels.AppendAndConcat.L01_AppendNil
@@ -199,4 +336,23 @@ msgstr ""
 
 #: Game.Levels.AppendAndConcat
 msgid "The Append and Concat World"
+msgstr ""
+
+#. §0: ```char```
+#. §1: ```word```
+#. §2: ```word```
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "In this level, you will prove that connecting a character §0 to a word\n"
+"§1 means, that the length of the obtained word is equal to 1 added to the length of\n"
+"§2."
+msgstr ""
+
+#. §0: ```word_1```
+#. §1: ```word_2```
+#. §2: ```word_1```
+#. §3: ```word_2```
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "In this level, you will prove the following: When the two words §0 and\n"
+"§1 are connected, the length of the obtained word is equal to the length of §2\n"
+"added the length of §3."
 msgstr ""
