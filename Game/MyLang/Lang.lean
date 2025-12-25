@@ -101,7 +101,7 @@ def append (word_1 : Word) (word_2 : Word) : Word :=
   | .cons head tail => .cons head (append tail word_2)
 
 /--
-Infix notation for word concatenation.
+Infix notation for the append function.
 -/
 notation word_1 " ++ " word_2 => append word_1 word_2
 
@@ -126,7 +126,7 @@ def concat (word : Word) (char : Character) : Word :=
   | .cons head tail => .cons head (concat tail char)
 
 /--
-Infix notation for appending a character to a word.
+Infix notation for the concat function.
 -/
 notation head "::" tail => concat head tail
 
