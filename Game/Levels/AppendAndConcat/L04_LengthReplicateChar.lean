@@ -1,17 +1,21 @@
 import Game.Levels.AppendAndConcat.L03_LengthAppend
+
 namespace Word
 
 World "AppendAndConcat"
 Level 4
 Title "Length of Character Replicas"
 
-Introduction "In this level, you will prove that replicating a character ```char``` ```n``` times
-equals to a word consisting of ```n``` copies of ```char```. Thus, the length of this word is ```n```."
+Introduction "The theorem ```length_replicateChar``` describes the length of a word created by
+repeating a single character multiple times. It states that if a character ```char``` is
+repeated ```n``` times using ```replicateChar```, the resulting word has length exactly ```n```."
 
 /--
-```length_replicateChar``` proves ```length (replicateChar char n) = n```.
+The length of a word formed by repeating a character.
 
-If a word consists of ```n``` copies of a character ```char``` the length of such a word is ```n```.
+For any character `char` and natural number `n`, `replicateChar char n`
+produces a word consisting of `n` copies of `char`. The length of this
+word is exactly `n`.
 -/
 TheoremDoc Word.length_replicateChar as "length_replicateChar" in "Word"
 
@@ -30,7 +34,8 @@ Statement length_replicateChar (char : Character) (n : Nat): length (replicateCh
     rewrite [add_comm]
     rfl
 
+Conclusion "Very good! Let's move forward to the next level where you will show how how the length
+of a word changes when it is repeated multiple times."
+
 NewTheorem Word.length_replicateChar
 NewDefinition Word.replicateChar
-
-Conclusion "Very good! Let's move forward to the next and last proof of the first world."

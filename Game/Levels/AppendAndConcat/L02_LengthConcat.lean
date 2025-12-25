@@ -1,19 +1,22 @@
 import Game.Levels.AppendAndConcat.L01_AppendNil
+
 namespace Word
 
 World "AppendAndConcat"
 Level 2
-Title "Length of a Character Connected to a Word"
+Title "Prepending a Character Increases Word Length by One"
 
-Introduction "In this level, you will prove that connecting a character ```char``` to a word
-```word``` means, that the length of the obtained word is equal to 1 added to the length of
-```word```."
+Introduction "In this level, you will prove that concatenating a character ```char``` to the
+end of a ```word``` increases its length by one.
+
+Specifically, the length of word :: char is equal to the length of word plus one.
+"
 
 /--
-```length_concat``` proves ```length (word :: char) = length word + 1```.
+The length of a word after concatenating a character is the length of the word plus one.
 
-Basically, the length of a word ```word :: char``` corresponds to ```one``` added to the length of
-the respective ```word```.
+For any ```word``` and character ```char```, ```length (concat word char) = length word + 1```.
+This reflects the fact that concatenating a character to a word increases its length by one.
 -/
 TheoremDoc Word.length_concat as "length_concat" in "Word"
 
@@ -58,12 +61,9 @@ Statement length_concat (word : Word) (char : Character) : length (word :: char)
     rewrite [add_assoc]
     rfl
 
-TheoremTab "Nat"
-TheoremTab "Word"
+Conclusion "Well done! You just demonstrated that extending a word by one character results in
+a word whose length is precisely one greater than before. Let's move on to the next proof!"
 
 NewTactic apply «repeat» simp
 NewTheorem add_assoc add_comm Word.length_concat
 NewDefinition Word.concat Word.length
-
-Conclusion "Well done! Next, you will prove the length of a bit more complex functions based on the
-functions you encountered so far."

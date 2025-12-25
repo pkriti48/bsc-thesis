@@ -4,18 +4,19 @@ namespace Word
 
 World "AppendAndConcat"
 Level 1
-Title "Append an Empty Word to a Non-Empty Word"
+Title ""
 
-Introduction "In this level, you will prove that appending the empty word ```nil``` to any
-```word``` results into ```word```."
+Introduction "You will start playing the game by proving that appending the empty word
+```nil``` to any ```word``` leaves ```word``` unchanged.
+
+Basically, the theorem ```append_nil``` states the identity property of nil in word concatenation.
+"
 
 /--
-```append_nil``` is the proof of ```word ++ nil = word```.
+Appending the empty word ```nil``` to any word results in the word itself.
 
-```append_nil``` proves, whenever you append the empty word ```nil``` to any ```word```, the resulting
-term is always the ```word```.
-You almost always want to simplify the expression on the left-hand side of the ```=``` sign  and
-bring it to the state on the right-hand side, which can be done by using the ```rewrite``` tactic.
+For any word ```word```, ```word ++ nil = word```. This reflects the identity
+property of the empty word in word concatenation.
 -/
 TheoremDoc Word.append_nil as "append_nil" in "Word"
 
@@ -34,9 +35,11 @@ Statement append_nil (word : Word) : (word ++ nil) = word := by
     rewrite [ih]
     rfl
 
+Conclusion "```append_nil``` establishes that the empty word acts as a neutral element for word
+appending: adding it to the end of any word leaves the word unchanged. Using this lemma, you
+can simplify any term of the form ```word ++ nil``` to the term ```word``` in any upcoming
+level. Let's move on to the next proof!"
+
 NewTactic induction rfl rewrite
 NewTheorem Word.append_nil
 NewDefinition Word.nil Word.cons Word.append
-
-Conclusion "Using this lemma, you can simplify any term of the form ```word ++ nil``` to the term
-```word``` in any upcoming level. Let's move on to the next proof!"

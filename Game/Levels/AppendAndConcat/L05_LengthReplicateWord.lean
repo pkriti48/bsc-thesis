@@ -1,4 +1,5 @@
 import Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+
 namespace Word
 
 
@@ -6,15 +7,17 @@ World "AppendAndConcat"
 Level 5
 Title "Length of Word Replicas"
 
-Introduction "In this level, you will prove that replicating a word ```word``` ```n``` times
-equals to a word consisting of ```n``` copies of ```word```. Thus, the length of this word is
-```(length word) n```."
+Introduction "In this level, you will show how the length of a word changes when it is repeated
+multiple times using the ```replicateWord``` function. It states that if a word is repeated
+```n``` times, the length of the resulting word is equal to ```n``` multiplied by the length of
+the original word, reflecting the additive effect of appending the same word repeatedly."
 
 /--
-```length_replicateWord``` proves ```length (replicateWord word n) =  (length word) * n```.
+The length of a word repeated multiple times.
 
-If a word consists of ```n``` copies of a word ```word``` the length of such a word is
-```(length word) * n```.
+For any word `word` and natural number `n`, `replicateWord word n`
+produces a word consisting of `n` copies of `word` appended together.
+The length of this resulting word is `n` times the length of `word`.
 -/
 TheoremDoc Word.length_replicateWord as "length_replicateWord" in "Word"
 
@@ -40,7 +43,7 @@ length (replicateWord word n) = (length word) * n := by
   | zero =>
     rewrite [replicateWord]
     rewrite [length]
-    rewrite [mul_zero]
+    rewrite [Nat.mul_zero]
     rfl
   | succ k ih =>
     rewrite [replicateWord]
@@ -52,8 +55,8 @@ length (replicateWord word n) = (length word) * n := by
     rewrite [add_comm]
     rfl
 
+Conclusion "You did it! You successfully resolved all proof goals in the level 1. Let's move on
+to World 2."
+
 NewTheorem Word.length_replicateWord Nat.mul_zero Nat.mul_succ
 NewDefinition Word.replicateWord
-
-Conclusion "You did it! You successfully proved the statements in the level 1. Let's move on to
-World 2."
