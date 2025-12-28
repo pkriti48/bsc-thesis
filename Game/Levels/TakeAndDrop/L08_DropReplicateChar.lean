@@ -19,6 +19,15 @@ produces a word consisting of ```length - index``` copies of ```char```.
 -/
 TheoremDoc Word.drop_replicateChar as "drop_replicateChar" in "Word"
 
+/--
+Cancel a common addend on the right of a subtraction.
+
+For any natural numbers ```m```, ```n```, and ```k```, adding the same number ```k``` to
+both ```m``` and ```n``` does not change their difference:
+```(m + k) - (n + k) = m - n```.
+-/
+TheoremDoc Nat.add_sub_add_right as "Nat.add_sub_add_right" in "Nat"
+
 Statement drop_replicateChar (char : Character) (length index : Nat) (h : index ≤ length) :
 drop (replicateChar char length) index = replicateChar char (length - index) := by
   induction length generalizing index with
@@ -47,4 +56,4 @@ Conclusion "With this, you have successfully proven all the goals of the ```Take
 World. You are getting closer to executing the pumping lemma on concrete languages. Let's move
 on to the third world!"
 
-NewTheorem Word.drop_replicateChar
+NewTheorem Nat.add_sub_add_right Word.drop_replicateChar

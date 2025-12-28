@@ -1,4 +1,4 @@
-import Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+import Game.Levels.AppendAndConcat.L05_LengthReplicateWord
 
 namespace Word
 
