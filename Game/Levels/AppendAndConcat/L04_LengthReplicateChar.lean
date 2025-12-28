@@ -13,9 +13,9 @@ repeated ```n``` times using ```replicateChar```, the resulting word has length 
 /--
 The length of a word formed by repeating a character.
 
-For any character `char` and natural number `n`, `replicateChar char n`
-produces a word consisting of `n` copies of `char`. The length of this
-word is exactly `n`.
+For any character ```char``` and natural number ```n```, ```replicateChar char n```
+produces a word consisting of ```n``` copies of ```char```. The length of this
+word is exactly ```n```.
 -/
 TheoremDoc Word.length_replicateChar as "length_replicateChar" in "Word"
 

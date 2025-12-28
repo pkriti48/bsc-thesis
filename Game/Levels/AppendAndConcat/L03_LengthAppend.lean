@@ -6,31 +6,31 @@ World "AppendAndConcat"
 Level 3
 Title "Length of a Word Connected to Another Word"
 
-Introduction "In this level, you will prove the following: The operation of appending two words
-adds their lengths together: the resulting word contains exactly as many characters as the first
-word plus the second."
+Introduction "In this level, you will prove that the operation of appending two words adds their
+lengths together. The resulting word contains exactly as many characters as the first word plus
+the second."
 
 /--
 The length of joining two words.
 
-For any words `word₁` and `word₂`, the length of their append
-`word₁ ++ word₂` is the sum of their lengths.
+For any words ```word_1``` and ```word_2```, the length of their append
+```word_1 ++ word_2``` is the sum of their lengths.
 -/
 TheoremDoc Word.length_append as "length_append" in "Word"
 
 /--
 Zero is the right identity of addition.
 
-For any natural number `n`, we have `n + 0 = a`.
+For any natural number ```n```, we have ```n + 0 = a```.
 -/
-TheoremDoc add_zero as "add_zero" in "+ and *"
+TheoremDoc add_zero as "add_zero" in "Nat"
 
 /--
 Zero is the left identity of addition.
 
-For any natural number `n`, we have `0 + n = n`.
+For any natural number ```n```, we have ```0 + n = n```.the following:
 -/
-TheoremDoc zero_add as "zero_add" in "+ and *"
+TheoremDoc zero_add as "zero_add" in "Nat"
 
 Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = length word_1 + length word_2 := by
   Hint "You should start by induction on ```word_1```."

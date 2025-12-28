@@ -4,7 +4,7 @@ namespace Word
 
 World "AppendAndConcat"
 Level 1
-Title ""
+Title "Appending an Empty Word Preserves the Original Word"
 
 Introduction "You will start playing the game by proving that appending the empty word
 ```nil``` to any ```word``` leaves ```word``` unchanged.

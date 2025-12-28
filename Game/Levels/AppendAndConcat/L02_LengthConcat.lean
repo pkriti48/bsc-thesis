@@ -23,17 +23,17 @@ TheoremDoc Word.length_concat as "length_concat" in "Word"
 /--
 Addition is associative.
 
-For all natural numbers `n`, `m`, and `k`, we have
-`(n + m) + k = n + (m + k)`.
+For all natural numbers ```n```, ```m```, and ```k```, we have
+```(n + m) + k = n + (m + k)```.
 -/
-TheoremDoc add_assoc as "add_assoc" in "+ and *"
+TheoremDoc add_assoc as "add_assoc" in "Nat"
 
 /--
 Addition is commutative.
 
-For all natural numbers `n` and `m`, we have `n + m = n + m`.
+For all natural numbers ```n``` and ```m```, we have ```n + m = n + m```.
 -/
-TheoremDoc add_comm as "add_comm" in "+ and *"
+TheoremDoc add_comm as "add_comm" in "Nat"
 
 Statement length_concat (word : Word) (char : Character) : length (word :: char) = length word + 1 := by
   Hint "You should start by induction on ```word```."

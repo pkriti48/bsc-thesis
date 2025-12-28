@@ -3,22 +3,26 @@ import Game.Levels.AppendAndConcat.L02_LengthConcat
 import Game.Levels.AppendAndConcat.L03_LengthAppend
 import Game.Levels.AppendAndConcat.L04_LengthReplicateChar
 import Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+import Game.Levels.AppendAndConcat.L06_AppendReplicateChar
 
 World "AppendAndConcat"
 Title "The Append and Concat World"
 
 Introduction "
-In the first world of the game, you will prove some facts about the functions: ```append```,
-```concat```, ```replicateChar``` and ```replicateWord```.
+Welcome to **The Append and Concat World**!
 
-You will first prove that appending the empty word ```nil``` to any ```word``` results in
-```word```.
+In this world, you will investigate properties of the functions ```append```, ```concat```,
+```replicateChar```, and ```replicateWord```.
 
-Then, you will prove how the length of a word is calculated when two words are connected using
-```append``` or a character ```char``` is connected to a word using ```concat```.
+The first objective is to establish that appending the empty word ```nil``` to any word leaves
+the word unchanged.
 
-Finally, building upon these lemmas, you will show how the length of a word is influenced when
-it consists of ```n``` replicas of a character ```char``` or ```n``` replicas of some ```word```.
+Next, you will analyze how the length of a word behaves under ```append``` and ```concat```,
+formally proving the effect of combining words or adding a character to a word.
+
+Finally, building upon these lemmas, you will prove the lengths of words formed by ```n```
+repetitions of a character or ```n``` repetitions of a word, thereby formalizing the behavior
+of repeated character or word constructions.
 
 Let's get started!
 "
