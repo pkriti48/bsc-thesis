@@ -262,6 +262,7 @@ take (u ++ v) index = take u index := by
       apply Nat.le_of_succ_le_succ
       exact h
 
+--corresponds to level take_replicateChar
 theorem take_replicateChar_n_k_eq_replicateChar_k {char : Character} {length index : Nat}
 {h : index ≤ length } : take (replicateChar char length) index = replicateChar char index := by
   induction length generalizing index with
