@@ -31,5 +31,4 @@ Statement drop_all (word : Word) : drop word (length word) = nil := by
 Conclusion "Well done! You just proved that using the ```drop``` function with the full length
 of a word removes all characters, leaving no remaining characters. Let's move forward!"
 
-NewTheorem Word.drop_all
 NewDefinition Word.drop

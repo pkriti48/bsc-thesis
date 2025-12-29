@@ -47,5 +47,4 @@ Conclusion "Very good! Next, you will show the ```∈w``` property for any secon
 the append function."
 
 NewTactic intros left right
-NewTheorem Word.char_elemOf_append_left
 NewDefinition Word.elemOf

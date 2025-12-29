@@ -73,5 +73,5 @@ Conclusion "Well done! You just demonstrated that extending a word by one charac
 a word whose length is precisely one greater than before. Let's move on to the next proof!"
 
 NewTactic apply «repeat»
-NewTheorem add_assoc add_comm Word.length_concat
+NewTheorem add_assoc add_comm
 NewDefinition Word.concat Word.length

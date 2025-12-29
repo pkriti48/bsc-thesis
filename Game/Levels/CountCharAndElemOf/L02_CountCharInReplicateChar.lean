@@ -45,4 +45,3 @@ contains exactly as many occurrences of that character as its repetition count, 
 other character."
 
 NewTactic split
-NewTheorem Word.count_char_in_replicateChar

@@ -48,5 +48,4 @@ can simplify any term of the form ```word ++ nil``` to the term ```word``` in an
 level. Let's move on to the next proof!"
 
 NewTactic exact induction rfl rewrite simp
-NewTheorem Word.append_nil
 NewDefinition Word.nil Word.cons Word.append

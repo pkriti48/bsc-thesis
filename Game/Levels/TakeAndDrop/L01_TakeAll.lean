@@ -38,5 +38,4 @@ Conclusion "You did it! You just showed that if you use the ```take``` function 
 length of a word, no characters are omitted, and the resulting word is exactly the same as the
 original. Let's move on to the next proof!"
 
-NewTheorem Word.take_all
 NewDefinition Word.take

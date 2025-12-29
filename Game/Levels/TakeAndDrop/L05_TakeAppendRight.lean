@@ -68,4 +68,4 @@ characters than are present in the first word, the result includes the entirety 
 word plus the corresponding number of characters from the second word, correctly spanning the
 boundary between the two. Let's move on to the last proof in the second world."
 
-NewTheorem Nat.sub_zero Nat.succ_sub_succ Word.take_append_right
+NewTheorem Nat.sub_zero Nat.succ_sub_succ

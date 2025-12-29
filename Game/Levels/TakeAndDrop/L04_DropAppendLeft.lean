@@ -56,4 +56,3 @@ appending ```word_2``` leaves ```word_2``` unaffected. Let's move on to proving 
 theorems for take and drop for ```index ≥ length word_1```."
 
 NewTactic cases
-NewTheorem Word.drop_append_left

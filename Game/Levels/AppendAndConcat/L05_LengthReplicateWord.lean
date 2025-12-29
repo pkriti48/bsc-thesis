@@ -2,7 +2,6 @@ import Game.Levels.AppendAndConcat.L04_LengthReplicateChar
 
 namespace Word
 
-
 World "AppendAndConcat"
 Level 5
 Title "Length of Word Replicas"

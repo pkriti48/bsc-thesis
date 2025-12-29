@@ -52,4 +52,4 @@ induction m with
 Conclusion "You did it! You successfully resolved all proof goals in the level 1. Let's move on
 to World 2."
 
-NewTheorem Word.append_replicateChar Nat.succ_add
+NewTheorem Nat.succ_add

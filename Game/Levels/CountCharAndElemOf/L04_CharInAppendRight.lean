@@ -37,5 +37,3 @@ elemOf char right -> elemOf char (left ++ right) := by
 
 Conclusion "Well done! One more step closer to executing the pumping lemma on concrete languages. Let's
 move on to the next world!"
-
-NewTheorem Word.char_elemOf_append_right

@@ -45,5 +45,3 @@ take (replicateChar char length) index = replicateChar char index := by
 
 Conclusion "Well done! Now, let's go forward and prove the counterpart of this theorem, which is
 the theorem ```drop_replicateChar```."
-
-NewTheorem Word.take_replicateChar

@@ -39,5 +39,4 @@ Statement length_replicateChar (char : Character) (n : Nat): length (replicateCh
 Conclusion "Very good! Let's move forward to the next level where you will show how how the length
 of a word changes when it is repeated multiple times."
 
-NewTheorem Word.length_replicateChar
 NewDefinition Word.replicateChar

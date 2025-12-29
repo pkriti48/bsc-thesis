@@ -67,7 +67,6 @@ take (word_1 ++ word_2) index = take word_1 index := by
       Hint (hidden := true) "At this point, you can transform any term of the form ```n + 1``` into
       ```succ n``` by using the theorem ```Nat.succ_eq_add_one```."
       repeat rewrite [<- Nat.succ_eq_add_one] at h
-
       apply Nat.le_of_succ_le_succ
       exact h
 
@@ -76,4 +75,4 @@ number of characters within the bounds of the first word, allowing ```take``` to
 the first word. Well done! Let's move to the level 4!"
 
 NewTactic cases
-NewTheorem Nat.le_zero_eq Nat.succ_eq_add_one Nat.le_of_succ_le_succ Word.take_append_left
+NewTheorem Nat.le_zero_eq Nat.succ_eq_add_one Nat.le_of_succ_le_succ

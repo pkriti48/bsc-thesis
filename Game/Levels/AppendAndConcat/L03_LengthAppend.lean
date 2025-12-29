@@ -60,4 +60,4 @@ Conclusion "Very good! You just proved that appending words preserves all charac
 operands, with the total length of the resulting word being exactly the sum of their individual
 lengths. From now onwards, you can rewrite both terms to one another whenever necessary."
 
-NewTheorem add_zero zero_add Word.length_append
+NewTheorem add_zero zero_add

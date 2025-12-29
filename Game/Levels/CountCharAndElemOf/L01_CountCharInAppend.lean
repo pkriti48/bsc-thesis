@@ -38,6 +38,4 @@ Conclusion "Very good! You just how ```countCharInWord``` behaves in combination
 function. Now, let's move over to showing the behavior of ```countCharInWord``` in combination with
 ```replicateChar```."
 
-NewTheorem Word.count_char_in_append
 NewDefinition Word.countCharInWord
-

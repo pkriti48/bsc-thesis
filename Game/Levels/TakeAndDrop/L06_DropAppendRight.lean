@@ -52,5 +52,3 @@ Conclusion "By proving the theorem ```drop_append_right```, you showed that when
 characters than the first word contains, the entire first word is removed, and the remaining
 characters are taken from the second word, effectively continuing the drop into the suffix. Now,
 let's move forward to the next level!"
-
-NewTheorem Word.drop_append_right

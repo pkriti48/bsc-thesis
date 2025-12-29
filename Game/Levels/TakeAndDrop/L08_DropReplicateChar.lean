@@ -59,4 +59,4 @@ Conclusion "With this, you have successfully proven all the goals of the ```Take
 World. You are getting closer to executing the pumping lemma on concrete languages. Let's move
 on to the third world!"
 
-NewTheorem Nat.add_sub_add_right Word.drop_replicateChar
+NewTheorem Nat.add_sub_add_right
