@@ -18,16 +18,19 @@ word unchanged.
 TheoremDoc Word.take_all as "take_all" in "Word"
 
 Statement take_all (word : Word) : take word (length word) = word := by
-  Hint "You should start by induction on ```word```."
   induction word with
   | nil =>
     rewrite [length]
     Branch
       rewrite [take]
       rfl
-    simp [take]
+    Hint ""
+    rewrite [take]
+    rfl
   | cons head tail ih =>
     rewrite [length]
+    Hint "In order to solve the current goal, the easiest way to proceed is to execute
+    ```simp [take]```."
     simp [take]
     exact ih
 
@@ -35,6 +38,5 @@ Conclusion "You did it! You just showed that if you use the ```take``` function 
 length of a word, no characters are omitted, and the resulting word is exactly the same as the
 original. Let's move on to the next proof!"
 
-NewTactic exact
 NewTheorem Word.take_all
 NewDefinition Word.take

@@ -30,17 +30,22 @@ TheoremDoc Nat.succ_add as "Nat.succ_add" in "Nat"
 
 Statement append_replicateChar (char : Character) (m n : Nat) :
 ((replicateChar char m) ++ replicateChar char n) = replicateChar char (m + n) := by
+Hint "Start with induction on ```m```, as it is mostly easier to proceed from left to right."
 induction m with
 | zero =>
   rewrite [replicateChar]
   rewrite [append]
   rewrite [zero_add]
   rfl
-| succ =>
+| succ k ih =>
   rewrite [replicateChar]
   rewrite [append]
-  rewrite [a]
+  rewrite [ih]
+  Hint "To reach an equality between the terms on both sides of the ```=``` sign, start by
+  transforming ```replicateChar char (k + 1 + n)``` to an expression which can be easily
+  processed further."
   rewrite [Nat.succ_add]
+  Hint (hidden := true) "Now, you can rewrite the term on the right using ```replicateChar```."
   rewrite [replicateChar]
   rfl
 

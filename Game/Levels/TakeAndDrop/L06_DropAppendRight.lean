@@ -22,6 +22,8 @@ TheoremDoc Word.drop_append_right as "drop_append_right" in "Word"
 
 Statement drop_append_right (word_1 word_2 : Word) (index : Nat) (h : length word_1 < index) :
 drop (word_1 ++ word_2) index = drop word_2 (index - length word_1) := by
+  Hint "The proof for this statement is very similar to the proof for ```take_append_right```. If
+  you do not know how to proceed, you can follow the schema of the previous proof."
   induction word_1 generalizing index with
   | nil =>
     rewrite [append]

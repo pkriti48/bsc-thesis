@@ -36,7 +36,7 @@ For all natural numbers ```n``` and ```m```, we have ```n + m = n + m```.
 TheoremDoc add_comm as "add_comm" in "Nat"
 
 Statement length_concat (word : Word) (char : Character) : length (word :: char) = length word + 1 := by
-  Hint "You should start by induction on ```word```."
+  Hint (hidden := true) "Similar to the previous level, you should start with  induction on ```word```."
   induction word with
   | nil =>
     rewrite [concat]
@@ -44,26 +44,34 @@ Statement length_concat (word : Word) (char : Character) : length (word :: char)
       rewrite [length]
       rewrite [length]
       rewrite [length]
-      Hint (hidden := true) "You can also solve this step by using the ```repeat``` tactic. You can
+      Hint "You can also solve this step by using the ```repeat``` tactic. You can
       execute ```repeat rewrite [length]```."
     repeat rewrite [length]
     Hint "Lean is very precise, so you cannot use the ```rfl``` tactic yet. To retrieve the
     equality between the expressions on both sides of the ```=``` sign, you have to use the
     commutative property of the mathematical addition."
     Branch
-      apply add_comm
-    rewrite [add_comm]
-    rfl
+      Branch
+        apply add_comm
+      rewrite [add_comm]
+      rfl
+    Hint "You can also use the ```simp``` tactic at this point, which internally simplifies
+    the current expression using the commutative property of the mathematical addition and then
+    proves the equality of the terms on both sides of the ```=``` sign."
+    simp
   | cons head tail ih =>
+    Hint "You can continue by rewriting the concatenation of a ```char``` to a non-empty word."
     rewrite [concat]
     repeat rewrite [length]
     rewrite [ih]
+    Hint "Using the mathematical property of associativity, you can simplify the current expression
+    and reach the equality between the expressions on both sides of the ```=``` sign."
     rewrite [add_assoc]
     rfl
 
 Conclusion "Well done! You just demonstrated that extending a word by one character results in
 a word whose length is precisely one greater than before. Let's move on to the next proof!"
 
-NewTactic apply «repeat» simp
+NewTactic apply «repeat»
 NewTheorem add_assoc add_comm Word.length_concat
 NewDefinition Word.concat Word.length

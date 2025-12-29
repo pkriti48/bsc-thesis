@@ -24,6 +24,8 @@ Statement take_replicateChar (char : Character) (length index : Nat) (h : index 
 take (replicateChar char length) index = replicateChar char index := by
   induction length generalizing index with
   | zero =>
+    Hint "You know that ```index``` is a natural number. So, it cannot be < 0. Thus, you can derive
+    ```index = 0``` when ```length = 0```."
     rewrite [Nat.le_zero_eq] at h
     rewrite [h]
     rewrite [replicateChar]
@@ -38,7 +40,7 @@ take (replicateChar char length) index = replicateChar char index := by
       simp [take]
       apply ih
       apply Nat.le_of_succ_le_succ
-      rewrite [Nat.succ_eq_add_one, Nat.succ_eq_add_one]
+      repeat rewrite [Nat.succ_eq_add_one]
       exact h
 
 Conclusion "Well done! Now, let's go forward and prove the counterpart of this theorem, which is

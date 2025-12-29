@@ -18,10 +18,10 @@ characters, resulting in the empty word.
 TheoremDoc Word.drop_all as "drop_all" in "Word"
 
 Statement drop_all (word : Word) : drop word (length word) = nil := by
-  Hint "You should start by induction on ```word```."
   induction word with
   | nil =>
-    simp [drop]
+    rewrite [drop]
+    rfl
   | cons head tail ih =>
     rewrite [length]
     simp [drop]

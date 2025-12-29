@@ -57,8 +57,17 @@ take (word_1 ++ word_2) index = take word_1 index := by
       rewrite [length] at h
       simp [append]
       simp [take]
+      Hint (hidden := true) "The ```index``` variable in your induction hypothesis should not be
+      fixed at this point. In order to have a general variable ```index```, you should have
+      declared it as such when you started the induction over ```word_1```."
       apply ih
-      rewrite [<- Nat.succ_eq_add_one, <- add_comm, <- Nat.succ_eq_add_one] at h
+      Hint "Bring either the hypothesis ```k + 1 ≤ 1 + tail.length``` in the same form as your
+      current proof goal, or vice versa."
+      rewrite [<- add_comm (length tail)] at h
+      Hint (hidden := true) "At this point, you can transform any term of the form ```n + 1``` into
+      ```succ n``` by using the theorem ```Nat.succ_eq_add_one```."
+      repeat rewrite [<- Nat.succ_eq_add_one] at h
+
       apply Nat.le_of_succ_le_succ
       exact h
 

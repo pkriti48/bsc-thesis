@@ -28,6 +28,9 @@ drop (word_1 ++ word_2) index = (drop word_1 index) ++ word_2 := by
     rewrite [h, append]
     simp [drop]
     rewrite [append]
+    Hint "Contrary to the previous proof, an induction over ```word_2``` is necessary at this point
+    in this proof. Otherwise, the procedure is pretty similar to the proof of
+    ```take_append_left```."
     induction word_2 with
     | nil => simp [drop]
     | cons head tail ih => simp [drop]
@@ -44,7 +47,7 @@ drop (word_1 ++ word_2) index = (drop word_1 index) ++ word_2 := by
       rfl
       rewrite [length] at h
       rewrite [<- add_comm (length tail)] at h
-      rewrite [<- Nat.succ_eq_add_one k, <- Nat.succ_eq_add_one (length tail)] at h
+      repeat rewrite [<- Nat.succ_eq_add_one] at h
       simp at h
       exact h
 

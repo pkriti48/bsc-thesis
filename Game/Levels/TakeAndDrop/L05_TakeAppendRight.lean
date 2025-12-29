@@ -53,6 +53,9 @@ take (word_1 ++ word_2) index = word_1 ++ (take word_2 (index - length word_1)) 
       rewrite [length]
       rewrite [<- add_comm (length tail)]
       repeat rewrite [<- Nat.succ_eq_add_one]
+      Hint "In order to bring the term on the left hand side of the ```=``` sign, you can cancel the
+      successors of both ```k``` and ```length tail``` by subtracting ```succ (length tail)``` from
+      ```succ k```."
       rewrite [Nat.succ_sub_succ]
       rfl
       rewrite [length] at h

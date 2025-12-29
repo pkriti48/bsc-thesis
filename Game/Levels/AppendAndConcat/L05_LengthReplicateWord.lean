@@ -37,18 +37,24 @@ TheoremDoc Nat.mul_succ as "Nat.mul_succ" in "Nat"
 
 Statement length_replicateWord (word : Word) (n : Nat):
 length (replicateWord word n) = (length word) * n := by
-  Hint "You should start by induction on ```n```."
+  Hint (hidden := true) "You should start by induction on ```n``` as you did in the previous level."
   induction n with
   | zero =>
     rewrite [replicateWord]
     rewrite [length]
-    rewrite [Nat.mul_zero]
-    rfl
+    Branch
+      Hint "To reach an equality on both sides, you have to retrieve ```0``` on the right hand side
+      of the ```=``` sign. You can do that by using the ```Nat.mul_zero``` theorem."
+      rewrite [Nat.mul_zero]
+      rfl
+    simp
   | succ k ih =>
     rewrite [replicateWord]
-    Hint "At this point, you can use the lemma ```length_append```, you proved in Level 3, to
+    Hint "Here, you can use the ```length_append``` theorem, you proved in Level 3, to
     simplify your current goal."
     rewrite [length_append]
+    Hint "Similar to simplifying by using ```Nat.mul_zero``` in the ```nil``` case, you can use
+    ```Nat.mul_succ``` here."
     rewrite [Nat.mul_succ]
     rewrite [ih]
     rewrite [add_comm]

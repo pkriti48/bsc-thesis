@@ -41,7 +41,7 @@ Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = len
     Branch
       rewrite [zero_add]
       rfl
-    Hint "You can also use the ```simp``` tactic instead of```rewrite [zero_add]``` followed by
+    Hint "You can also use the ```simp``` tactic instead of ```rewrite [zero_add]``` followed by
     ```rfl```."
     simp
   | cons head tail ih =>

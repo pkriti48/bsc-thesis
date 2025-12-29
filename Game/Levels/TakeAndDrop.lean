@@ -21,4 +21,6 @@ returns the word itself, while dropping the same number of characters results in
 
 Next, you will analyze how ```take``` and ```drop``` behave on appended words, depending on
 whether the index stays within the first word or goes beyond it.
+
+Let's start!
 "
