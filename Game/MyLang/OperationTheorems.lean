@@ -84,8 +84,9 @@ induction m with
   rewrite [replicateChar]
   rfl
 
+--corresponds to char_elem_of_append_left
 theorem char_in_left_subset_is_in_append {left right : Word} {char : Character} :
-inWord char left -> inWord char (left ++ right) := by
+elemOf char left -> elemOf char (left ++ right) := by
   induction left generalizing right with intros h
   | nil =>
     exfalso
@@ -100,21 +101,22 @@ inWord char left -> inWord char (left ++ right) := by
       apply ih at char_in_tail
       exact char_in_tail
 
+--corresponds to char_elem_of_append_right
 theorem char_in_right_subset_is_in_append {left right : Word} {char : Character} :
-inWord char right -> inWord char (left ++ right) := by
+elemOf char right -> elemOf char (left ++ right) := by
   induction left generalizing right with intros h
   | nil =>
     rewrite [append]
     exact h
   | cons head tail ih =>
     rewrite [append]
-    rewrite [inWord]
+    rewrite [elemOf]
     apply Or.inr
     apply ih at h
     exact h
 
 theorem all_char_in_replicateChar_char {input_char : Character} {n : Nat} :
-∀ char : Character, inWord char (replicateChar input_char n) -> char = input_char := by
+∀ char : Character, elemOf char (replicateChar input_char n) -> char = input_char := by
   intros char h
   induction n with
   | zero =>
@@ -123,7 +125,7 @@ theorem all_char_in_replicateChar_char {input_char : Character} {n : Nat} :
     apply h
   | succ =>
     rewrite [replicateChar] at h
-    rewrite [inWord] at h
+    rewrite [elemOf] at h
     cases h with
     | inl input_char_eq_char =>
       rewrite [input_char_eq_char]

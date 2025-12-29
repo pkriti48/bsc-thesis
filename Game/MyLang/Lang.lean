@@ -1,25 +1,25 @@
 import Mathlib
 
 /--
-`Character` represents a single symbol in a finite alphabet.
+```Character``` represents a single symbol in a finite alphabet.
 
 This type defines a small, fixed set of characters that can be used to
-construct words. Equality on `Character` is decidable and computable.
+construct words. Equality on ```Character``` is decidable and computable.
 -/
 inductive Character where
-  /-- The character `a`. -/
+  /-- The character ```a```. -/
   | a
-  /-- The character `b`. -/
+  /-- The character ```b```. -/
   | b
-  /-- The character `c`. -/
+  /-- The character ```c```. -/
   | c
   deriving BEq, DecidableEq
 
 /--
-Convert a `Character` to its string representation.
+Convert a ```Character``` to its string representation.
 
-This function maps each `Character` constructor to the corresponding
-single-character `String`.
+This function maps each ```Character``` constructor to the corresponding
+single-character ```String```.
 -/
 def Character.toString (char : Character) : String :=
   match char with
@@ -28,7 +28,7 @@ def Character.toString (char : Character) : String :=
     | c => "c"
 
 /--
-`Word` represents a finite sequence of `Character`s.
+```Word``` represents a finite sequence of ```Character```s.
 
 It is structurally equivalent to a list of characters, but defined as a
 separate type to give semantic meaning to character sequences.
@@ -42,44 +42,45 @@ inductive Word where
 | nil : Word
 
 /--
-  Prepend a `Character` to an existing `Word`.
+  Prepend a ```Character``` to an existing ```Word```.
 
-  `cons char word` represents the word whose first character is `char`,
-  followed by the characters of `word`.
+  ```cons char word``` represents the word whose first character is ```char```,
+  followed by the characters of ```word```.
   -/
 | cons  : Character -> Word -> Word
 
 namespace Word
 
 /--
-`Lang` represents a formal language over words.
+```Lang``` represents a formal language over words.
 
-A language is defined as a set of `Word`s, allowing membership-based
+A language is defined as a set of ```Word```s, allowing membership-based
 reasoning about which words belong to the language.
 -/
 structure Lang where
   /-- The underlying set of words defining the language. -/
   l : Set Word
 
-
 /--
-Predicate stating whether a `Character` occurs in a `Word`.
+Predicate stating whether a ```Character``` occurs in a ```Word```.
 
-`inWord c w` holds if and only if `c` appears at least once in `w`.
+```elemOf char word``` holds if and only if ```char``` appears at least once in ```word```.
+
+```elemOf char word``` can also be written as ```char ∈w word```.
 -/
-def inWord (char : Character) (word : Word) : Prop :=
+def elemOf (char : Character) (word : Word) : Prop :=
   match word with
   | .nil => False
-  | .cons head tail => head = char ∨ (inWord char tail)
+  | .cons head tail => head = char ∨ (elemOf char tail)
 
 /--
 Notation for character membership in a word.
 -/
-notation char "∈w" word => inWord char word
+notation char " ∈w " word => elemOf char word
 
 
 /--
-Compute the length of a `Word`.
+Compute the length of a ```Word```.
 
 Returns the number of characters contained in the word.
 -/
@@ -92,8 +93,10 @@ def length (word : Word) : Nat :=
 /--
 Append two words.
 
-`append word_1 word_2` produces a new word consisting of the characters of `word_1`
-followed by the characters of `word_2`.
+```append word_1 word_2``` produces a new word consisting of the characters of ```word_1```
+followed by the characters of ```word_2```.
+
+```append word_1 word_2``` can also be written as ```word_1 ++ word_2```.
 -/
 def append (word_1 : Word) (word_2 : Word) : Word :=
   match word_1 with
@@ -107,9 +110,9 @@ notation word_1 " ++ " word_2 => append word_1 word_2
 
 
 /--
-Repeat a word `n` times.
+Repeat a word ```n``` times.
 
-`replicateWord word n` is the concatenation of `word` with itself `n` times.
+```replicateWord word n``` appends ```word``` to itself ```n``` times.
 -/
 def replicateWord (word : Word) (n : Nat) : Word :=
   match n with
@@ -118,7 +121,9 @@ def replicateWord (word : Word) (n : Nat) : Word :=
 
 
 /--
-Append a single `Character` to the end of a `Word`.
+Concatenate a single ```Character``` to the end of a ```Word```.
+
+```concat word char``` can be written as ```word :: char```.
 -/
 def concat (word : Word) (char : Character) : Word :=
   match word with
@@ -128,11 +133,11 @@ def concat (word : Word) (char : Character) : Word :=
 /--
 Infix notation for the concat function.
 -/
-notation head "::" tail => concat head tail
+notation head " :: " tail => concat head tail
 
 
 /--
-Create a word consisting of `n` repetitions of a single `Character`.
+Create a word consisting of ```n``` repetitions of a single ```Character```.
 -/
 def replicateChar (char : Character) (n : Nat): Word :=
   match n with
@@ -141,7 +146,7 @@ def replicateChar (char : Character) (n : Nat): Word :=
 
 
 /--
-Count the number of occurrences of a `Character` in a `Word`.
+Count the number of occurrences of a ```Character``` in a ```Word```.
 -/
 def countCharInWord (char : Character) (word : Word) : Nat :=
   match word with
@@ -150,9 +155,9 @@ def countCharInWord (char : Character) (word : Word) : Nat :=
 
 
 /--
-Take the first `index` characters of a `Word`.
+Take characters upto ```index``` of a ```Word```.
 
-If `index` exceeds the length of the word, the entire word is returned.
+If ```index``` exceeds the length of the word, the entire word is returned.
 -/
 def take (word : Word) (index : Nat) : Word :=
   if index > 0 then
@@ -164,9 +169,9 @@ def take (word : Word) (index : Nat) : Word :=
 
 
 /--
-Drop the first `index` characters of a `Word`.
+Drop the characters upto ```index``` of a ```Word```.
 
-If `index` exceeds the length of the word, the empty word is returned.
+If ```index``` exceeds the length of the word, the empty word is returned.
 -/
 def drop (word : Word) (index : Nat) : Word :=
   if index > 0 then
@@ -178,10 +183,10 @@ def drop (word : Word) (index : Nat) : Word :=
 
 
 /--
-Split a `Word` at a given index.
+Split a ```Word``` at a given index.
 
-Returns a pair `(word_1, word_2)` where `word_1` contains the first `index` characters
-and `word_2` contains the remaining characters.
+Returns a pair ```(word_1, word_2)``` where ```word_1``` contains the characters
+upto ```index``` and ```word_2``` contains the remaining characters.
 -/
 def splitAt (word : Word) (index : Nat) : (Prod Word Word) :=
   match word with
@@ -190,7 +195,7 @@ def splitAt (word : Word) (index : Nat) : (Prod Word Word) :=
 
 
 /--
-Insert a `Character` into a `Word` at a given index.
+Insert a ```Character``` into a ```Word``` at a given ```index```.
 
 If the index exceeds the length of the word, the original word is returned.
 -/
@@ -205,7 +210,7 @@ def addCharAt (word : Word) (char : Character) (index : Nat) : Word :=
 
 
 /--
-Remove the character at a given index from a `Word`.
+Remove the character at a given ```index``` from a ```Word```.
 
 If the index exceeds the length of the word, the original word is returned.
 -/
@@ -219,11 +224,29 @@ def removeCharAt (word : Word) (index : Nat) : Word :=
       .cons head (removeCharAt tail (index - 1))
       else tail
 
+/--
+The pumping property for a language.
+
+A language ```lang``` satisfies the pumping property if there exists a positive
+integer ```n``` such that every word ```z``` in ```lang``` with length at least
+```n``` can be written as ```z = u ++ v ++ w``` and fulfills the following:
+1. The length of ```u ++ v``` is at most ```n```
+2. The word ```v```` is non-empty
+3. For any natural number ```i```, repeating ```v ``` ```i``` times within ```z```
+results in a word that is still in the language: ```u ++ replicateWord v i ++ w ∈ lang.l```
+-/
+def pumpingProperty (lang : Lang) :=
+  ∃ (n : Nat) (H : n > 0),
+  ∀ z : Word, z ∈ lang.l ∧ length z ≥ n →
+  ∃ u v w : Word, z = ((u ++ v) ++ w) ∧
+  length (u ++ v) ≤ n ∧
+  length v ≥ 1 ∧
+  ∀ (i : Nat), ((u ++ (replicateWord v i)) ++ w) ∈ lang.l
 
 /--
-Convert a `Word` to its string representation.
+Convert a ```Word``` to its string representation.
 
-Characters are converted using `Character.toString` and concatenated
+Characters are converted using ```Character.toString``` and concatenated
 in order.
 -/
 def toString (word : Word) : String :=

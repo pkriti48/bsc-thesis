@@ -2,14 +2,6 @@ import Game.MyLang.OperationTheorems
 
 namespace Word
 
-def pumpingProperty (lang : Lang) :=
-  ∃ (n : Nat) (H : n > 0),
-  ∀ z : Word, z ∈ lang.l ∧ length z ≥ n →
-  ∃ u v w : Word, z = ((u ++ v) ++ w) ∧
-  length (u ++ v) ≤ n ∧
-  length v ≥ 1 ∧
-  ∀ (i : Nat), ((u ++ (replicateWord v i)) ++ w) ∈ lang.l
-
 def anBnLang : Lang :=
   {l := { z | ∃ j : Nat, z = (replicateChar Character.a j) ++ (replicateChar Character.b j)}}
 
@@ -23,7 +15,7 @@ word ∈ anBnLang.l -> countCharInWord Character.a word = countCharInWord Charac
   simp
 
 theorem word_count_as {char : Character} {word : Word}
-{h : ∀ char : Character, inWord char word -> char = Character.a} :
+{h : ∀ char : Character, elemOf char word -> char = Character.a} :
 countCharInWord Character.a word = length word := by
   induction word with
   | nil =>
@@ -31,7 +23,7 @@ countCharInWord Character.a word = length word := by
     rewrite [length]
     rfl
   | cons head tail ih =>
-    simp [inWord] at h
+    simp [elemOf] at h
     have h_head : head = Character.a := by
       apply h
       simp
@@ -40,7 +32,7 @@ countCharInWord Character.a word = length word := by
     rewrite [ih]
     rewrite [length]
     rfl
-    have h_tail : ∀ char, inWord char tail → char = Character.a := by
+    have h_tail : ∀ char, elemOf char tail → char = Character.a := by
       intros ch h_ch
       apply h
       apply Or.inr
@@ -48,14 +40,14 @@ countCharInWord Character.a word = length word := by
     exact h_tail
 
 theorem word_count_bs {char : Character} {word : Word}
-{h : ∀ char : Character, inWord char word -> char = Character.a} :
+{h : ∀ char : Character, elemOf char word -> char = Character.a} :
 countCharInWord Character.b word = 0 := by
   induction word with
   | nil =>
     rewrite [countCharInWord]
     rfl
   | cons head tail ih =>
-    simp [inWord] at h
+    simp [elemOf] at h
     have h_head : head = Character.a := by
       apply h
       simp
@@ -63,7 +55,7 @@ countCharInWord Character.b word = 0 := by
     simp [countCharInWord]
     rewrite [ih]
     rfl
-    have h_tail : ∀ char, inWord char tail → char = Character.a := by
+    have h_tail : ∀ char, elemOf char tail → char = Character.a := by
       intros ch h_ch
       apply h
       apply Or.inr
@@ -151,7 +143,7 @@ theorem lang_not_regular : ¬ pumpingProperty anBnLang := by
     rewrite [<- length_append]
     exact length_u_v
   -- |v| ≥ 1 und u(v^i)w ∈ L für jedes i ∈ ℕ.
-  have u_all_a : ∀ char : Character, inWord char u -> char = Character.a := by
+  have u_all_a : ∀ char : Character, elemOf char u -> char = Character.a := by
     intros char h
     apply (char_in_left_subset_is_in_append (right := v)) at h
     rewrite [u_v_all_a] at h
@@ -159,7 +151,7 @@ theorem lang_not_regular : ¬ pumpingProperty anBnLang := by
     apply all_char_in_replicateChar_char at h
     exact h
     exact k_leq_n
-  have v_all_a : ∀ char : Character, inWord char v -> char = Character.a := by
+  have v_all_a : ∀ char : Character, elemOf char v -> char = Character.a := by
     intros char h
     apply (char_in_right_subset_is_in_append (left := u)) at h
     rewrite [u_v_all_a] at h
