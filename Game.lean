@@ -2,6 +2,7 @@ import GameServer.Commands
 
 import Game.Levels.AppendAndConcat
 import Game.Levels.TakeAndDrop
+import Game.Levels.CountCharAndElemOf
 
 -- Here's what we'll put on the title screen
 Title "The Pumping Lemma Game"
