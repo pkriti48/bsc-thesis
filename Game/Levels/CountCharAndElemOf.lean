@@ -2,6 +2,7 @@ import Game.Levels.CountCharAndElemOf.L01_CountCharInAppend
 import Game.Levels.CountCharAndElemOf.L02_CountCharInReplicateChar
 import Game.Levels.CountCharAndElemOf.L03_CharInAppendLeft
 import Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
+import Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
 
 World "CountCharAndElemOf"
 Title "The ```Count Char``` and ```Element Of```World"

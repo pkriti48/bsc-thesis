@@ -35,5 +35,4 @@ elemOf char right -> elemOf char (left ++ right) := by
     right
     exact h
 
-Conclusion "Well done! One more step closer to executing the pumping lemma on concrete languages. Let's
-move on to the next world!"
+Conclusion "Very good! Now, let's proceed towards the last proof of this world!"

@@ -198,6 +198,16 @@ msgid "Dropping from an appended word beyond the left operand.\n"
 "§4 characters from §5."
 msgstr ""
 
+#. §0: ```replicateChar input_char n```
+#. §1: ```input_char```
+#: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
+msgid "In this level, you will show that if any character appears in a word formed by\n"
+"§0, then that character and §1 must be equal.\n"
+"\n"
+"In other words, you will prove that a word made of repeating a single character cannot contain any\n"
+"other character."
+msgstr ""
+
 #: Game
 msgid "The Pumping Lemma Game"
 msgstr ""
@@ -275,6 +285,10 @@ msgstr ""
 msgid "Appending Two Replicas of a Single Character Adds Their Counts"
 msgstr ""
 
+#: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
+msgid "All Characters in a Word Formed By Replicating a Characters are Same"
+msgstr ""
+
 #. §0: ```take_append_right```
 #: Game.Levels.TakeAndDrop.L06_DropAppendRight
 msgid "The proof for this statement is very similar to the proof for §0. If\n"
@@ -333,6 +347,10 @@ msgstr ""
 
 #: Game
 msgid "A playful way to learn about the Pumping Lemma"
+msgstr ""
+
+#: Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
+msgid "Very good! Now, let's proceed towards the last proof of this world!"
 msgstr ""
 
 #: Game.Levels.AppendAndConcat.L03_LengthAppend
@@ -822,6 +840,19 @@ msgid "You did it! You successfully resolved all proof goals in the level 1. Let
 "to World 2."
 msgstr ""
 
+#. §0: ```char```
+#. §1: ```char```
+#. §2: ```input_char```
+#. §3: ```n```
+#. §4: ```char```
+#. §5: ```input_char```
+#: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
+msgid "Character membership in a replicated-character word.\n"
+"\n"
+"For any character §0, if §1 appears in a word formed by repeating\n"
+"§2 exactly §3 times, then §4 must be equal to §5."
+msgstr ""
+
 #: GameServer.RpcHandlers
 msgid "level completed! 🎉"
 msgstr ""
@@ -1005,7 +1036,7 @@ msgid "In order to bring the term on the left hand side of the §0 sign, you can
 "§4."
 msgstr ""
 
-#: Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
+#: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
 msgid "Well done! One more step closer to executing the pumping lemma on concrete languages. Let's\n"
 "move on to the next world!"
 msgstr ""
