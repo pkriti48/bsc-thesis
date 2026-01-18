@@ -16,7 +16,7 @@ import Game.Levels.AnBnNotRegular.L15_MoreAsThanBs
 import Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
 
 World "AnBnNotRegular"
-Title "```anBnLang``` is Not Regular"
+Title "AnBn is Not Regular"
 
 Introduction ""
 

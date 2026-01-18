@@ -5,7 +5,7 @@ import Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
 import Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
 
 World "CountCharAndElemOf"
-Title "The ```Count Char``` and ```Element Of```World"
+Title "CountChar and ElemOf"
 
 Introduction "Welcome to **The CountChar and ElemOf World**!
 

@@ -22,24 +22,38 @@ TheoremDoc Word.append_nil as "append_nil" in "Word"
 
 Statement append_nil (word : Word) : (word ++ nil) = word := by
   Hint "You should start with induction on ```word``` so that you can prove the statement for the
-  empty word ```nil``` and for any non-empty word."
+  empty word ```nil``` and for any non-empty word ```cons head tail```, where the non-empty word
+  corresponds to a character (```head```) prepended to a word (```tail```)."
   induction word with
   | nil =>
-    Hint (hidden := true) "If you do not know how to procced you can start by rewriting the function
-    being used on the lowest layer of the current term. This is also valid for all the other proofs
-    in the upcoming levels."
+    Hint "So far, you have seen how an expression can be simplified using the ```rewrite``` tactic
+    and a theorem if you have played the Natural Number Game. Now, you will see that you can
+    combine this tactic also with function definitions: You can simplify your current proof state
+    ```nil ++ nil = nil``` by executing the tactic ```rewrite [append]```, as it corresponds to
+    appending an empty word ```nil``` with another empty word ```nil```. The result is then the
+    equation ```nil = nil```."
     rewrite [append]
+    Hint "If you do not know how to proceed, click on the ```Show more help!``` button!"
+    Hint (hidden := true) "In order to prove this proof goal, you can execute the ```rfl``` tactic."
     rfl
   | cons head tail ih =>
+    Hint "As you did in the first proof goal, you can start with rewriting the ```append```
+    function. This rewrites the term on the lefthand side of the ```=``` sign into ```cons head
+    (tail ++ nil)."
     rewrite [append]
-    Hint (hidden := true) "At this point, you can simplify the proof goal by using the induction
-    hypothesis. as you would do in any proof by induction for the non-base case."
+    Hint "At this point, you can simplify the proof goal by using the induction hypothesis, as
+    you would do in any proof by induction for the non-base case. For that, you have two
+    possibilities to proceed from this step. You can either proceed by executing the ```simp```
+    tactic followed by ```exact``` tactic combined with the induction hypothesis or you rewrite
+    the induction hypothesis and then execute ```rfl```."
+    Hint "The ```simp``` tactic simplifies your current proof goal using all function definitions
+    and theorems that are currently available and have been notated with the ```simp``` keyword.
+    And, the ```exact``` tactic can be applied to a proof goal that matches with an induction
+    hypothesis character by character."
     Branch
       simp
       exact ih
     rewrite [ih]
-    Hint "You can prove the equality between the terms on both sides of the ```=``` by using the
-    ```rfl```."
     rfl
 
 Conclusion "```append_nil``` establishes that the empty word acts as a neutral element for word

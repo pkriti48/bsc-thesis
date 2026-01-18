@@ -30,7 +30,7 @@ TheoremDoc Nat.succ_add as "Nat.succ_add" in "Nat"
 
 Statement append_replicateChar (char : Character) (m n : Nat) :
 ((replicateChar char m) ++ replicateChar char n) = replicateChar char (m + n) := by
-Hint "Start with induction on ```m```, as it is mostly easier to proceed from left to right."
+Hint "You can start with an induction on ```m```, as it is mostly easier to proceed from left to right."
 induction m with
 | zero =>
   rewrite [replicateChar]

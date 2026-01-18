@@ -23,26 +23,27 @@ Zero is the right identity of addition.
 
 For any natural number ```n```, we have ```n + 0 = a```.
 -/
-TheoremDoc add_zero as "add_zero" in "Nat"
+TheoremDoc Nat.add_zero as "Nat.add_zero" in "Nat"
 
 /--
 Zero is the left identity of addition.
 
 For any natural number ```n```, we have ```0 + n = n```.the following:
 -/
-TheoremDoc zero_add as "zero_add" in "Nat"
+TheoremDoc Nat.zero_add as "Nat.zero_add" in "Nat"
 
 Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = length word_1 + length word_2 := by
-  Hint "You should start by induction on ```word_1```."
+  Hint "In this level, you start with an induction on ```word_1``` so that you can easily prove the
+  statement for all possible values of ```word_1```."
   induction word_1 with
   | nil =>
     rewrite [append]
     rewrite [length]
     Branch
-      rewrite [zero_add]
+      rewrite [Nat.zero_add]
       rfl
-    Hint "You can also use the ```simp``` tactic instead of ```rewrite [zero_add]``` followed by
-    ```rfl```."
+    Hint "You can also use the ```simp``` tactic to solve the current proof goal in one single step instead of
+    solving it in multiple steps."
     simp
   | cons head tail ih =>
     rewrite [append]
@@ -53,11 +54,11 @@ Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = len
       have also done in the previous level."
     repeat rewrite [length]
     rewrite [ih]
-    rewrite [<- add_assoc]
+    rewrite [<- Nat.add_assoc]
     rfl
 
 Conclusion "Very good! You just proved that appending words preserves all characters from both
 operands, with the total length of the resulting word being exactly the sum of their individual
 lengths. From now onwards, you can rewrite both terms to one another whenever necessary."
 
-NewTheorem add_zero zero_add
+NewTheorem Nat.add_zero Nat.zero_add

@@ -8,7 +8,7 @@ import Game.Levels.TakeAndDrop.L07_TakeReplicateChar
 import Game.Levels.TakeAndDrop.L08_DropReplicateChar
 
 World "TakeAndDrop"
-Title "The Take and Drop World"
+Title "Take and Drop"
 
 Introduction "
 Welcome to the second world of this game: **The Take and Drop World**!

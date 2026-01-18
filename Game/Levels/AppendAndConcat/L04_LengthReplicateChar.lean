@@ -20,12 +20,12 @@ word is exactly ```n```.
 TheoremDoc Word.length_replicateChar as "length_replicateChar" in "Word"
 
 Statement length_replicateChar (char : Character) (n : Nat): length (replicateChar char n) = n := by
-  Hint "Since you have to prove the statement for all possible lengths, you should start by induction
-  on ```n```."
+  Hint "Since you have to prove the statement for all possible values of ```n```, you should
+  start by induction on ```n```."
   induction n with
   | zero =>
-    Hint "As you did in every proof so far, you should start by rewriting the function being used on
-    the lowest layer of the term."
+    Hint "You first prove the statement for the case, where ```n``` has the value ```zero``` and
+    you start by rewriting the ```replicateChar``` function."
     rewrite [replicateChar]
     rewrite [length]
     rfl
@@ -33,7 +33,7 @@ Statement length_replicateChar (char : Character) (n : Nat): length (replicateCh
     rewrite [replicateChar]
     rewrite [length]
     rewrite [ih]
-    rewrite [add_comm]
+    rewrite [Nat.add_comm]
     rfl
 
 Conclusion "Very good! Let's move forward to the next level where you will show how how the length
