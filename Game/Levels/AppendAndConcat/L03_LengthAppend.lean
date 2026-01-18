@@ -4,15 +4,13 @@ namespace Word
 
 World "AppendAndConcat"
 Level 3
-Title "Length of a Word Connected to Another Word"
+Title "Length of a Word Appended to Another Word"
 
 Introduction "In this level, you will prove that the operation of appending two words adds their
 lengths together. The resulting word contains exactly as many characters as the first word plus
 the second."
 
 /--
-The length of joining two words.
-
 For any words ```word_1``` and ```word_2```, the length of their append
 ```word_1 ++ word_2``` is the sum of their lengths.
 -/
@@ -28,7 +26,7 @@ TheoremDoc Nat.add_zero as "Nat.add_zero" in "Nat"
 /--
 Zero is the left identity of addition.
 
-For any natural number ```n```, we have ```0 + n = n```.the following:
+For any natural number ```n```, we have ```0 + n = n```
 -/
 TheoremDoc Nat.zero_add as "Nat.zero_add" in "Nat"
 
@@ -42,8 +40,8 @@ Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = len
     Branch
       rewrite [Nat.zero_add]
       rfl
-    Hint "You can also use the ```simp``` tactic to solve the current proof goal in one single step instead of
-    solving it in multiple steps."
+    Hint "You can also use the ```simp``` tactic to solve the current proof goal in one single step
+    instead of solving it in multiple steps."
     simp
   | cons head tail ih =>
     rewrite [append]
@@ -57,8 +55,8 @@ Statement length_append (word_1 word_2 : Word) : length (word_1 ++ word_2) = len
     rewrite [<- Nat.add_assoc]
     rfl
 
-Conclusion "Very good! You just proved that appending words preserves all characters from both
-operands, with the total length of the resulting word being exactly the sum of their individual
-lengths. From now onwards, you can rewrite both terms to one another whenever necessary."
+Conclusion "Very good! You just proved that appending words preserves all characters from both words.
+Thus, the total length of the resulting word is the sum of the length of the first and the second word.
+From now onwards, you can rewrite both terms to one another whenever necessary."
 
 NewTheorem Nat.add_zero Nat.zero_add

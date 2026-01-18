@@ -7,14 +7,13 @@ World "AppendAndConcat"
 Level 6
 Title "Appending Two Replicas of a Single Character Adds Their Counts"
 
-Introduction "In this level, you will show that if you append two words formed by replicating
-the same character — one repeated ```m``` times and the other repeated ```n``` times — the
-resulting word corresponds to ```m + n``` replicas of that same character."
-/--
-Appending two words consisting of repeated instances of the same character.
+Introduction "In this level, you will show that if you append a word consisting of ```n``` replicas
+of a character to a word consisting ```m``` replicas of the same character, then the resulting word
+corresponds to ```m + n``` replicas of that character."
 
+/--
 For a character ```char``` and natural numbers ```m``` and ```n```, appending
-```replicateChar char m``` with ```replicateChar char n``` produces a word
+```replicateChar char n``` to ```replicateChar char m``` produces a word
 equivalent to ```replicateChar char (m + n)```.
 -/
 TheoremDoc Word.append_replicateChar as "append_replicateChar" in "Word"
@@ -23,8 +22,7 @@ TheoremDoc Word.append_replicateChar as "append_replicateChar" in "Word"
 The successor of a natural number added to another number.
 
 For any natural numbers ```a``` and ```b```, ```Nat.succ a + b``` is equal to
-```Nat.succ (a + b)```. This expresses that adding ```b``` after taking the
-successor of ```a``` is equivalent to taking the successor after adding ```b``` to ```a```.
+```Nat.succ (a + b)```.
 -/
 TheoremDoc Nat.succ_add as "Nat.succ_add" in "Nat"
 

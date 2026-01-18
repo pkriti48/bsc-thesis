@@ -7,14 +7,11 @@ Level 2
 Title "Prepending a Character Increases Word Length by One"
 
 Introduction "In this level, you will prove that concatenating a character ```char``` to the
-end of a ```word``` increases its length by one.
-
-Specifically, the length of word :: char is equal to the length of word plus one.
+end of a ```word``` increases its length by one, which can be written as ```length (word :: char) =
+  length word + 1```.
 "
 
 /--
-The length of a word after concatenating a character is the length of the word plus one.
-
 For any ```word``` and character ```char```, ```length (concat word char) = length word + 1```.
 This reflects the fact that concatenating a character to a word increases its length by one.
 -/
@@ -23,8 +20,7 @@ TheoremDoc Word.length_concat as "length_concat" in "Word"
 /--
 Addition is associative.
 
-For all natural numbers ```n```, ```m```, and ```k```, we have
-```(n + m) + k = n + (m + k)```.
+For all natural numbers ```n```, ```m```, and ```k```, we have ```(n + m) + k = n + (m + k)```.
 -/
 TheoremDoc Nat.add_assoc as "Nat.add_assoc" in "Nat"
 

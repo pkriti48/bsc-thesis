@@ -6,16 +6,13 @@ World "AppendAndConcat"
 Level 5
 Title "Length of Word Replicas"
 
-Introduction "In this level, you will showthat if a word is repeated ```n``` times, the length
-of the resulting word is equal to ```n``` multiplied by the length of the original word,
-reflecting the additive effect of appending the same word repeatedly."
+Introduction "In this level, you will show that if a ```word``` is repeated ```n``` times, the
+length of the resulting word is equal to ```n * length word```."
 
 /--
-The length of a word repeated multiple times.
-
 For any word ```word``` and natural number ```n```, ```replicateWord word n```
-produces a word consisting of ```n``` copies of ```word``` appended together.
-The length of this resulting word is ```n``` times the length of ```word```.
+produces a new word consisting of ```n``` replicas of ```word```. The length of
+this resulting word is ```n * length word```.
 -/
 TheoremDoc Word.length_replicateWord as "length_replicateWord" in "Word"
 

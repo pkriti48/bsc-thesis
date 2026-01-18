@@ -9,14 +9,15 @@ Title "Appending an Empty Word Preserves the Original Word"
 Introduction "You will start playing the game by proving that appending the empty word
 ```nil``` to any ```word``` leaves ```word``` unchanged.
 
-Basically, the theorem ```append_nil``` states the identity property of nil in word concatenation.
+Basically, the theorem ```append_nil``` states the identity property of nil when appending
+words to one another.
 "
 
 /--
-Appending the empty word ```nil``` to any word results in the word itself.
+For any ```word```, ```word ++ nil = word```. Appending the empty word ```nil``` to any word
+results in the word itself.
 
-For any word ```word```, ```word ++ nil = word```. This reflects the identity
-property of the empty word in word concatenation.
+This reflects the identity property of the empty word when appending words to one another.
 -/
 TheoremDoc Word.append_nil as "append_nil" in "Word"
 

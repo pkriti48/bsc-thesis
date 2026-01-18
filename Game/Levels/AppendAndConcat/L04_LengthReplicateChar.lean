@@ -7,14 +7,12 @@ Level 4
 Title "Length of Character Replicas"
 
 Introduction "The theorem ```length_replicateChar``` describes the length of a word created by
-repeating a single character multiple times. It states that if a character ```char``` is
+repeating a specific character multiple times. It states that if a character ```char``` is
 repeated ```n``` times using ```replicateChar```, the resulting word has length exactly ```n```."
 
 /--
-The length of a word formed by repeating a character.
-
 For any character ```char``` and natural number ```n```, ```replicateChar char n```
-produces a word consisting of ```n``` copies of ```char```. The length of this
+produces a word consisting of ```n``` replicas of ```char```. The length of this
 word is exactly ```n```.
 -/
 TheoremDoc Word.length_replicateChar as "length_replicateChar" in "Word"
