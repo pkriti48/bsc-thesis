@@ -59,7 +59,7 @@ take (word_1 ++ word_2) index = take word_1 index := by
   | cons head tail ih =>
     Hint "At this point, you are observing the non empty case of ```word_1``` and your proof goal
     right now has two more values of an inductive type: ```word_2``` and ```index```. However, you
-    do not need to observe ```word_2``` as you want to transform the lefthand side term such that
+    do not need to observe ```word_2``` as you want to transform the left-hand side term such that
     word_2 does not occur in it anymore. So you proceed by observing all possible values of
     ```index```."
     Hint (hidden := true) "To observe all possible values of ```index```, you can either proceed

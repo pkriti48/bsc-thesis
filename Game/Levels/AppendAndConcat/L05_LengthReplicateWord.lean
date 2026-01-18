@@ -44,7 +44,7 @@ length (replicateWord word n) = (length word) * n := by
     rewrite [length]
     Branch
       Hint "To reach an equality among the terms on both sides of the ```=``` sign, you have to
-      retrieve ```0``` in the term on the righthand side of the ```=``` sign. You can do that by
+      retrieve ```0``` in the term on the right-hand side of the ```=``` sign. You can do that by
       using the ```Nat.mul_zero``` theorem."
       rewrite [Nat.mul_zero]
       rfl

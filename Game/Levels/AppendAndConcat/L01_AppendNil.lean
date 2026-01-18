@@ -38,7 +38,7 @@ Statement append_nil (word : Word) : (word ++ nil) = word := by
     rfl
   | cons head tail ih =>
     Hint "As you did in the first proof goal, you can start with rewriting the ```append```
-    function. This rewrites the term on the lefthand side of the ```=``` sign into ```cons head
+    function. This rewrites the term on the left-hand side of the ```=``` sign into ```cons head
     (tail ++ nil)."
     rewrite [append]
     Hint "At this point, you can simplify the proof goal by using the induction hypothesis, as
