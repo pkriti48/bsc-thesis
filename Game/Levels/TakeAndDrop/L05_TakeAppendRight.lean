@@ -51,14 +51,14 @@ take (word_1 ++ word_2) index = word_1 ++ (take word_2 (index - length word_1)) 
       simp [take]
       rewrite [ih]
       rewrite [length]
-      rewrite [<- add_comm (length tail)]
+      rewrite [<- Nat.add_comm (length tail)]
       repeat rewrite [<- Nat.succ_eq_add_one]
       Hint "In order to reach equality between the terms on both sides of the ```=``` sign, you can cancel the
       successors of both ```k``` and ```length tail``` using the theorem ```Nat.succ_sub_succ```."
       rewrite [Nat.succ_sub_succ]
       rfl
       rewrite [length] at h
-      rewrite [add_comm] at h
+      rewrite [Nat.add_comm] at h
       simp at h
       exact h
 

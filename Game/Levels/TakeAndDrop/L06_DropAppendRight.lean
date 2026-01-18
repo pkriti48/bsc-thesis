@@ -38,12 +38,12 @@ drop (word_1 ++ word_2) index = drop word_2 (index - length word_1) := by
       simp [drop]
       rewrite [ih]
       rewrite [length]
-      rewrite [<- add_comm (length tail)]
+      rewrite [<- Nat.add_comm (length tail)]
       repeat rewrite [<- Nat.succ_eq_add_one]
       rewrite [Nat.succ_sub_succ]
       rfl
       rewrite [length] at h
-      rewrite [add_comm] at h
+      rewrite [Nat.add_comm] at h
       simp at h
       exact h
 

@@ -28,11 +28,11 @@ Statement more_as_than_bs (u v w z z_pumped : Word) (n k : Nat)
   k_leq_n)]
   rewrite [count_b_in_w u v w z n k (z_eq := z_eq) (length_u_lt_k := length_u_lt_k) (k_leq_n :=
   k_leq_n)]
-  repeat rewrite [zero_add]
+  repeat rewrite [Nat.zero_add]
   rewrite [length_pumped_word u v w z n k (k_leq_n := k_leq_n)]
   apply Nat.lt_add_of_pos_right
-  rewrite [<- add_zero 1] at length_v_geq_1
-  rewrite [add_comm] at length_v_geq_1
+  rewrite [<- Nat.add_zero 1] at length_v_geq_1
+  rewrite [Nat.add_comm] at length_v_geq_1
   rewrite [<- Nat.succ_eq_add_one] at length_v_geq_1
   exact Nat.lt_of_succ_le length_v_geq_1
   exact z_eq

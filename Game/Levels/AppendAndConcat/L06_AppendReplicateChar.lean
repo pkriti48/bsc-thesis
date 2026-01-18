@@ -35,7 +35,7 @@ induction m with
 | zero =>
   rewrite [replicateChar]
   rewrite [append]
-  rewrite [zero_add]
+  rewrite [Nat.zero_add]
   rfl
 | succ k ih =>
   rewrite [replicateChar]
