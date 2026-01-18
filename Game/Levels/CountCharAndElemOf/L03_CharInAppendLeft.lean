@@ -4,14 +4,14 @@ namespace Word
 
 World "CountCharAndElemOf"
 Level 3
-Title "Element of First Word is Element of Appended Word"
+Title "Element of Left Word is Element of Appended Word"
 
 Introduction "The following proof states that character membership is preserved when a word is appended
 to another. Precisely, if a character appears in the left word, then it also appears in the word formed
 by appending any right word to it."
 
 /--
-Character membership is preserved under append on the left.
+Character membership is preserved under append on the left word.
 
 If a character ```char``` appears in the word ```left```, then it also appears
 in the appended word ```left ++ right``` for any word ```right```.
@@ -23,8 +23,8 @@ elemOf char left -> elemOf char (left ++ right) := by
   induction left generalizing right with
   | nil =>
     Hint "You can split the implication in the current expression by executing ```intros h```. This
-    would create an induction hypothesis using the term on the left hand side of the ```->``` sign
-    and keep the term on the right hand side of the ```->``` sign as your current proof goal."
+    creates an induction hypothesis using the term on the left-hand side of the ```->``` sign and
+    creates a proof goal out of the term on the right-hand side."
     intros h
     Branch
       exfalso
@@ -32,19 +32,24 @@ elemOf char left -> elemOf char (left ++ right) := by
     cases h
   | cons head tail ih =>
     intros h
-    cases h with
-    | inl head_eq_char =>
-      Hint "Since the ```elemOf``` function returns a clause of the form ```A ∨ B```, you can split
-      it into two parts by using the keyword ```left``` or ```right``` and observe them individually."
-      left
-      exact head_eq_char
-    | inr char_in_tail =>
-      right
-      apply ih at char_in_tail
-      exact char_in_tail
+    Hint "Now, you can proceed by simplifying your hypothesis ```h```. Any other simplification is
+    currently not possible with the given theorems."
+    simp [elemOf] at h
+    Hint "If you now observe ```h```, you see that it is a clause of the form ```A ∨ B```. So, to
+    prove the statement for all possible return values of ```elemOf```, you can proceed with
+    executing the ```cases``` tactic with the hypothesis ```h```."
+    cases h
+    Hint "As you already observed in the previous steps, the ```elemOf``` function returns a clause
+    of the form ```A ∨ B```. For your current proof goal, it means that you can access any of the
+    clauses by using the respective tactics ```left``` or ```right``` and observe them individually."
+    left
+    exact h_1
+    right
+    apply ih at h_1
+    exact h_1
 
 Conclusion "Very good! Next, you will show the ```∈w``` property for any second word or right word in
 the append function."
 
-NewTactic intros left right
+NewTactic intros exfalso left right
 NewDefinition Word.elemOf

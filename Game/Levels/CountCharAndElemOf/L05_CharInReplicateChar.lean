@@ -9,8 +9,8 @@ Title "All Characters in a Word Formed By Replicating a Characters are Same"
 Introduction "In this level, you will show that if any character appears in a word formed by
 ```replicateChar input_char n```, then that character and ```input_char``` must be equal.
 
-In other words, you will prove that a word made of repeating a single character cannot contain any
-other character."
+In other words, you will prove that a word made of repeating a specifif character cannot
+contain any other character."
 
 /--
 Character membership in a replicated-character word.
@@ -42,3 +42,5 @@ Statement char_elemOf_replicateChar {input_char : Character} {n : Nat} :
 
 Conclusion "Well done! One more step closer to executing the pumping lemma on concrete languages. Let's
 move on to the next world!"
+
+NewTactic symm

@@ -17,7 +17,7 @@ Counting characters in a word of repeated characters.
 
 For characters ```char``` and ```char_count``` and a natural number ```n```,
 counting occurrences of ```char_count``` in ```replicateChar char n```
-yields ```n``` if the two characters are equal, and ```0``` otherwise.
+returns ```n``` if the two characters are equal, and ```0``` otherwise.
 -/
 TheoremDoc Word.count_char_in_replicateChar as "count_char_in_replicateChar" in "Word"
 
@@ -32,12 +32,12 @@ countCharInWord char_count (replicateChar char n) = (if char = char_count then n
     rewrite [replicateChar]
     rewrite [countCharInWord]
     rewrite [ih]
-    Hint "You can split your current proof goal at this point. Then, you will prove the outcome for
-    the two cases ```char = char_count``` and ```char ≠ char_count```."
+    Hint "You can ```split``` your current proof goal at this point. Then, you will prove the outcome
+    for the two cases ```char = char_count``` and ```char ≠ char_count```."
     split
-    rewrite [add_comm]
+    rewrite [Nat.add_comm]
     rfl
-    rewrite [add_zero]
+    rewrite [Nat.add_zero]
     rfl
 
 Conclusion "Well done! You just proved that a word formed by repeating a single character
