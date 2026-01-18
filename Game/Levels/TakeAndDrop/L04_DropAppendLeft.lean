@@ -22,15 +22,15 @@ TheoremDoc Word.drop_append_left as "drop_append_left" in "Word"
 
 Statement drop_append_left (word_1 word_2 : Word) (index : Nat) (h: index ≤ length word_1) :
 drop (word_1 ++ word_2) index = (drop word_1 index) ++ word_2 := by
+  Hint "You can start with this proof the same way as you did in the previous proof."
   induction word_1 generalizing index with
   | nil =>
     rewrite [length, Nat.le_zero_eq] at h
     rewrite [h, append]
     simp [drop]
     rewrite [append]
-    Hint "Contrary to the previous proof, an induction over ```word_2``` is necessary at this point
-    in this proof. Otherwise, the procedure is pretty similar to the proof of
-    ```take_append_left```."
+    Hint "Contrary to the previous proof, an induction over ```word_2``` is necessary at this point.
+    Otherwise, the procedure is pretty similar to the proof of ```take_append_left```."
     induction word_2 with
     | nil => simp [drop]
     | cons head tail ih => simp [drop]
@@ -54,5 +54,3 @@ drop (word_1 ++ word_2) index = (drop word_1 index) ++ word_2 := by
 Conclusion "Very good! You just proved that dropping characters in ```word_1``` and then
 appending ```word_2``` leaves ```word_2``` unaffected. Let's move on to proving the corresponding
 theorems for take and drop for ```index ≥ length word_1```."
-
-NewTactic cases

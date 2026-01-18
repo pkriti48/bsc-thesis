@@ -16,11 +16,25 @@ Welcome to the second world of this game: **The Take and Drop World**!
 Here, you will study the behavior of the functions ```take``` and ```drop``` on words and their
 interaction with word appending.
 
-You will start by proving, that taking a number of characters equal to the length of a word
-returns the word itself, while dropping the same number of characters results in ```nil```.
+The ```take``` function returns a prefix of a given word consisting of the character upto the
+specified index, while the ```drop``` function returns a suffix of a given word consisting of the
+characters starting at the given index.
 
-Next, you will analyze how ```take``` and ```drop``` behave on appended words, depending on
-whether the index stays within the first word or goes beyond it.
+You will start by proving, that the function ```take``` returns the word itself when the index
+corresponds to the length of the given word. At the same time, with the same value for the index,
+the drop function returns the empty word ```nil```.
+
+Following this, you will analyze how ```take``` and ```drop``` behave when combined with the append
+function:
+- The prefix to be returned of a given word lies in ```word_1``` for ```word_1 ++ word_2```.
+- The suffix to be returned of a given word lies in both ```word_1``` and ```word_2``` for ```word_1
+++ word_2```.
+- The prefix to be returned of a given word lies in both ```word_1``` and ```word_2``` for ```word_1
+++ word_2```.
+- The suffix to be returned of a given word lies in ```word_2``` for  ```word_1 ++ word_2```.
+
+Lastly, you will analyze how ```take``` and ```drop``` behave when combined with the function
+```replicateChar```.
 
 Let's start!
 "

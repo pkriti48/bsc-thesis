@@ -6,10 +6,9 @@ World "TakeAndDrop"
 Level 6
 Title "Dropping Characters Beyond the First Word in an Appended Word"
 
-Introduction "In the last level of this world, you will prove that if ```index``` is greater
-than the length of ```word_1```, then dropping ```index``` characters from ```word_1 ++
-word_2``` is equivalent to dropping ```index - length word_1``` characters from ```word_2```
-alone."
+Introduction "In this level, you will prove that if ```index``` is greater than the length
+of ```word_1```, then dropping ```index``` characters from ```word_1 ++ word_2``` is
+equivalent to dropping ```index - length word_1``` characters from ```word_2``` alone."
 
 /--
 Dropping from an appended word beyond the left operand.

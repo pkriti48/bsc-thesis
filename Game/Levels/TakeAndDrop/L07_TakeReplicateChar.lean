@@ -19,13 +19,12 @@ produces a word consisting of ```index``` copies of ```char```.
 -/
 TheoremDoc Word.take_replicateChar as "take_replicateChar" in "Word"
 
-
 Statement take_replicateChar (char : Character) (length index : Nat) (h : index ≤ length) :
 take (replicateChar char length) index = replicateChar char index := by
   induction length generalizing index with
   | zero =>
-    Hint "You know that ```index``` is a natural number. So, it cannot be < 0. Thus, you can derive
-    ```index = 0``` when ```length = 0```."
+    Hint "As already discussed earlier, ```index``` is a natural number so it cannot be 0. Thus, it has to
+    be 0 when ```index ≤ length``` and ```length = 0```."
     rewrite [Nat.le_zero_eq] at h
     rewrite [h]
     rewrite [replicateChar]
@@ -39,6 +38,12 @@ take (replicateChar char length) index = replicateChar char index := by
       repeat rewrite [replicateChar]
       simp [take]
       apply ih
+      Hint "As you can see, your current proof goal and the hypothesis ```h``` represent a very
+      similar fact. You can now either transform ```h``` such that it is equal to the current proof
+      goal or vice versa."
+      Branch
+        repeat rewrite [<- Nat.succ_eq_add_one] at h
+        apply Nat.le_of_succ_le_succ at h
       apply Nat.le_of_succ_le_succ
       repeat rewrite [Nat.succ_eq_add_one]
       exact h

@@ -30,7 +30,10 @@ Statement take_all (word : Word) : take word (length word) = word := by
   | cons head tail ih =>
     rewrite [length]
     Hint "In order to solve the current goal, the easiest way to proceed is to execute
-    ```simp [take]```."
+    ```simp [take]```. As described earlier, the ```simp``` tactic simplifies your current proof
+    goal using all function definitions and theorems that are curently available and have been
+    notated with the ```simp``` keyword. In this case, it additionally uses the ```take``` function
+    to simplify the current proof goal further."
     simp [take]
     exact ih
 
