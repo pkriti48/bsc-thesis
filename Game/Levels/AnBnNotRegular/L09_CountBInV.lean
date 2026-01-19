@@ -5,11 +5,18 @@ namespace Word
 
 World "AnBnNotRegular"
 Level 9
-Title ""
+Title "The Middle Word v Does Not Contain any bs"
 
-Introduction ""
+Introduction "In this level, you will show that when you decompose the word ```z = $a^n b^n$``` as
+```z = (u ++ v) ++ w``` and the length of ```u ++ v``` is at most ```n```, then ```v``` is made of
+only ```a```s. Following this, the count of ```b```s in ```v``` is equal to 0."
 
-TheoremDoc Word.count_b_in_v as "count_b_in_v" in "Word"
+/--
+If a word ```z = $a^n b^n$``` is decomposed as ```z = (u ++ v) ++ w``` and the length of ```u ++ v```
+is at most ```n```, then  ```v``` consists only of ```a```s. That means, the the number of occurrences
+of ```b``` in ```v``` is equal to 0.
+-/
+TheoremDoc Word.count_b_in_v as "count_b_in_v" in "AnBnNotRegular"
 
 Statement count_b_in_v (u v w z : Word) (n : Nat)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)
@@ -25,4 +32,4 @@ countCharInWord Character.b v = 0 := by
   apply char_elemOf_replicateChar at h
   exact h
 
-Conclusion ""
+Conclusion "Well done! In the next level, let's move on to the next proof!"

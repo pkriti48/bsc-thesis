@@ -1,78 +1,19 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-18\n"
+"POT-Creation-Date: 2026-01-19\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#. §0: ```index```
-#. §1: ```word_1```
-#. §2: ```index```
-#. §3: ```word_1 ++ word_2```
-#. §4: ```word_1```
-#. §5: ```word_2```
-#: Game.Levels.TakeAndDrop.L05_TakeAppendRight
-msgid "Taking from an appended word beyond the left operand.\n"
-"\n"
-"If §0 is greater than the length of §1, then taking §2\n"
-"characters from §3 yields all of §4 followed by the\n"
-"remaining characters taken from §5."
-msgstr ""
-
-#. §0: ```char```
-#. §1: ```length```
-#. §2: ```index```
-#. §3: ```index ≤ length```
-#. §4: ```index```
-#. §5: ```replicateChar char length```
-#. §6: ```length - index```
-#. §7: ```char```
-#: Game.Levels.TakeAndDrop.L08_DropReplicateChar
-msgid "Dropping a prefix from a word of repeated characters.\n"
-"\n"
-"For a character §0 and natural numbers §1 and §2 such that\n"
-"§3, dropping §4 characters from §5\n"
-"produces a word consisting of §6 copies of §7."
+#. §0: $a^n b^n$
+#: Game.Levels.AnBnNotRegular.L07_CountBInU
+msgid "The Prefix u of §0 Does Not Contain any bs"
 msgstr ""
 
 #: Game.Levels.TakeAndDrop.L01_TakeAll
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
-#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
-#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
-#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
-#: Game.Levels.AnBnNotRegular.L07_CountBInU
-#: Game.Levels.AnBnNotRegular.L07_CountBInU
-#: Game.Levels.AnBnNotRegular.L07_CountBInU
-#: Game.Levels.AnBnNotRegular.L07_CountBInU
-#: Game.Levels.AnBnNotRegular.L08_CountAInV
-#: Game.Levels.AnBnNotRegular.L08_CountAInV
-#: Game.Levels.AnBnNotRegular.L08_CountAInV
-#: Game.Levels.AnBnNotRegular.L08_CountAInV
-#: Game.Levels.AnBnNotRegular.L09_CountBInV
-#: Game.Levels.AnBnNotRegular.L09_CountBInV
-#: Game.Levels.AnBnNotRegular.L09_CountBInV
-#: Game.Levels.AnBnNotRegular.L09_CountBInV
 #: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
 #: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
 #: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
@@ -104,14 +45,6 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#. §0: ```take_append_right```
-#: Game.Levels.TakeAndDrop.L05_TakeAppendRight
-msgid "Well done! You just showed that §0 shows that when taking more\n"
-"characters than are present in the first word, the result includes the entirety of the first\n"
-"word plus the corresponding number of characters from the second word, correctly spanning the\n"
-"boundary between the two. Let's move on to the last proof in the second world."
-msgstr ""
-
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
 msgstr ""
@@ -121,16 +54,6 @@ msgstr ""
 msgid "The following statement §0 proves that the number of times a\n"
 "character appears in the appended word is exactly the sum of its occurrences in each of the original\n"
 "words."
-msgstr ""
-
-#. §0: ```word```
-#. §1: ```char```
-#. §2: ```length (concat word char) = length word + 1```
-#: Game.Levels.AppendAndConcat.L02_LengthConcat
-msgid "The length of a word after concatenating a character is the length of the word plus one.\n"
-"\n"
-"For any §0 and character §1, §2.\n"
-"This reflects the fact that concatenating a character to a word increases its length by one."
 msgstr ""
 
 #: Game.Levels.TakeAndDrop
@@ -149,8 +72,52 @@ msgid "In order to solve the current goal, the easiest way to proceed is to exec
 "to simplify the current proof goal further."
 msgstr ""
 
+#. §0: ```char```
+#. §1: ```word_1```
+#. §2: ```word_2```
+#. §3: ```char```
+#. §4: ```word_1 ++ word_2```
+#. §5: ```word_1```
+#. §6: ```word_2```
+#. §7: ```char```
+#. §8: ```word_1```
+#. §9: ```word_2```
+#: Game.Levels.CountCharAndElemOf.L01_CountCharInAppend
+msgid "For any character §0 and words §1 and §2, the number of\n"
+"occurrences of §3 in the word §4 generated by appending\n"
+"§5 and §6 is the sum of the numbers of occurrences of §7\n"
+"in §8 and in §9."
+msgstr ""
+
 #: Game.Levels.AppendAndConcat
 msgid "Append and Concat"
+msgstr ""
+
+#. §0: ```char```
+#. §1: ```length```
+#. §2: ```index```
+#. §3: ```index ≤ length```
+#. §4: ```index```
+#. §5: ```replicateChar char length```
+#. §6: ```length - index```
+#. §7: ```char```
+#: Game.Levels.TakeAndDrop.L08_DropReplicateChar
+msgid "For a character §0 and natural numbers §1 and §2 such that\n"
+"§3, dropping §4 characters from §5\n"
+"produces a word consisting of §6 replicas of §7."
+msgstr ""
+
+#. §0: ```word_1```
+#. §1: ```word_2```
+#. §2: ```word_1 ++ word_2```
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "For any words §0 and §1, the length of their append\n"
+"§2 is the sum of their lengths."
+msgstr ""
+
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+msgid "Very good! Let's move forward to the next level where you will show how how the length\n"
+"of a word changes when it is repeated multiple times."
 msgstr ""
 
 #. §0: ```m```
@@ -161,16 +128,11 @@ msgstr ""
 #. §5: ```n```
 #. §6: ```(m + k) - (n + k) = m - n```
 #: Game.Levels.TakeAndDrop.L08_DropReplicateChar
-msgid "Cancel a common addend on the right of a subtraction.\n"
+msgid "Cancel a common addend in a subtraction.\n"
 "\n"
 "For any natural numbers §0, §1, and §2, adding the same number §3 to\n"
 "both §4 and §5 does not change their difference:\n"
 "§6."
-msgstr ""
-
-#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
-msgid "Very good! Let's move forward to the next level where you will show how how the length\n"
-"of a word changes when it is repeated multiple times."
 msgstr ""
 
 #. §0: ```∈w```
@@ -181,17 +143,6 @@ msgstr ""
 
 #: Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
 msgid "Element of Second Word is Element of Appended Word"
-msgstr ""
-
-#. §0: ```n```
-#. §1: ```m```
-#. §2: ```k```
-#. §3: ```(n + m) + k = n + (m + k)```
-#: Game.Levels.AppendAndConcat.L02_LengthConcat
-msgid "Addition is associative.\n"
-"\n"
-"For all natural numbers §0, §1, and §2, we have\n"
-"§3."
 msgstr ""
 
 #. §0: ```n```
@@ -216,6 +167,11 @@ msgid "Now, you can simplify your current proof goal by rewriting the concatenat
 "to a non-empty word."
 msgstr ""
 
+#. §0: $a^n b^n$
+#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+msgid "Any Prefix of Length at Most n in an §0 Word Is All a"
+msgstr ""
+
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
 msgstr ""
@@ -236,15 +192,27 @@ msgstr ""
 msgid "Length of Character Replicas"
 msgstr ""
 
-#. §0: ```length_replicateChar```
+#. §0: ```a```
+#. §1: ```a```
+#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+msgid "In the level, you will prove that if §0 occurs at every position of a word, then\n"
+"the number of §1 in the word is equal to the length of the word."
+msgstr ""
+
+#. §0: ```v```
+#. §1: ```a```
+#. §2: ```v```
+#: Game.Levels.AnBnNotRegular.L07_CountBInU
+msgid "Very good! In the next level, you will show that §0 consists of as many §1s as\n"
+"the length of §2 is."
+msgstr ""
+
+#. §0: ```word```
 #. §1: ```char```
-#. §2: ```n```
-#. §3: ```replicateChar```
-#. §4: ```n```
-#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
-msgid "The theorem §0 describes the length of a word created by\n"
-"repeating a single character multiple times. It states that if a character §1 is\n"
-"repeated §2 times using §3, the resulting word has length exactly §4."
+#. §2: ```length (concat word char) = length word + 1```
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "For any §0 and character §1, §2.\n"
+"This reflects the fact that concatenating a character to a word increases its length by one."
 msgstr ""
 
 #. §0: ```replicateChar input_char n```
@@ -263,51 +231,11 @@ msgid "Using the mathematical property of associativity, you can simplify the cu
 "and reach the equality between the expressions on both sides of the §0 sign."
 msgstr ""
 
-#. §0: ```char```
-#. §1: ```n```
-#. §2: ```replicateChar char n```
-#. §3: ```n```
-#. §4: ```char```
-#. §5: ```n```
-#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
-msgid "The length of a word formed by repeating a character.\n"
-"\n"
-"For any character §0 and natural number §1, §2\n"
-"produces a word consisting of §3 copies of §4. The length of this\n"
-"word is exactly §5."
-msgstr ""
-
-#. §0: ```index```
-#. §1: ```word_1```
-#. §2: ```index```
-#. §3: ```word_1 ++ word_2```
-#. §4: ```index - length word_1```
-#. §5: ```word_2```
-#: Game.Levels.TakeAndDrop.L06_DropAppendRight
-msgid "Dropping from an appended word beyond the left operand.\n"
-"\n"
-"If §0 is greater than the length of §1, then dropping §2\n"
-"characters from §3 is the same as dropping\n"
-"§4 characters from §5."
-msgstr ""
-
-#. §0: ```char```
-#. §1: ```word_1```
-#. §2: ```word_2```
-#. §3: ```char```
-#. §4: ```word_1 ++ word_2```
-#. §5: ```word_1```
-#. §6: ```word_2```
-#. §7: ```char```
-#. §8: ```word_1```
-#. §9: ```word_2```
-#: Game.Levels.CountCharAndElemOf.L01_CountCharInAppend
-msgid "Counting characters distributes over word append.\n"
-"\n"
-"For any character §0 and words §1 and §2, the number of\n"
-"occurrences of §3 in the word §4 generated by appending\n"
-"§5 and §6 is the sum of the numbers of occurrences of §7\n"
-"in §8 and in §9."
+#. §0: ```word```
+#. §1: ```length word```
+#: Game.Levels.TakeAndDrop.L02_DropAll
+msgid "For any word §0, dropping §1 characters removes all\n"
+"characters, resulting in the empty word."
 msgstr ""
 
 #. §0: ```word```
@@ -321,15 +249,22 @@ msgid "You should start with induction on §0 so that you can prove the statemen
 "corresponds to a character (§3) prepended to a word (§4)."
 msgstr ""
 
-#. §0: ```char```
-#. §1: ```left```
-#. §2: ```left ++ right```
-#. §3: ```right```
-#: Game.Levels.CountCharAndElemOf.L03_CharInAppendLeft
-msgid "Character membership is preserved under append on the left word.\n"
-"\n"
-"If a character §0 appears in the word §1, then it also appears\n"
-"in the appended word §2 for any word §3."
+#. §0: ```anBnLang```
+#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+msgid "Well done! You just proved the first theorem, which is part of the final proof for the\n"
+"fact that §0 is not regular. Let's move on to the next proof."
+msgstr ""
+
+#. §0: ```index```
+#. §1: ```word_1```
+#. §2: ```index```
+#. §3: ```word_1 ++ word_2```
+#. §4: ```word_1```
+#. §5: ```word_2```
+#: Game.Levels.TakeAndDrop.L05_TakeAppendRight
+msgid "If §0 is greater than the length of §1, then taking §2\n"
+"characters from §3 returns all of §4 followed by the\n"
+"remaining characters taken from §5."
 msgstr ""
 
 #: Game
@@ -354,42 +289,45 @@ msgid "In this level, you will prove that if §0 is greater than the length\n"
 "equivalent to dropping §4 characters from §5 alone."
 msgstr ""
 
-#. §0: ```index```
-#. §1: ```replicateChar char length```
-#. §2: ```index```
-#. §3: ```length```
-#. §4: ```index```
-#. §5: ```char```
-#: Game.Levels.TakeAndDrop.L07_TakeReplicateChar
-msgid "In this level, you will prove that if you take §0 characters from\n"
-"§1, where §2 does not exceed §3, the result is\n"
-"a word consisting of exactly §4 copies of the character §5."
+#. §0: ```word```
+#. §1: ```n```
+#. §2: ```n * length word```
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "In this level, you will show that if a §0 is repeated §1 times, the\n"
+"length of the resulting word is equal to §2."
+msgstr ""
+
+#. §0: ```word```
+#. §1: ```word ++ nil = word```
+#. §2: ```nil```
+#: Game.Levels.AppendAndConcat.L01_AppendNil
+msgid "For any §0, §1. Appending the empty word §2 to any word\n"
+"results in the word itself.\n"
+"\n"
+"This reflects the identity property of the empty word when appending words to one another."
+msgstr ""
+
+#. §0: ```char```
+#. §1: ```word```
+#. §2: ```length (word :: char) =
+#.   length word + 1```
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "In this level, you will prove that concatenating a character §0 to the\n"
+"end of a §1 increases its length by one, which can be written as §2."
+msgstr ""
+
+#. §0: ```a```
+#. §1: ```a```
+#. §2: ```b```
+#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+msgid "Well done! With the previous statement and the one in this level you proved that, if a\n"
+"word consists of only §0s then the count §1s in that word is equal to the length of that\n"
+"word, which also results in the count §2 being 0 in that word."
 msgstr ""
 
 #. §0: ```word```
 #: Game.Levels.AppendAndConcat.L02_LengthConcat
 msgid "Similar to the previous level, you should start with  induction on §0."
-msgstr ""
-
-#. §0: ```word_1```
-#. §1: ```index```
-#. §2: ```word_1 ++ word_2```
-#. §3: ```index```
-#. §4: ```word_1```
-#: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
-msgid "Taking from an appended word within the left operand.\n"
-"\n"
-"If the number of characters taken does not exceed the length of §0,\n"
-"then taking §1 characters from §2 is the same as taking\n"
-"§3 characters from §4 alone."
-msgstr ""
-
-#. §0: ```n```
-#. §1: ```n```
-#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
-msgid "In this level, you will showthat if a word is repeated §0 times, the length\n"
-"of the resulting word is equal to §1 multiplied by the length of the original word,\n"
-"reflecting the additive effect of appending the same word repeatedly."
 msgstr ""
 
 #. §0: ```drop_replicateChar```
@@ -406,18 +344,20 @@ msgstr ""
 msgid "Appending Two Replicas of a Single Character Adds Their Counts"
 msgstr ""
 
+#. §0: ```b```
+#. §1: ```u```
+#: Game.Levels.AnBnNotRegular.L06_CountAInU
+msgid "Well done! Next, you will show, how man §0s occur in the word §1."
+msgstr ""
+
 #. §0: ```char```
-#. §1: ```m```
-#. §2: ```n```
-#. §3: ```replicateChar char m```
-#. §4: ```replicateChar char n```
-#. §5: ```replicateChar char (m + n)```
-#: Game.Levels.AppendAndConcat.L06_AppendReplicateChar
-msgid "Appending two words consisting of repeated instances of the same character.\n"
-"\n"
-"For a character §0 and natural numbers §1 and §2, appending\n"
-"§3 with §4 produces a word\n"
-"equivalent to §5."
+#. §1: ```left```
+#. §2: ```left ++ right```
+#. §3: ```right```
+#: Game.Levels.CountCharAndElemOf.L03_CharInAppendLeft
+#: Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
+msgid "If a character §0 appears in the word §1, then it also appears\n"
+"in the appended word §2 for any word §3."
 msgstr ""
 
 #: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
@@ -442,23 +382,17 @@ msgstr ""
 msgid "Prepending a Character Increases Word Length by One"
 msgstr ""
 
+#. §0: $a^n b^n$
+#: Game.Levels.AnBnNotRegular.L09_CountBInV
+msgid "The Middle Word v of §0 Does Not Contain any bs"
+msgstr ""
+
 #. §0: ```index ≤ 0```
 #. §1: ```index = 0```
 #: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
 msgid "Your induction hypothesis is currently §0. However, you know that index is a\n"
 "natural number, that cannot be less than 0. That means, you have to derive §1 from\n"
 "the current expression."
-msgstr ""
-
-#. §0: ```char```
-#. §1: ```right```
-#. §2: ```left ++ right```
-#. §3: ```left```
-#: Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
-msgid "Character membership is preserved under append on the right.\n"
-"\n"
-"If a character §0 appears in the word §1, then it also appears\n"
-"in the appended word §2 for any word §3."
 msgstr ""
 
 #. §0: ```word_1```
@@ -477,6 +411,12 @@ msgstr ""
 
 #: Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
 msgid "Very good! Now, let's proceed towards the last proof of this world!"
+msgstr ""
+
+#. §0: ```simp```
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "You can also use the §0 tactic to solve the current proof goal in one single step\n"
+"instead of solving it in multiple steps."
 msgstr ""
 
 #. §0: ```countCharInWord```
@@ -508,8 +448,16 @@ msgid "Welcome to **The CountChar and ElemOf World**!\n"
 "Let's get started!"
 msgstr ""
 
-#: Game.Levels.AppendAndConcat.L03_LengthAppend
-msgid "Length of a Word Connected to Another Word"
+#. §0: ```index```
+#. §1: ```word_1```
+#. §2: ```index```
+#. §3: ```word_1 ++ word_2```
+#. §4: ```index - length
+#. word_1```
+#. §5: ```word_2```
+#: Game.Levels.TakeAndDrop.L06_DropAppendRight
+msgid "If §0 is greater than the length of §1, then dropping §2\n"
+"characters from §3 is the same as dropping §4 characters from §5."
 msgstr ""
 
 #: Game.Levels.TakeAndDrop.L01_TakeAll
@@ -520,18 +468,6 @@ msgstr ""
 msgid "Count Occurrences of a Character in an Appended Word"
 msgstr ""
 
-#. §0: ```index```
-#. §1: ```replicateChar char length```
-#. §2: ```index```
-#. §3: ```length```
-#. §4: ```length - index```
-#. §5: ```char```
-#: Game.Levels.TakeAndDrop.L08_DropReplicateChar
-msgid "In this level, you will prove that if you drop §0 characters from\n"
-"§1, where §2 does not exceed §3, the result is\n"
-"a word consisting of exactly §4 copies of the character §5."
-msgstr ""
-
 #. §0: ```n + 1```
 #. §1: ```succ n```
 #. §2: ```Nat.succ_eq_add_one```
@@ -540,39 +476,28 @@ msgid "Now, you can transform any term of the form §0 into\n"
 "§1 by using the theorem §2."
 msgstr ""
 
-#. §0: ```char```
-#. §1: ```char_count```
+#. §0: ```a```
+#. §1: ```b```
 #. §2: ```n```
-#. §3: ```char_count```
-#. §4: ```replicateChar char n```
+#. §3: ```k```
+#. §4: ```k ≤ n```
 #. §5: ```n```
-#. §6: ```0```
-#: Game.Levels.CountCharAndElemOf.L02_CountCharInReplicateChar
-msgid "Counting characters in a word of repeated characters.\n"
-"\n"
-"For characters §0 and §1 and a natural number §2,\n"
-"counting occurrences of §3 in §4\n"
-"returns §5 if the two characters are equal, and §6 otherwise."
+#. §6: ```b```
+#. §7: ```n```
+#. §8: ```a```
+#. §9: ```k```
+#. §10: ```k```
+#. §11: ```a```
+#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+msgid "For two characters §0 and §1 and two natural number §2 and §3\n"
+"with §4, if a word consists of §5 replicas of §6 appended to\n"
+"§7 replicas of §8, then taking §9 characters from that word results\n"
+"in §10 replicas of §11."
 msgstr ""
 
-#. §0: ```drop```
-#: Game.Levels.TakeAndDrop.L02_DropAll
-msgid "Well done! You just proved that using the §0 function with the full length\n"
-"of a word removes all characters, leaving no remaining characters. Let's move forward!"
-msgstr ""
-
-#. §0: ```take_append_right```
-#. §1: ```index```
-#. §2: ```word_1```
-#. §3: ```index```
-#. §4: ```word_1 ++
-#. word_2```
-#. §5: ```index - length word_1```
-#. §6: ```word_2```
-#: Game.Levels.TakeAndDrop.L05_TakeAppendRight
-msgid "The following theorem §0 states that if §1 is\n"
-"greater than the length of §2, then taking §3 characters from §4 results in all of word₁ followed by the first §5 characters\n"
-"of §6."
+#: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
+msgid "Well done! One more step closer to executing the pumping lemma on concrete languages.\n"
+"Let's move on to the next and final world!"
 msgstr ""
 
 #. §0: ```length_replicateWord```
@@ -589,10 +514,24 @@ msgstr ""
 msgid "You should start with induction over §0 in this proof."
 msgstr ""
 
-#: Game.Levels.CountCharAndElemOf.L02_CountCharInReplicateChar
-msgid "Well done! You just proved that a word formed by repeating a single character\n"
-"contains exactly as many occurrences of that character as its repetition count, and none of any\n"
-"other character."
+#. §0: ```char```
+#. §1: ```length```
+#. §2: ```index```
+#. §3: ```index ≤ length```
+#. §4: ```index```
+#. §5: ```replicateChar char length```
+#. §6: ```index```
+#. §7: ```char```
+#: Game.Levels.TakeAndDrop.L07_TakeReplicateChar
+msgid "For a character §0 and natural numbers §1 and §2 such that\n"
+"§3, taking §4 characters from §5\n"
+"produces a word consisting of §6 replicas of §7."
+msgstr ""
+
+#: Game.Levels.TakeAndDrop.L05_TakeAppendRight
+msgid "Well done! You just showed that when taking more characters than are present in the\n"
+"first word, the result includes the entire first word plus the corresponding number of characters\n"
+"from the second word. Let's move on to the last proof in the second world."
 msgstr ""
 
 #. §0: ```simp```
@@ -655,22 +594,16 @@ msgid "Welcome to the second world of this game: **The Take and Drop World**!\n"
 "Let's start!"
 msgstr ""
 
+#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+msgid "Well done! Let's move forward to the next proof!"
+msgstr ""
+
 #: Game.Levels.CountCharAndElemOf
 msgid "CountChar and ElemOf"
 msgstr ""
 
 #: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
 msgid "Length of Word Replicas"
-msgstr ""
-
-#. §0: ```nil```
-#. §1: ```word```
-#. §2: ```word ++ nil = word```
-#: Game.Levels.AppendAndConcat.L01_AppendNil
-msgid "Appending the empty word §0 to any word results in the word itself.\n"
-"\n"
-"For any word §1, §2. This reflects the identity\n"
-"property of the empty word in word concatenation."
 msgstr ""
 
 #: Game
@@ -699,6 +632,37 @@ msgid "Similar to simplifying by using §0 in the previous proof goal, you can u
 "§1 here."
 msgstr ""
 
+#. §0: ```index```
+#. §1: ```replicateChar char length```
+#. §2: ```index```
+#. §3: ```length```
+#. §4: ```length - index```
+#. §5: ```char```
+#: Game.Levels.TakeAndDrop.L08_DropReplicateChar
+msgid "In this level, you will prove that if you drop §0 characters from\n"
+"§1, where §2 does not exceed §3, the resulting\n"
+"word consists of exactly §4 replicas of the character §5."
+msgstr ""
+
+#. §0: ```a```
+#. §1: ```b```
+#. §2: ```n```
+#. §3: ```k```
+#. §4: ```k ≤ n```
+#. §5: ```n```
+#. §6: ```a```
+#. §7: ```n```
+#. §8: ```b```
+#. §9: ```k```
+#. §10: ```k```
+#. §11: ```a```
+#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+msgid "In the following, you will show that for two characters §0 and §1 and two\n"
+"natural numbers §2 and §3, if §4 and a word consists of §5 replicas of\n"
+"§6 followed by §7 replicas of §8, then taking §9 characters from that word\n"
+"results in §10 replicas of §11."
+msgstr ""
+
 #. §0: ```take```
 #: Game.Levels.TakeAndDrop.L01_TakeAll
 msgid "You did it! You just showed that if you use the §0 function with the full\n"
@@ -711,25 +675,31 @@ msgstr ""
 msgid "You can also use the §0 tactic at this point."
 msgstr ""
 
-#. §0: ```word_1```
-#. §1: ```word_2```
-#. §2: ```word_1 ++ word_2```
-#: Game.Levels.AppendAndConcat.L03_LengthAppend
-msgid "The length of joining two words.\n"
+#. §0: ```congrArg```
+#. §1: ```x```
+#. §2: ```y```
+#. §3: ```f```
+#. §4: ```x = y```
+#. §5: ```f x = f y```
+#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+msgid "§0 carries equality through a function.\n"
 "\n"
-"For any words §0 and §1, the length of their append\n"
-"§2 is the sum of their lengths."
+"If two terms §1 and §2 are equal, then applying the same function §3\n"
+"to both returns equal results. In other words, from §4 §5 is\n"
+"derived."
 msgstr ""
 
-#. §0: ```nil```
-#. §1: ```word```
-#. §2: ```word```
-#. §3: ```append_nil```
-#: Game.Levels.AppendAndConcat.L01_AppendNil
-msgid "You will start playing the game by proving that appending the empty word\n"
-"§0 to any §1 leaves §2 unchanged.\n"
-"\n"
-"Basically, the theorem §3 states the identity property of nil in word concatenation."
+#. §0: $a^n b^n$
+#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+msgid "The First k Characters of an §0 Word Are All a"
+msgstr ""
+
+#. §0: ```a```
+#. §1: ```a```
+#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+msgid "If every character occurring in a word is §0, then the number of §1s in the\n"
+"word is equal to the length of the word."
 msgstr ""
 
 #. §0: ```=```
@@ -739,6 +709,18 @@ msgstr ""
 #: Game.Levels.TakeAndDrop.L05_TakeAppendRight
 msgid "In order to reach equality between the terms on both sides of the §0 sign, you can cancel the\n"
 "successors of both §1 and §2 using the theorem §3."
+msgstr ""
+
+#. §0: ```char```
+#. §1: ```m```
+#. §2: ```n```
+#. §3: ```replicateChar char n```
+#. §4: ```replicateChar char m```
+#. §5: ```replicateChar char (m + n)```
+#: Game.Levels.AppendAndConcat.L06_AppendReplicateChar
+msgid "For a character §0 and natural numbers §1 and §2, appending\n"
+"§3 to §4 produces a word\n"
+"equivalent to §5."
 msgstr ""
 
 #. §0: ```nil :: char```
@@ -751,14 +733,43 @@ msgid "The term §0 in your current proof goal corresponds to concatenating a gi
 "user friendly way. So, you can simplify this expression by executing §3."
 msgstr ""
 
+#. §0: ```a```
+#. §1: ```b```
+#. §2: ```Nat.succ a + b```
+#. §3: ```Nat.succ (a + b)```
+#: Game.Levels.AppendAndConcat.L06_AppendReplicateChar
+msgid "The successor of a natural number added to another number.\n"
+"\n"
+"For any natural numbers §0 and §1, §2 is equal to\n"
+"§3."
+msgstr ""
+
 #. §0: ```rfl```
 #: Game.Levels.AppendAndConcat.L01_AppendNil
 msgid "In order to prove this proof goal, you can execute the §0 tactic."
 msgstr ""
 
-#: Game.Levels.TakeAndDrop.L01_TakeAll
-msgid "In this level, you will provef: This theorem states that taking a number of\n"
-"characters equal to the length of a word returns the word itself."
+#. §0: ```word_1```
+#. §1: ```index```
+#. §2: ```word_1 ++ word_2```
+#. §3: ```index```
+#. §4: ```word_1```
+#: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
+msgid "If the number of characters taken does not exceed the length of §0,\n"
+"then taking §1 characters from §2 is the same as taking\n"
+"§3 characters from §4 alone."
+msgstr ""
+
+#. §0: ```nil```
+#. §1: ```word```
+#. §2: ```word```
+#. §3: ```append_nil```
+#: Game.Levels.AppendAndConcat.L01_AppendNil
+msgid "You will start playing the game by proving that appending the empty word\n"
+"§0 to any §1 leaves §2 unchanged.\n"
+"\n"
+"Basically, the theorem §3 states the identity property of nil when appending\n"
+"words to one another."
 msgstr ""
 
 #. §0: ```append_nil```
@@ -771,16 +782,68 @@ msgid "§0 establishes that the empty word acts as a neutral element for word\n"
 "level. Let's move on to the next proof!"
 msgstr ""
 
-#. §0: ```simp```
-#: Game.Levels.AppendAndConcat.L03_LengthAppend
-msgid "You can also use the §0 tactic to solve the current proof goal in one single step instead of\n"
-"solving it in multiple steps."
+#: Game.Levels.TakeAndDrop.L01_TakeAll
+msgid "In this level, you will prove that taking a number of characters equal to the\n"
+"length of a word returns the word itself."
 msgstr ""
 
 #. §0: ```Nat.le_zero_eq```
 #: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
 msgid "You can simplify your current induction hypothesis using the theorem\n"
 "§0."
+msgstr ""
+
+#. §0: ```z = $a^n b^n$```
+#. §1: ```z = (u ++ v) ++ w```
+#. §2: ```u ++ v```
+#. §3: ```n```
+#. §4: ```u```
+#. §5: ```a```
+#. §6: ```b```
+#. §7: ```u```
+#: Game.Levels.AnBnNotRegular.L07_CountBInU
+#: Game.Levels.AnBnNotRegular.L09_CountBInV
+msgid "If a word §0 is decomposed as §1 and the length of §2\n"
+"is at most §3, then  §4 consists only of §5s. That means, the the number of occurrences\n"
+"of §6 in §7 is equal to 0."
+msgstr ""
+
+#. §0: ```index```
+#. §1: ```word_1```
+#. §2: ```index```
+#. §3: ```word_1 ++ word_2```
+#. §4: ```index```
+#. §5: ```word_1```
+#: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
+msgid "In this level, you will prove that if the number of characters §0 to take\n"
+"does not exceed the length of §1, then taking §2 characters from\n"
+"§3 is equivalent to taking §4 characters from §5 alone."
+msgstr ""
+
+#. §0: ```n```
+#. §1: ```m```
+#. §2: ```k```
+#. §3: ```(n + m) + k = n + (m + k)```
+#: Game.Levels.AppendAndConcat.L02_LengthConcat
+msgid "Addition is associative.\n"
+"\n"
+"For all natural numbers §0, §1, and §2, we have §3."
+msgstr ""
+
+#. §0: ```n```
+#. §1: ```a```
+#. §2: ```n```
+#. §3: ```b```
+#. §4: ```left ++
+#. right```
+#. §5: ```left```
+#. §6: ```n```
+#. §7: ```left```
+#. §8: ```a```
+#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+msgid "In this level, you will prove that if a word consists of §0 replicas of\n"
+"§1 followed by §2 replicas of §3, and that word is written as §4 where the length of §5 is at most §6, then §7 must consist\n"
+"only of §8s."
 msgstr ""
 
 #: Game.Levels.TakeAndDrop.L08_DropReplicateChar
@@ -796,30 +859,6 @@ msgid "The successor of a natural number is adding one.\n"
 "For any natural number §0, §1 is equal to §2."
 msgstr ""
 
-#. §0: ```n```
-#. §1: ```0 + n = n```
-#: Game.Levels.AppendAndConcat.L03_LengthAppend
-msgid "Zero is the left identity of addition.\n"
-"\n"
-"For any natural number §0, we have §1.the following:"
-msgstr ""
-
-#. §0: ```m```
-#. §1: ```n```
-#. §2: ```m + n```
-#: Game.Levels.AppendAndConcat.L06_AppendReplicateChar
-msgid "In this level, you will show that if you append two words formed by replicating\n"
-"the same character — one repeated §0 times and the other repeated §1 times — the\n"
-"resulting word corresponds to §2 replicas of that same character."
-msgstr ""
-
-#: Game.Levels.CountCharAndElemOf.L02_CountCharInReplicateChar
-msgid "In the following, you will prove that the result of counting occurrences of a character\n"
-"in a word formed by a character's replicas solely depends on whether the character being counted matches\n"
-"the repeated one. If they are the same, the count equals the number of repetitions; otherwise, the\n"
-"count is zero."
-msgstr ""
-
 #. §0: ```word_1```
 #. §1: ```word_1```
 #: Game.Levels.AppendAndConcat.L03_LengthAppend
@@ -827,11 +866,37 @@ msgid "In this level, you start with an induction on §0 so that you can easily 
 "statement for all possible values of §1."
 msgstr ""
 
+#. §0: ```word```
+#. §1: ```n```
+#. §2: ```replicateWord word n```
+#. §3: ```n```
+#. §4: ```word```
+#. §5: ```n * length word```
+#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
+msgid "For any word §0 and natural number §1, §2\n"
+"produces a new word consisting of §3 replicas of §4. The length of\n"
+"this resulting word is §5."
+msgstr ""
+
+#: Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
+msgid "The goal of this level is to prove that if a character appears in the right word,\n"
+"then it also appears in the word formed by appending this word to any other word."
+msgstr ""
+
+#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+msgid "The Number of as is Equal to the Number of bs in anBnLang"
+msgstr ""
+
 #. §0: ```n```
 #. §1: ```n```
 #: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
 msgid "Again, you have to prove the statement for all possible values of §0. So, you start\n"
 "with induction on §1 as you did in the previous level."
+msgstr ""
+
+#: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
+msgid "You just proved that the second word does not influence the result when taking a\n"
+"number of characters within the bounds of the first word. Well done! Let's move to the level 4!"
 msgstr ""
 
 #: Game.Levels.TakeAndDrop.L02_DropAll
@@ -875,6 +940,13 @@ msgid "Contrary to the previous proof, an induction over §0 is necessary at thi
 "Otherwise, the procedure is pretty similar to the proof of §1."
 msgstr ""
 
+#. §0: ```a```
+#. §1: ```b```
+#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+msgid "In the level, you will prove that if §0 occurs at every position of a word, then\n"
+"the number of §1 in the word is equal to 0."
+msgstr ""
+
 #. §0: ```n```
 #. §1: ```n```
 #: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
@@ -899,6 +971,22 @@ msgid "In this level, you will prove the theorem §0. It states that dropping\n"
 "a number of characters equal to the length of a word results in the empty word §1."
 msgstr ""
 
+#. §0: ```z = $a^n b^n$```
+#. §1: ```z = (u ++ v) ++ w```
+#. §2: ```u ++ v```
+#. §3: ```n```
+#. §4: ```u```
+#. §5: ```a```
+#. §6: ```a```
+#. §7: ```u```
+#. §8: ```u```
+#: Game.Levels.AnBnNotRegular.L06_CountAInU
+#: Game.Levels.AnBnNotRegular.L08_CountAInV
+msgid "If a word §0 is decomposed as §1 and the length of §2\n"
+"is at most §3, then  §4 consists only of §5s. That means, the the number of occurrences\n"
+"of §6 in §7 is equal to the length of §8."
+msgstr ""
+
 #. §0: ```length_append```
 #: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
 msgid "Here, you can use the §0 theorem, you proved in Level 3, to\n"
@@ -906,18 +994,22 @@ msgid "Here, you can use the §0 theorem, you proved in Level 3, to\n"
 msgstr ""
 
 #: Game.Levels.AppendAndConcat.L03_LengthAppend
-msgid "Very good! You just proved that appending words preserves all characters from both\n"
-"operands, with the total length of the resulting word being exactly the sum of their individual\n"
-"lengths. From now onwards, you can rewrite both terms to one another whenever necessary."
+msgid "Length of a Word Appended to Another Word"
 msgstr ""
 
-#. §0: ```char```
-#. §1: ```word```
-#: Game.Levels.AppendAndConcat.L02_LengthConcat
-msgid "In this level, you will prove that concatenating a character §0 to the\n"
-"end of a §1 increases its length by one.\n"
-"\n"
-"Specifically, the length of word :: char is equal to the length of word plus one."
+#. §0: ```z = $a^n b^n$```
+#. §1: ```z = (u ++ v) ++ w```
+#. §2: ```u ++ v```
+#. §3: ```n```
+#. §4: ```u```
+#. §5: ```a```
+#. §6: ```b```
+#. §7: ```u```
+#: Game.Levels.AnBnNotRegular.L07_CountBInU
+#: Game.Levels.AnBnNotRegular.L09_CountBInV
+msgid "In this level, you will show that when you decompose the word §0 as\n"
+"§1 and the length of §2 is at most §3, then §4 is made of\n"
+"only §5s. Following this, the count of §6s in §7 is equal to 0."
 msgstr ""
 
 #: Game.Levels.CountCharAndElemOf.L03_CharInAppendLeft
@@ -933,20 +1025,20 @@ msgid "With this, you have successfully proven all the goals of the §0\n"
 "on to the third world!"
 msgstr ""
 
+#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+msgid "In a Word Formed by Only a, Counting a Returns the Word’s Length"
+msgstr ""
+
 #. §0: ```char```
-#. §1: ```length```
-#. §2: ```index```
-#. §3: ```index ≤ length```
-#. §4: ```index```
-#. §5: ```replicateChar char length```
-#. §6: ```index```
-#. §7: ```char```
-#: Game.Levels.TakeAndDrop.L07_TakeReplicateChar
-msgid "Taking a prefix of repeated characters.\n"
-"\n"
-"For a character §0 and natural numbers §1 and §2 such that\n"
-"§3, taking §4 characters from §5\n"
-"produces a word consisting of §6 copies of §7."
+#. §1: ```n```
+#. §2: ```replicateChar char n```
+#. §3: ```n```
+#. §4: ```char```
+#. §5: ```n```
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+msgid "For any character §0 and natural number §1, §2\n"
+"produces a word consisting of §3 replicas of §4. The length of this\n"
+"word is exactly §5."
 msgstr ""
 
 #. §0: ```index```
@@ -972,6 +1064,16 @@ msgid "In this game, you prove some facts about the Language structure specifica
 "prove that the provided examples fo languages are not regular languages."
 msgstr ""
 
+#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+msgid "In a Word Formed by Only a, Counting b Returns 0"
+msgstr ""
+
+#. §0: ```drop```
+#: Game.Levels.TakeAndDrop.L02_DropAll
+msgid "Well done! You just proved that using the §0 function with the full length\n"
+"of a word removes all characters. Let's move forward!"
+msgstr ""
+
 #. §0: ```n```
 #. §1: ```m```
 #. §2: ```n```
@@ -985,11 +1087,26 @@ msgid "Multiplication by a successor.\n"
 "is equal to adding §4 to §5."
 msgstr ""
 
-#. §0: ```take```
-#: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
-msgid "You just proved that the second word does not influence the result when taking a\n"
-"number of characters within the bounds of the first word, allowing §0 to focus solely on\n"
-"the first word. Well done! Let's move to the level 4!"
+#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+msgid "Well done! You are getting closer to the final proof! Let's move on to the next\n"
+"proof!"
+msgstr ""
+
+#. §0: ```word```
+#. §1: ```length word```
+#: Game.Levels.TakeAndDrop.L01_TakeAll
+msgid "For any word §0, taking §1 characters returns the original word."
+msgstr ""
+
+#. §0: $a^n b^n$
+#: Game.Levels.AnBnNotRegular.L06_CountAInU
+msgid "The Prefix u of §0 Consists Only of as"
+msgstr ""
+
+#: Game.Levels.CountCharAndElemOf.L02_CountCharInReplicateChar
+msgid "Well done! You just proved that a word formed by replicating a specific character\n"
+"contains exactly as many occurrences of that character as its repetition count, and none of any\n"
+"other character."
 msgstr ""
 
 #. §0: ```countCharInWord```
@@ -1002,12 +1119,31 @@ msgid "Very good! You just how §0 behaves in combination with the §1\n"
 "§3."
 msgstr ""
 
-#. §0: ```drop_append_right```
-#: Game.Levels.TakeAndDrop.L06_DropAppendRight
-msgid "By proving the theorem §0, you showed that when dropping more\n"
-"characters than the first word contains, the entire first word is removed, and the remaining\n"
-"characters are taken from the second word, effectively continuing the drop into the suffix. Now,\n"
-"let's move forward to the next level!"
+#. §0: ```take_append_right```
+#. §1: ```index```
+#. §2: ```word_1```
+#. §3: ```index```
+#. §4: ```word_1 ++ word_2```
+#. §5: ```word_1```
+#. §6: ```index - length word_1```
+#. §7: ```word_2```
+#: Game.Levels.TakeAndDrop.L05_TakeAppendRight
+msgid "The theorem §0 states that if §1 is greater than\n"
+"the length of §2, then taking §3 characters from §4\n"
+"results in all of §5 followed by the first §6 characters\n"
+"of §7."
+msgstr ""
+
+#. §0: ```index```
+#. §1: ```replicateChar char length```
+#. §2: ```index```
+#. §3: ```length```
+#. §4: ```index```
+#. §5: ```char```
+#: Game.Levels.TakeAndDrop.L07_TakeReplicateChar
+msgid "In this level, you will prove that if you take §0 characters from\n"
+"§1, where §2 does not exceed §3, the resulting\n"
+"word consists of exactly §4 replicas of the character §5."
 msgstr ""
 
 #. §0: ```n```
@@ -1018,13 +1154,11 @@ msgid "Zero is the right identity of addition.\n"
 "For any natural number §0, we have §1."
 msgstr ""
 
-#. §0: ```word```
-#. §1: ```length word```
-#: Game.Levels.TakeAndDrop.L01_TakeAll
-msgid "Taking the full length of a word returns the word itself.\n"
-"\n"
-"For any word §0, taking §1 characters yields the original\n"
-"word unchanged."
+#. §0: ```index - length
+#. word_1```
+#: Game.Levels.TakeAndDrop.L06_DropAppendRight
+msgid "By proving this theorem, you showed that when dropping more characters than the\n"
+"first word contains, the entire first word is removed along with the first §0 characters from the second word. Now, let's move forward to the next level!"
 msgstr ""
 
 #. §0: ```h```
@@ -1049,8 +1183,8 @@ msgstr ""
 msgid "Element of Left Word is Element of Appended Word"
 msgstr ""
 
-#. §0: ```$L = {a^n b^n |
-#. n ≥ 0}$```
+#. §0: $L = {a^n b^n |
+#. n ≥ 0}$
 #. §1: ```a```
 #. §2: ```b```
 #. §3: ```a```
@@ -1079,7 +1213,7 @@ msgstr ""
 #. §24: ```b```
 #. §25: ```a```
 #. §26: ```b```
-#. §27: ```$L = {a^n b^n | n ≥ 0}$```
+#. §27: $L = {a^n b^n | n ≥ 0}$
 #: Game.Levels.AnBnNotRegular
 msgid "Wuhuu! You have finally reached the final world of the game.\n"
 "\n"
@@ -1104,17 +1238,18 @@ msgid "Wuhuu! You have finally reached the final world of the game.\n"
 "§26s and finally, you will show that the language §27 is not regular."
 msgstr ""
 
-#. §0: ```char```
-#. §1: ```char```
-#. §2: ```input_char```
-#. §3: ```n```
-#. §4: ```char```
-#. §5: ```input_char```
-#: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
-msgid "Character membership in a replicated-character word.\n"
-"\n"
-"For any character §0, if §1 appears in a word formed by repeating\n"
-"§2 exactly §3 times, then §4 must be equal to §5."
+#. §0: ```anBnLang```
+#. §1: ```a```
+#. §2: ```b```
+#. §3: ```anBnLang```
+#. §4: ```a```
+#. §5: ```b```
+#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+msgid "In this level, you will prove that if any word is an element of the language\n"
+"§0, then the number of occurrences of the character §1 equals the number of\n"
+"occurrences of the character §2 in that word. This follows from the definition of\n"
+"§3, where each word is constructed using an equal number of replicas of §4\n"
+"followed by the same number of replicas of §5."
 msgstr ""
 
 #. §0: ```simp```
@@ -1126,6 +1261,22 @@ msgid "At this point, you can simplify the proof goal by using the induction hyp
 "possibilities to proceed from this step. You can either proceed by executing the §0\n"
 "tactic followed by §1 tactic combined with the induction hypothesis or you rewrite\n"
 "the induction hypothesis and then execute §2."
+msgstr ""
+
+#. §0: ```n```
+#. §1: ```m```
+#. §2: ```m + n```
+#: Game.Levels.AppendAndConcat.L06_AppendReplicateChar
+msgid "In this level, you will show that if you append a word consisting of §0 replicas\n"
+"of a character to a word consisting §1 replicas of the same character, then the resulting word\n"
+"corresponds to §2 replicas of that character."
+msgstr ""
+
+#: Game.Levels.CountCharAndElemOf.L02_CountCharInReplicateChar
+msgid "In the following, you will prove that the number of occurrences of a character\n"
+"in a word formed by a character's replicas only depends on whether the character being counted\n"
+"matches the replicated one. If the characters match, the count equals the number of repetitions;\n"
+"otherwise, it is zero."
 msgstr ""
 
 #. §0: ```∨```
@@ -1153,19 +1304,9 @@ msgstr ""
 msgid "You can start with an induction on §0, as it is mostly easier to proceed from left to right."
 msgstr ""
 
-#. §0: ```word```
-#. §1: ```length word```
-#: Game.Levels.TakeAndDrop.L02_DropAll
-msgid "Dropping the full length of a word yields the empty word.\n"
-"\n"
-"For any word §0, dropping §1 characters removes all\n"
-"characters, resulting in the empty word."
-msgstr ""
-
-#: Game.Levels.CountCharAndElemOf.L04_CharInAppendRight
-msgid "The goal of this level is to prove that character membership is preserved when a\n"
-"word is appended to another. Precisely, if a character appears in the right word, then it also\n"
-"appears in the word formed by appending this word to any word on its left."
+#. §0: $a^n b^n$
+#: Game.Levels.AnBnNotRegular.L08_CountAInV
+msgid "The Middle Word v of §0 Consists Only of as"
 msgstr ""
 
 #. §0: ```append```
@@ -1180,25 +1321,45 @@ msgstr ""
 msgid "Taking Characters Within the First Word of an Appended Word"
 msgstr ""
 
-#. §0: ```index```
-#. §1: ```word_1```
-#. §2: ```index```
-#. §3: ```word_1 ++ word_2```
-#. §4: ```index```
-#. §5: ```word_1```
-#. §6: ```word_2```
-#: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
-msgid "In this level, you will prove that if the number of characters §0 to take\n"
-"does not exceed the length of the first word §1, then taking §2 characters\n"
-"from §3 is equivalent to taking §4 characters from §5\n"
-"alone. The second word §6 has no effect in this case."
+#. §0: ```n```
+#. §1: ```a```
+#. §2: ```n```
+#. §3: ```b```
+#. §4: `left ++ right`
+#. §5: ```left```
+#. §6: ```n```
+#. §7: ```left```
+#. §8: ```a```
+#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+msgid "This lemma states that if a word consists of §0 replicas of §1 followed\n"
+"by §2 replicas of §3, and that word is written as §4 where\n"
+"the length of §5 is at most §6, then §7 must consist only of\n"
+"§8s."
 msgstr ""
 
-#. §0: ```A```
-#. §1: ```B```
-#. §2: ```anBnLang```
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
-msgid "The Number of §0s is Equal to the Number of §1s in §2"
+#. §0: ```char```
+#. §1: ```char```
+#. §2: ```input_char```
+#. §3: ```n```
+#. §4: ```char```
+#. §5: ```input_char```
+#: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
+msgid "For any character §0, if §1 appears in a word formed by repeating\n"
+"§2 exactly §3 times, then §4 must be equal to §5."
+msgstr ""
+
+#. §0: ```k```
+#. §1: ```a```
+#. §2: ```n```
+#. §3: ```n```
+#. §4: ```b```
+#. §5: ```a```
+#. §6: ```k```
+#. §7: ```n```
+#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+msgid "Very good! You just proved that the first §0 characters of the word, formed by\n"
+"replicating §1 §2 times followed by §3 replicas of §4, are all §5s if\n"
+"§6 is less than §7."
 msgstr ""
 
 #: Game.Levels.TakeAndDrop.L05_TakeAppendRight
@@ -1226,20 +1387,15 @@ msgstr ""
 msgid "Dropping Characters Beyond the First Word in an Appended Word"
 msgstr ""
 
-#. §0: ```a```
-#. §1: ```b```
-#. §2: ```Nat.succ a + b```
-#. §3: ```Nat.succ (a + b)```
-#. §4: ```b```
-#. §5: ```a```
-#. §6: ```b```
-#. §7: ```a```
-#: Game.Levels.AppendAndConcat.L06_AppendReplicateChar
-msgid "The successor of a natural number added to another number.\n"
-"\n"
-"For any natural numbers §0 and §1, §2 is equal to\n"
-"§3. This expresses that adding §4 after taking the\n"
-"successor of §5 is equivalent to taking the successor after adding §6 to §7."
+#. §0: ```length_replicateChar```
+#. §1: ```char```
+#. §2: ```n```
+#. §3: ```replicateChar```
+#. §4: ```n```
+#: Game.Levels.AppendAndConcat.L04_LengthReplicateChar
+msgid "The theorem §0 describes the length of a word created by\n"
+"repeating a specific character multiple times. It states that if a character §1 is\n"
+"repeated §2 times using §3, the resulting word has length exactly §4."
 msgstr ""
 
 #. §0: ```elemOf```
@@ -1270,6 +1426,14 @@ msgid "In this level, you will prove that if the number of characters to drop §
 "does not exceed the length of the first word §1, then dropping §2 characters\n"
 "from §3 is equivalent to dropping §4 characters from §5\n"
 "and then appending the second word §6."
+msgstr ""
+
+#. §0: ```n```
+#. §1: ```0 + n = n```
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "Zero is the left identity of addition.\n"
+"\n"
+"For any natural number §0, we have §1"
 msgstr ""
 
 #. §0: ```n```
@@ -1359,23 +1523,33 @@ msgid "To observe all possible values of §0, you can either proceed\n"
 "§4 does not produce any (induction) hypothesis."
 msgstr ""
 
-#: Game.Levels.CountCharAndElemOf.L05_CharInReplicateChar
-msgid "Well done! One more step closer to executing the pumping lemma on concrete languages. Let's\n"
-"move on to the next world!"
+#. §0: ```z = $a^n b^n$```
+#. §1: ```z = (u ++ v) ++ w```
+#. §2: ```u ++ v```
+#. §3: ```n```
+#. §4: ```u```
+#. §5: ```a```
+#. §6: ```a```
+#. §7: ```u```
+#. §8: ```u```
+#: Game.Levels.AnBnNotRegular.L06_CountAInU
+#: Game.Levels.AnBnNotRegular.L08_CountAInV
+msgid "In this level, you will show that when you decompose the word §0 as\n"
+"§1 and the length of §2 is at most §3, then §4 is made of\n"
+"only §5s. Following this, the count of §6s in §7 is equal to the length of §8."
 msgstr ""
 
-#. §0: ```word_1```
-#. §1: ```index```
-#. §2: ```word_1 ++ word_2```
-#. §3: ```index```
-#. §4: ```word_1```
-#. §5: ```word_2```
-#: Game.Levels.TakeAndDrop.L04_DropAppendLeft
-msgid "Dropping from an appended word within the left operand.\n"
-"\n"
-"If the number of characters dropped does not exceed the length of §0,\n"
-"then dropping §1 characters from §2 is the same as\n"
-"dropping §3 characters from §4 and then appending §5."
+#. §0: ```anBnLang```
+#. §1: ```a```
+#. §2: ```b```
+#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+msgid "This lemma states that if a word is an element of the language §0, then the number of\n"
+"occurrences of the character §1 equals the number of occurrences of the character §2 in\n"
+"that word."
+msgstr ""
+
+#: Game.Levels.AnBnNotRegular.L09_CountBInV
+msgid "Well done! In the next level, let's move on to the next proof!"
 msgstr ""
 
 #. §0: ```h```
@@ -1391,6 +1565,25 @@ msgstr ""
 msgid "The proof for §0 is analogue to the proof for the counterpart\n"
 "§1. If you do not know how to proceed you can have a look at the\n"
 "proof for §2 in the previous level."
+msgstr ""
+
+#. §0: ```b```
+#. §1: ```v```
+#: Game.Levels.AnBnNotRegular.L08_CountAInV
+msgid "Very good! Next, you will show, how man §0s occur in the word §1."
+msgstr ""
+
+#. §0: ```char```
+#. §1: ```char_count```
+#. §2: ```n```
+#. §3: ```char_count```
+#. §4: ```replicateChar char n```
+#. §5: ```n```
+#. §6: ```0```
+#: Game.Levels.CountCharAndElemOf.L02_CountCharInReplicateChar
+msgid "For characters §0 and §1 and a natural number §2,\n"
+"counting occurrences of §3 in §4\n"
+"returns §5 if the two characters are equal, and §6 otherwise."
 msgstr ""
 
 #. §0: ```intros h```
@@ -1427,21 +1620,6 @@ msgid "If you now observe §0, you see that it is a clause of the form §1. So, 
 "executing the §3 tactic with the hypothesis §4."
 msgstr ""
 
-#. §0: ```word```
-#. §1: ```n```
-#. §2: ```replicateWord word n```
-#. §3: ```n```
-#. §4: ```word```
-#. §5: ```n```
-#. §6: ```word```
-#: Game.Levels.AppendAndConcat.L05_LengthReplicateWord
-msgid "The length of a word repeated multiple times.\n"
-"\n"
-"For any word §0 and natural number §1, §2\n"
-"produces a word consisting of §3 copies of §4 appended together.\n"
-"The length of this resulting word is §5 times the length of §6."
-msgstr ""
-
 #: Game.Levels.AnBnNotRegular
 msgid "AnBn is Not Regular"
 msgstr ""
@@ -1454,6 +1632,24 @@ msgid "Subtracting zero from a natural number.\n"
 "For any natural number §0, we have §1."
 msgstr ""
 
+#: Game.Levels.AppendAndConcat.L03_LengthAppend
+msgid "Very good! You just proved that appending words preserves all characters from both words.\n"
+"Thus, the total length of the resulting word is the sum of the length of the first and the second word.\n"
+"From now onwards, you can rewrite both terms to one another whenever necessary."
+msgstr ""
+
 #: Game.Levels.TakeAndDrop.L04_DropAppendLeft
 msgid "Dropping Characters Within the First Word of an Appended Word"
+msgstr ""
+
+#. §0: ```word_1```
+#. §1: ```index```
+#. §2: ```word_1 ++ word_2```
+#. §3: ```index```
+#. §4: ```word_1```
+#. §5: ```word_2```
+#: Game.Levels.TakeAndDrop.L04_DropAppendLeft
+msgid "If the number of characters to be dropped does not exceed the length of §0,\n"
+"then dropping §1 characters from §2 is the same as\n"
+"dropping §3 characters from §4 and then appending §5."
 msgstr ""

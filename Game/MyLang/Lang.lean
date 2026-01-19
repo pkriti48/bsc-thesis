@@ -31,17 +31,17 @@ Structurally equivalent to a list of characters.
 -/
 inductive Word where
 /--
-  The empty word.
+The empty word.
 
-  This constructor represents a word containing no characters.
+This constructor represents a word containing no characters.
   -/
 | nil : Word
 
 /--
-  Prepend a ```Character``` to an existing ```Word```.
+Prepend a ```Character``` to an existing ```Word```.
 
-  ```cons char word``` represents the word whose first character
-  is ```char```, followed by the ```word```.
+```cons char word``` represents the word whose first character
+is ```char```, followed by the ```word```.
   -/
 | cons  : Character -> Word -> Word
 
@@ -134,7 +134,7 @@ notation head " :: " tail => concat head tail
 
 
 /--
-Create a word consisting of ```n``` replicas of a single ```Character```.
+Create a word consisting of ```n``` replicas of a ```Character```.
 -/
 def replicateChar (char : Character) (n : Nat): Word :=
   match n with
@@ -182,7 +182,7 @@ def drop (word : Word) (index : Nat) : Word :=
 The pumping property for a language.
 
 A language ```lang``` satisfies the pumping property if there exists a positive
-integer ```n``` such that every word ```z``` in ```lang``` with length at least
+number ```n``` such that every word ```z``` in ```lang``` with length at least
 ```n``` can be written as ```z = u ++ v ++ w``` and fulfills the following:
 1. The length of ```u ++ v``` is at most ```n```
 2. The word ```v```` is non-empty
@@ -197,6 +197,15 @@ def pumpingProperty (lang : Lang) :=
   length v ≥ 1 ∧
   ∀ (i : Nat), ((u ++ (replicateWord v i)) ++ w) ∈ lang.l
 
+
+/--
+The language ```anBnLang``` consists of all words of the form ```$a^n b^n$```.
+
+A word is an element of ```anBnLang``` if there exists a number ```j``` such that the
+word is equal to ```j``` replicas of the character ```b``` appended to ```j``` replicas
+of the character ```a```. To be precise, all words in this language contain the same
+number of ```a```s and ```b```s, with all ```a```s appearing before any ```b```.
+-/
 def anBnLang : Lang :=
   {l := { z | ∃ j : Nat, z = (replicateChar Character.a j) ++ (replicateChar Character.b j)}}
 

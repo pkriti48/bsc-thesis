@@ -4,17 +4,33 @@ namespace Word
 
 World "AnBnNotRegular"
 Level 10
-Title ""
+Title "Length of z Is 2 * n"
 
-Introduction ""
+Introduction "In this proof, you will show that appending ```n``` replicas of ```b``` to ```n```
+replicas of ```a``` means that the word has a length equal to ```2 * n``` since each individual word
+has the length ```n```."
 
-TheoremDoc Word.length_z_eq_2n as "length_z_eq_2n" in "Word"
+/--
+Th word produced by appending ```n``` replicas of ```b``` to ```n```
+replicas of ```a``` has the length ```2 * n```.
+-/
+TheoremDoc Word.length_z_eq_2n as "length_z_eq_2n" in "AnBnNotRegular"
+
+/--
+Multiplication by two is addition with itself.
+
+For any natural number ```n```, multiplying ```n``` by ```2``` is
+equal to adding ```n``` to itself, i.e. `2 * n = n + n`.
+-/
+TheoremDoc Nat.two_mul as "two_mul"
 
 Statement length_z_eq_2n (n : Nat) :
 length (replicateChar Character.a n ++ replicateChar Character.b n) = 2 * n := by
   rewrite [length_append]
   repeat rewrite [length_replicateChar]
-  rewrite [two_mul]
+  rewrite [Nat.two_mul]
   rfl
 
-Conclusion ""
+Conclusion "Well done! Next, you'll show how the length of the pumped word is calculated."
+
+NewTheorem Nat.two_mul

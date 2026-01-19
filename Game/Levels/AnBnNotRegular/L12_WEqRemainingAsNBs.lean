@@ -1,13 +1,22 @@
-import Game.Levels.AnBnNotRegular.L11_LengthPumpedWord
+import Game.Levels.AnBnNotRegular.L11_LengthPumpedAn
 
 namespace Word
 
 World "AnBnNotRegular"
 Level 12
-Title ""
+Title "The Suffix w Contains All Remaining as And All bs"
 
-Introduction ""
+Introduction "In this proof, you will show that decomposing a word $z = a^n b^n$ as  ```z =
+(u ++ v) ++ w``` with ```k = length u + length v```, ```k ≤ n``` and ```length u < k```, the
+suffix ```w```consists of exactly ```n - k``` replicas of ```a``` followed by ```n``` replicas
+of ```b```."
 
+/--
+For a word $z = a^n b^n$, which is decomposed as ```z = (u ++ v) ++ w``` with
+```k = length u + length v```, ```k ≤ n``` and ```length u < k```, the remaining
+suffix ```w```consists of exactly ```n - k``` replicas of ```a``` followed by
+```n``` replicas of ```b```.
+-/
 TheoremDoc Word.w_eq_remaining_as_n_bs as "w_eq_remaining_as_n_bs" in "Word"
 
 Statement w_eq_remaining_as_n_bs (u v w z : Word) (n k : Nat)
@@ -36,4 +45,5 @@ w = replicateChar Character.a (n - k) ++ replicateChar Character.b n := by
   rewrite [length_replicateChar]
   exact k_leq_n
 
-Conclusion ""
+Conclusion "Using this theorem, will prove separately how many ```a```s and ```b```s occur in the
+suffix ```w``` of ```z```."

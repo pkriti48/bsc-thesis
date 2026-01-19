@@ -4,11 +4,18 @@ namespace Word
 
 World "AnBnNotRegular"
 Level 8
-Title ""
+Title "The Middle Word v Consists Only of as"
 
-Introduction ""
+Introduction "In this level, you will show that when you decompose the word ```z = $a^n b^n$``` as
+```z = (u ++ v) ++ w``` and the length of ```u ++ v``` is at most ```n```, then ```v``` is made of
+only ```a```s. Following this, the count of ```a```s in ```v``` is equal to the length of ```v```."
 
-TheoremDoc Word.count_a_in_v as "count_a_in_v" in "Word"
+/--
+If a word ```z = $a^n b^n$``` is decomposed as ```z = (u ++ v) ++ w``` and the length of ```u ++ v```
+is at most ```n```, then  ```v``` consists only of ```a```s. That means, the the number of occurrences
+of ```a``` in ```v``` is equal to the length of ```v```.
+-/
+TheoremDoc Word.count_a_in_v as "count_a_in_v" in "AnBnNotRegular"
 
 Statement count_a_in_v (u v w z : Word) (n : Nat)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)
@@ -24,4 +31,4 @@ countCharInWord Character.a v = length v := by
   apply char_elemOf_replicateChar at h
   exact h
 
-Conclusion ""
+Conclusion "Very good! Next, you will show, how man ```b```s occur in the word ```v```."

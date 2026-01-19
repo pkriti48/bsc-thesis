@@ -4,9 +4,16 @@ namespace Word
 
 World "AnBnNotRegular"
 Level 3
-Title ""
+Title "In a Word Formed by Only a, Counting b Returns 0"
 
-Introduction ""
+Introduction "In the level, you will prove that if ```a``` occurs at every position of a word, then
+the number of ```b``` in the word is equal to 0."
+
+/--
+If every character occurring in a word is ```a```, then the number of ```b```s in the
+word is equal to the length of the word.
+-/
+TheoremDoc Word.count_b_in_replicateChar_a as "count_b_in_replicateChar_a" in "AnBnNotRegular"
 
 Statement count_b_in_replicateChar_a {char : Character} {word : Word}
 {h : ∀ char : Character, elemOf char word -> char = Character.a} :
@@ -31,4 +38,8 @@ countCharInWord Character.b word = 0 := by
       exact h_ch
     exact h_tail
 
-Conclusion ""
+Conclusion "Well done! With the previous statement and the one in this level you proved that, if a
+word consists of only ```a```s then the count ```a```s in that word is equal to the length of that
+word, which also results in the count ```b``` being 0 in that word."
+
+NewDefinition Character.b

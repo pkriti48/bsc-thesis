@@ -8,7 +8,7 @@ import Game.Levels.AnBnNotRegular.L07_CountBInU
 import Game.Levels.AnBnNotRegular.L08_CountAInV
 import Game.Levels.AnBnNotRegular.L09_CountBInV
 import Game.Levels.AnBnNotRegular.L10_LengthZEq2n
-import Game.Levels.AnBnNotRegular.L11_LengthPumpedWord
+import Game.Levels.AnBnNotRegular.L11_LengthPumpedAn
 import Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
 import Game.Levels.AnBnNotRegular.L13_CountAInW
 import Game.Levels.AnBnNotRegular.L14_CountBInW
@@ -20,8 +20,8 @@ Title "AnBn is Not Regular"
 
 Introduction "Wuhuu! You have finally reached the final world of the game.
 
-So far, you proved many theorem that will now come handy to prove that the language ```$L = {a^n b^n |
-n ≥ 0}$``` is not regular.
+So far, you proved many theorem that will now come handy to prove that the language $L = {a^n b^n |
+n ≥ 0}$ is not regular.
 
 You will start by proving that the count of ```a```s and ```b```s has to be the same in word if the
 word is an element of the language L as defined above.
@@ -41,5 +41,5 @@ Thereafter, you will prove that the word ```w``` consists of ```n - (length (u +
 and ```n``` ```b```s.
 
 Then almost reaching the end, you will prove that the pumped word consists of more ```a```s than
-```b```s and finally, you will show that the language ```$L = {a^n b^n | n ≥ 0}$``` is not regular.
+```b```s and finally, you will show that the language $L = {a^n b^n | n ≥ 0}$ is not regular.
 "
