@@ -11,8 +11,6 @@ to another. Precisely, if a character appears in the left word, then it also app
 by appending any right word to it."
 
 /--
-Character membership is preserved under append on the left word.
-
 If a character ```char``` appears in the word ```left```, then it also appears
 in the appended word ```left ++ right``` for any word ```right```.
 -/

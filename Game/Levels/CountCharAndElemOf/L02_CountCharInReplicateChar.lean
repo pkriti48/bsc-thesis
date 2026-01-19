@@ -6,15 +6,13 @@ World "CountCharAndElemOf"
 Level 2
 Title "Count Occurrences of a Character in Word Formed by a Character's Replicas"
 
-Introduction "In the following, you will prove that the result of counting occurrences of a character
-in a word formed by a character's replicas solely depends on whether the character being counted matches
-the repeated one. If they are the same, the count equals the number of repetitions; otherwise, the
-count is zero."
+Introduction "In the following, you will prove that the number of occurrences of a character
+in a word formed by a character's replicas only depends on whether the character being counted
+matches the replicated one. If the characters match, the count equals the number of repetitions;
+otherwise, it is zero."
 
 
 /--
-Counting characters in a word of repeated characters.
-
 For characters ```char``` and ```char_count``` and a natural number ```n```,
 counting occurrences of ```char_count``` in ```replicateChar char n```
 returns ```n``` if the two characters are equal, and ```0``` otherwise.
@@ -40,7 +38,7 @@ countCharInWord char_count (replicateChar char n) = (if char = char_count then n
     rewrite [Nat.add_zero]
     rfl
 
-Conclusion "Well done! You just proved that a word formed by repeating a single character
+Conclusion "Well done! You just proved that a word formed by replicating a specific character
 contains exactly as many occurrences of that character as its repetition count, and none of any
 other character."
 

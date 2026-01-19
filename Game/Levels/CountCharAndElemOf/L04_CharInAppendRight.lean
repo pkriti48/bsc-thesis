@@ -6,14 +6,11 @@ World "CountCharAndElemOf"
 Level 4
 Title "Element of Second Word is Element of Appended Word"
 
-Introduction "The goal of this level is to prove that character membership is preserved when a
-word is appended to another. Precisely, if a character appears in the right word, then it also
-appears in the word formed by appending this word to any word on its left."
+Introduction "The goal of this level is to prove that if a character appears in the right word,
+then it also appears in the word formed by appending this word to any other word."
 
 
 /--
-Character membership is preserved under append on the right.
-
 If a character ```char``` appears in the word ```right```, then it also appears
 in the appended word ```left ++ right``` for any word ```left```.
 -/

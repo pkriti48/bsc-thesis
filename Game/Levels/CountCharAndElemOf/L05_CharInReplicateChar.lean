@@ -13,8 +13,6 @@ In other words, you will prove that a word made of repeating a specifif characte
 contain any other character."
 
 /--
-Character membership in a replicated-character word.
-
 For any character ```char```, if ```char``` appears in a word formed by repeating
 ```input_char``` exactly ```n``` times, then ```char``` must be equal to ```input_char```.
 -/
@@ -40,7 +38,7 @@ Statement char_elemOf_replicateChar {input_char : Character} {n : Nat} :
       rfl
       exact char_in_tail
 
-Conclusion "Well done! One more step closer to executing the pumping lemma on concrete languages. Let's
-move on to the next world!"
+Conclusion "Well done! One more step closer to executing the pumping lemma on concrete languages.
+Let's move on to the next and final world!"
 
 NewTactic symm
