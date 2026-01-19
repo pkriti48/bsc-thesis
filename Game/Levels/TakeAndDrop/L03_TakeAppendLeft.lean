@@ -7,13 +7,10 @@ Level 3
 Title "Taking Characters Within the First Word of an Appended Word"
 
 Introduction "In this level, you will prove that if the number of characters ```index``` to take
-does not exceed the length of the first word ```word_1```, then taking ```index``` characters
-from ```word_1 ++ word_2``` is equivalent to taking ```index``` characters from ```word_1```
-alone. The second word ```word_2``` has no effect in this case."
+does not exceed the length of ```word_1```, then taking ```index``` characters from
+```word_1 ++ word_2``` is equivalent to taking ```index``` characters from ```word_1``` alone."
 
 /--
-Taking from an appended word within the left operand.
-
 If the number of characters taken does not exceed the length of ```word_1```,
 then taking ```index``` characters from ```word_1 ++ word_2``` is the same as taking
 ```index``` characters from ```word_1``` alone.
@@ -85,8 +82,7 @@ take (word_1 ++ word_2) index = take word_1 index := by
       exact h
 
 Conclusion "You just proved that the second word does not influence the result when taking a
-number of characters within the bounds of the first word, allowing ```take``` to focus solely on
-the first word. Well done! Let's move to the level 4!"
+number of characters within the bounds of the first word. Well done! Let's move to the level 4!"
 
 NewTactic cases
 NewTheorem Nat.le_zero_eq Nat.succ_eq_add_one Nat.le_of_succ_le_succ

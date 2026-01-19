@@ -10,8 +10,6 @@ Introduction "In this level, you will prove the theorem ```drop_all```. It state
 a number of characters equal to the length of a word results in the empty word ```nil```."
 
 /--
-Dropping the full length of a word yields the empty word.
-
 For any word ```word```, dropping ```length word``` characters removes all
 characters, resulting in the empty word.
 -/
@@ -29,6 +27,6 @@ Statement drop_all (word : Word) : drop word (length word) = nil := by
     rfl
 
 Conclusion "Well done! You just proved that using the ```drop``` function with the full length
-of a word removes all characters, leaving no remaining characters. Let's move forward!"
+of a word removes all characters. Let's move forward!"
 
 NewDefinition Word.drop

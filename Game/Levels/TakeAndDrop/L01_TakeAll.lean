@@ -6,14 +6,11 @@ World "TakeAndDrop"
 Level 1
 Title "Take All Characters of a Word"
 
-Introduction "In this level, you will provef: This theorem states that taking a number of
-characters equal to the length of a word returns the word itself."
+Introduction "In this level, you will prove that taking a number of characters equal to the
+length of a word returns the word itself."
 
 /--
-Taking the full length of a word returns the word itself.
-
-For any word ```word```, taking ```length word``` characters yields the original
-word unchanged.
+For any word ```word```, taking ```length word``` characters returns the original word.
 -/
 TheoremDoc Word.take_all as "take_all" in "Word"
 

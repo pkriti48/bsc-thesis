@@ -7,20 +7,18 @@ Level 8
 Title "Drop from a Sequence of Repeated Characters"
 
 Introduction "In this level, you will prove that if you drop ```index``` characters from
-```replicateChar char length```, where ```index``` does not exceed ```length```, the result is
-a word consisting of exactly ```length - index``` copies of the character ```char```."
+```replicateChar char length```, where ```index``` does not exceed ```length```, the resulting
+word consists of exactly ```length - index``` replicas of the character ```char```."
 
 /--
-Dropping a prefix from a word of repeated characters.
-
 For a character ```char``` and natural numbers ```length``` and ```index``` such that
 ```index ≤ length```, dropping ```index``` characters from ```replicateChar char length```
-produces a word consisting of ```length - index``` copies of ```char```.
+produces a word consisting of ```length - index``` replicas of ```char```.
 -/
 TheoremDoc Word.drop_replicateChar as "drop_replicateChar" in "Word"
 
 /--
-Cancel a common addend on the right of a subtraction.
+Cancel a common addend in a subtraction.
 
 For any natural numbers ```m```, ```n```, and ```k```, adding the same number ```k``` to
 both ```m``` and ```n``` does not change their difference:

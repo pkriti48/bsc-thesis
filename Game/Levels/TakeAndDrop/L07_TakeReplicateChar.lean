@@ -7,15 +7,13 @@ Level 7
 Title "Take from a Sequence of Repeated Characters"
 
 Introduction "In this level, you will prove that if you take ```index``` characters from
-```replicateChar char length```, where ```index``` does not exceed ```length```, the result is
-a word consisting of exactly ```index``` copies of the character ```char```."
+```replicateChar char length```, where ```index``` does not exceed ```length```, the resulting
+word consists of exactly ```index``` replicas of the character ```char```."
 
 /--
-Taking a prefix of repeated characters.
-
 For a character ```char``` and natural numbers ```length``` and ```index``` such that
 ```index ≤ length```, taking ```index``` characters from ```replicateChar char length```
-produces a word consisting of ```index``` copies of ```char```.
+produces a word consisting of ```index``` replicas of ```char```.
 -/
 TheoremDoc Word.take_replicateChar as "take_replicateChar" in "Word"
 

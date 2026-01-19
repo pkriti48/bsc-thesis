@@ -6,16 +6,14 @@ World "TakeAndDrop"
 Level 5
 Title "Taking Characters Beyond the First Word in an Appended Word"
 
-Introduction "The following theorem ```take_append_right``` states that if ```index``` is
-greater than the length of ```word_1```, then taking ```index``` characters from ```word_1 ++
-word_2``` results in all of word₁ followed by the first ```index - length word_1``` characters
+Introduction "The theorem ```take_append_right``` states that if ```index``` is greater than
+the length of ```word_1```, then taking ```index``` characters from ```word_1 ++ word_2```
+results in all of ```word_1``` followed by the first ```index - length word_1``` characters
 of ```word_2```."
 
 /--
-Taking from an appended word beyond the left operand.
-
 If ```index``` is greater than the length of ```word_1```, then taking ```index```
-characters from ```word_1 ++ word_2``` yields all of ```word_1``` followed by the
+characters from ```word_1 ++ word_2``` returns all of ```word_1``` followed by the
 remaining characters taken from ```word_2```.
 -/
 TheoremDoc Word.take_append_right as "take_append_right" in "Word"
@@ -62,9 +60,8 @@ take (word_1 ++ word_2) index = word_1 ++ (take word_2 (index - length word_1)) 
       simp at h
       exact h
 
-Conclusion "Well done! You just showed that ```take_append_right``` shows that when taking more
-characters than are present in the first word, the result includes the entirety of the first
-word plus the corresponding number of characters from the second word, correctly spanning the
-boundary between the two. Let's move on to the last proof in the second world."
+Conclusion "Well done! You just showed that when taking more characters than are present in the
+first word, the result includes the entire first word plus the corresponding number of characters
+from the second word. Let's move on to the last proof in the second world."
 
 NewTheorem Nat.sub_zero Nat.succ_sub_succ

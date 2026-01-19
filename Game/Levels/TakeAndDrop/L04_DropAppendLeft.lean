@@ -12,9 +12,7 @@ from ```word_1 ++ word_2``` is equivalent to dropping ```index``` characters fro
 and then appending the second word ```word_2```."
 
 /--
-Dropping from an appended word within the left operand.
-
-If the number of characters dropped does not exceed the length of ```word_1```,
+If the number of characters to be dropped does not exceed the length of ```word_1```,
 then dropping ```index``` characters from ```word_1 ++ word_2``` is the same as
 dropping ```index``` characters from ```word_1``` and then appending ```word_2```.
 -/
