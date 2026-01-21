@@ -18,16 +18,7 @@ increases the number of ```a```s occurring in the word by the factor
 ```length v```. So, the final length of the prefix consisting of ```a```s
 is ```n + length v```.
 -/
-TheoremDoc Word.length_pumped_word as "length_pumped_word" in "Word"
-
-/--
-Left-cancellation for addition.
-
-For natural numbers ```m```, ```n```, and ```k```, adding the same
-number ```m``` to both sides of an equality results in an equivalent
-statement: ```m + n = m + k``` if and only if ```n = k```.
--/
-TheoremDoc Nat.add_left_cancel_iff as "Nat.add_left_cancel_iff" in "Nat"
+TheoremDoc Word.number_of_as_in_pumped_word as "number_of_as_in_pumped_word" in "Word"
 
 /--
 States ommutativity on the left operands for addition on natural numbers.
@@ -71,33 +62,36 @@ For natural numbers ```m``` and ```n```, it asserts: ```m ≤ m + n```
 -/
 TheoremDoc Nat.le_add_right as "Nat.le_add_right" in "Nat"
 
-Statement length_pumped_word (u v w z : Word) (n k : Nat)
+Statement number_of_as_in_pumped_word (u v w z : Word) (n : Nat)
 (z_eq : z = (u ++ v) ++ w)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)
-(k_leq_n : k ≤ n) (h_k : k = length u + length v) :
+(length_u_v_leq_n : length (u ++ v) ≤ n) :
 u.length + (v.length + v.length) + (w.length - n) = n + length v := by
+  Hint "This statement can mostly be proven using theorems about the associative and the commutative
+  property of natural numbers. It is quite a straightforward proof."
   rewrite [<- Nat.add_sub_assoc]
   rewrite [<- Nat.add_left_comm]
   rewrite [Nat.add_assoc]
-  rewrite [Nat.add_comm n]
   rewrite [<- length_append]
   rewrite [<- length_append]
   rewrite [<- z_eq]
-  rewrite [Nat.add_sub_assoc]
-  rewrite [Nat.add_left_cancel_iff]
   rewrite [h_z]
   rewrite [length_z_eq_2n]
+  rewrite [Nat.add_sub_assoc]
   rewrite [Nat.two_mul]
   rewrite [Nat.add_sub_cancel]
+  rewrite [Nat.add_comm]
   rfl
-  rewrite [h_z]
-  rewrite [length_append]
-  repeat rewrite [length_replicateChar]
+  rewrite [Nat.two_mul]
+  Hint "Now, you can execute ```apply Nat.le_add_right n n```. This theorem states, that any natural
+  number is less than or equal to itself plus another natural number. However, in your case both
+  numbers are same so you can pass ```n``` twice."
   apply Nat.le_add_right n n
-  have length_w : length w = length z - k := by
+  Hint "If you do not know, how to proceed from here, you can start by writing an auxiliary thoerem,
+  that retrieves the length of the word ```w``` using the length of the word ```z```."
+  have length_w : length w = length z - length (u ++ v) := by
     rewrite [z_eq]
-    rewrite [h_k]
-    repeat rewrite [length_append]
+    rewrite [length_append]
     rewrite [Nat.add_sub_cancel_left]
     rfl
   rewrite [length_w]
@@ -106,9 +100,9 @@ u.length + (v.length + v.length) + (w.length - n) = n + length v := by
   rewrite [Nat.two_mul]
   rewrite [Nat.add_sub_assoc]
   apply Nat.le_add_right
-  exact k_leq_n
+  exact length_u_v_leq_n
 
 Conclusion "Very good! You will use this theorem later on to show that the pumped word contains more
 ```a```s than the non pumped word ```z```."
 
-NewTheorem Nat.add_left_cancel_iff Nat.add_left_comm Nat.add_sub_assoc Nat.add_sub_cancel Nat.add_sub_cancel_left Nat.le_add_right
+NewTheorem Nat.add_left_comm Nat.add_sub_assoc Nat.add_sub_cancel Nat.add_sub_cancel_left Nat.le_add_right

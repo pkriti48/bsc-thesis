@@ -25,10 +25,16 @@ TheoremDoc Nat.sub_self as "Nat.sub_self" in "Nat"
 
 Statement count_a_in_w (u v w z : Word) (n k : Nat)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)
-(z_eq : z = (u ++ v) ++ w) (h_k : k = length u + length v)
-(k_leq_n : k ≤ n) (length_u_lt_k : length u < k) :
+(z_eq : z = (u ++ v) ++ w) (h_k : k = length (u ++ v))
+(length_u_v_leq_n : length (u ++ v) ≤ n) :
 countCharInWord Character.a w = length w - n := by
-  rewrite [w_eq_remaining_as_n_bs u v w z n k h_z z_eq h_k k_leq_n length_u_lt_k]
+  Hint "In the previous level, you showed how many ```a```s and ```b```s occur in the word ```w```,
+  you can use that theorem to simplify your current proof goal."
+  Hint "In order to execute the tactic correctly, you have to pass the word ```w``` to that theorem
+  as you did in one of the recent proofs and to avoid repetitive proofs for any other words, numbers
+  or the hypotheses that theorem requires, you can pass those to the theorem as well. That makes
+  your proof half as long."
+  rewrite [w_eq_remaining_as_n_bs u v w z n k h_z z_eq h_k length_u_v_leq_n]
   rewrite [count_char_in_append]
   simp [count_char_in_replicateChar]
   rewrite [length_append]

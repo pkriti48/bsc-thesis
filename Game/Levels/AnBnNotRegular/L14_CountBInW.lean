@@ -18,10 +18,12 @@ TheoremDoc Word.count_b_in_w as "count_b_in_w" in "Word"
 
 Statement count_b_in_w (u v w z : Word) (n k : Nat)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)
-(z_eq : z = (u ++ v) ++ w) (h_k : k = length u + length v)
-(k_leq_n : k ≤ n) (length_u_lt_k : length u < k) :
+(z_eq : z = (u ++ v) ++ w) (h_k : k = length (u ++ v))
+(length_u_v_leq_n : length (u ++ v) ≤ n) :
 countCharInWord Character.b w = n := by
-  rewrite [w_eq_remaining_as_n_bs u v w z n k h_z z_eq h_k k_leq_n length_u_lt_k]
+  Hint "Again, you start by rewriting the word ```w``` as a sequence of ```a```s followed by a
+  sequence of ```b```s and proceed accordingly thereafter."
+  rewrite [w_eq_remaining_as_n_bs u v w z n k h_z z_eq h_k length_u_v_leq_n]
   rewrite [count_char_in_append]
   simp [count_char_in_replicateChar]
 

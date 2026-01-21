@@ -18,25 +18,22 @@ TheoremDoc Word.count_b_in_replicateChar_a as "count_b_in_replicateChar_a" in "A
 Statement count_b_in_replicateChar_a {char : Character} {word : Word}
 {h : ∀ char : Character, elemOf char word -> char = Character.a} :
 countCharInWord Character.b word = 0 := by
+  Hint "This proof is analogue to the proof for the theorem ```count_a_in_replicateChar_a```. So, if
+  at any point, you do not know how to proceed, you can have a look at that proof."
   induction word with
   | nil =>
     rewrite [countCharInWord]
     rfl
   | cons head tail ih =>
     simp [elemOf] at h
-    have h_head : head = Character.a := by
-      apply h
-      simp
-    simp [h_head]
+    simp [h]
     simp [countCharInWord]
     rewrite [ih]
     rfl
-    have h_tail : ∀ char, elemOf char tail → char = Character.a := by
-      intros ch h_ch
-      apply h
-      right
-      exact h_ch
-    exact h_tail
+    intros ch h_ch
+    apply h
+    right
+    exact h_ch
 
 Conclusion "Well done! With the previous statement and the one in this level you proved that, if a
 word consists of only ```a```s then the count ```a```s in that word is equal to the length of that

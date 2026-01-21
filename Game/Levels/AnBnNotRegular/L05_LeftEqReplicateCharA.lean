@@ -20,31 +20,27 @@ the length of ```left``` is at most ```n```, then ```left``` must consist only o
 -/
 TheoremDoc Word.left_eq_replicateChar_a as "left_eq_replicateChar_a" in "AnBnNotRegular"
 
-/--
-```congrArg``` carries equality through a function.
-
-If two terms ```x``` and ```y``` are equal, then applying the same function ```f```
-to both returns equal results. In other words, from ```x = y``` ```f x = f y``` is
-derived.
--/
-TacticDoc congrArg
-
 Statement left_eq_replicateChar_a (left right word : Word) (n : Nat)
 (h_z : word = replicateChar Character.a n ++ replicateChar Character.b n)
 (z_eq : word = left ++ right)
 (length_left_leq_n : length left ≤ n) :
 left = replicateChar Character.a (length left) := by
-  have helper := congrArg (fun f => take f (length left)) z_eq
-  simp at helper
-  simp [h_z] at helper
-  rewrite [take_replicateChar_append (k_leq_n := length_left_leq_n)] at helper
-  rewrite [helper]
-  rewrite [take_append_left]
-  rewrite [take_all]
-  rfl
-  rfl
+  Hint "To prove this statement, start by deriving the fact that left can be retrieved from ```word
+  = left ++ right``` by applying the ```take``` function to ```word```."
+  Hint (hidden := true) "To derive this fact, you can write a helper theorem using the ```have``` tactic."
+  have take_left : left = take word (length left) := by
+    rewrite [z_eq]
+    rewrite [take_append_left]
+    rewrite [take_all]
+    rfl
+    rfl
+  Hint "From here, the proof should be easy to solve using the theorems you have proven so far."
+  rewrite [h_z] at take_left
+  rewrite [take_replicateChar_append] at take_left
+  exact take_left
+  exact length_left_leq_n
 
 Conclusion "Well done! You are getting closer to the final proof! Let's move on to the next
 proof!"
 
-NewTactic congrArg
+NewTactic «have»

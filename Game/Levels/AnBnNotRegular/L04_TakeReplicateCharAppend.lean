@@ -21,6 +21,8 @@ TheoremDoc Word.take_replicateChar_append as "take_replicateChar_append" in "AnB
 
 Statement take_replicateChar_append (n k : Nat) (k_leq_n : k ≤ n) :
 take (replicateChar Character.a n ++ replicateChar Character.b n) k = replicateChar Character.a k := by
+  Hint "Considering that you proved all theorems used in this proof in earlier worlds, this proof
+  should be trivial."
   rewrite [take_append_left]
   rewrite [take_replicateChar (h := k_leq_n)]
   rfl

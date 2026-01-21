@@ -24,6 +24,8 @@ Statement count_a_in_u (u v w z : Word) (n : Nat)
 countCharInWord Character.a u = length u := by
   apply count_a_in_replicateChar_a
   exact Character.a
+  Hint "As you did earlier, you can split this implication into an hypothesis and proof goal using
+  the ```intros``` tactic."
   intros char h
   apply char_elemOf_append_left (right := v ) at h
   rewrite [left_eq_replicateChar_a (u ++ v) w z n h_z z_eq length_u_v_leq_n] at h

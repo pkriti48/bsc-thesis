@@ -8,7 +8,7 @@ import Game.Levels.AnBnNotRegular.L07_CountBInU
 import Game.Levels.AnBnNotRegular.L08_CountAInV
 import Game.Levels.AnBnNotRegular.L09_CountBInV
 import Game.Levels.AnBnNotRegular.L10_LengthZEq2n
-import Game.Levels.AnBnNotRegular.L11_LengthPumpedAn
+import Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
 import Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
 import Game.Levels.AnBnNotRegular.L13_CountAInW
 import Game.Levels.AnBnNotRegular.L14_CountBInW

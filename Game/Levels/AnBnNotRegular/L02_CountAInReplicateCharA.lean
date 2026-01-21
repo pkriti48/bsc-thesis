@@ -26,22 +26,22 @@ countCharInWord Character.a word = length word := by
     rfl
   | cons head tail ih =>
     simp [elemOf] at h
-    have h_head : head = Character.a := by
-      apply h
-      simp
-    simp [h_head]
+    Hint (hidden := true) "If you do not know how to proceed from here, try using the ```simp```
+    tactic. It will simplify your expression using all theorems that are available and applicable to
+    your current proof goal along with the hypothesis ```h```."
+    simp [h]
     simp [countCharInWord]
-    rewrite [ih]
     rewrite [length]
+    rewrite [ih]
     rfl
-    have h_tail : ∀ char, elemOf char tail → char = Character.a := by
-      intros ch h_ch
-      apply h
-      right
-      exact h_ch
-    exact h_tail
+    Hint "If you carefully look at your current proof goal, it looks a lot like the hypothesis
+    ```h```. In order to prove its correctness, simplify your current proof goal using ```intros```
+    tactic."
+    intros ch h_ch
+    apply h
+    right
+    exact h_ch
 
 Conclusion "Well done! Let's move forward to the next proof!"
 
-NewTactic «have»
 NewDefinition Character.a

@@ -28,6 +28,8 @@ Statement length_z_eq_2n (n : Nat) :
 length (replicateChar Character.a n ++ replicateChar Character.b n) = 2 * n := by
   rewrite [length_append]
   repeat rewrite [length_replicateChar]
+  Hint (hidden := true) "To proceed from here, you are given a theorem stating that adding a number
+  to itself is equal to multiplying the same number by 2. Use that!"
   rewrite [Nat.two_mul]
   rfl
 

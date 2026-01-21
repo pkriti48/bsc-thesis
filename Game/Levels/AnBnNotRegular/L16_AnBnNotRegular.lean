@@ -15,12 +15,21 @@ This theorem states that the language $L = {a^n b^n | n ≥ 0}$ is not regular.
 TheoremDoc Word.an_bn_not_regular as "an_bn_not_regular" in "Word"
 
 Statement an_bn_not_regular : ¬ pumpingProperty anBnLang := by
-  -- wenn word in lang anbn dann folgt, dass die Anzahl von as und bs ist gleich
+  Hint "You start by splitting your proof goal into the hypothesis ```pumpingProperty anBnLang```
+  and a proof goal ```False```. This is analogue to specifying 'proof by contradiction' in a
+  pen-and-paper proof."
   intro h
   rewrite [pumpingProperty] at h
-  -- Sei n ∈ ℕ ∧ n ≠ 0 beliebig.
+  Hint "As you can see, the hypothesis you created using ```intro``` is not in its simplest form
+  yet. In order to simplify it further, remove all quantifiers you can."
+  Hint "To remove the quantifiers, you can use the ```cases``` tactic and simplify the hypothesis
+  manually as far as required/possible or you can use the ```rcases``` tactic which simplifies the
+  hypothesis recursively as far as possible. When using ```rcases```, you can specify the names of
+  the new hypothesis and expressions to be introduced. You could use the following names:  ```n```,
+  ```h_n```, ```h_word```."
   rcases h with ⟨n, h_n, h_word⟩
-  -- Wir wählen z ∈ L als z = (a^n)(b^n) mit |z| ≥ n.
+  Hint "At this point, you choose your word ```z``` with that you are gonna prove that ```anBnLang```
+  is not regular."
   let z := replicateChar Character.a n ++ replicateChar Character.b n
   have z_in_lang : z ∈ anBnLang.l := by
     unfold anBnLang
@@ -30,18 +39,19 @@ Statement an_bn_not_regular : ¬ pumpingProperty anBnLang := by
     simp [z]
     rewrite [length_z_eq_2n]
     simp [Nat.two_mul]
-  -- Sei z = uvw eine beliebige Zerlegung von z, ...
+  Hint "Now, you decompose your word ```z``` as ```z = (u ++ v) ++ w```, by first introducing an
+  auxiliary statement that feeds ```h_word``` with the word ```z``` you chose and the properties
+  ```z_in_lang``` and ```length_z```. Then you can split the newly introduced logical statement into
+  individual statements/hypotheses and proceed with the proof."
   have h := h_word z ⟨z_in_lang, length_z⟩
   rcases h with ⟨u, v, w, z_eq, length_u_v, length_v, pump_word⟩
   -- sodass |uv| ≤ n, ...
-  let k := length u + length v
-  have k_leq_n : k ≤ n := by
-    simp [k]
-    rewrite [<- length_append]
-    exact length_u_v
+  let k := length (u ++ v)
   -- |v| ≥ 1 und u(v^i)w ∈ L für jedes i ∈ ℕ.
   -- Dann ist u = a^r, v = a^s mit r + s ≤ n, s ≥ 1 und w = (a^t)(b^n) mit r + s + t = n.
   -- Wenn wir nun i=2 wählen, gilt uv^2w = (a^r)(a^s)(a^s)(a^t)(b^n) ∉ L, da s ≥ 1.
+  Hint "Next, you can introduce your pumped word, show that it is an element of ```anBnLang``` and
+  finally derive the contradiction."
   let z_pumped := (u ++ (replicateWord v 2)) ++ w
   have z_pumped_in_lang : z_pumped ∈ anBnLang.l := by
     specialize pump_word 2
@@ -50,13 +60,15 @@ Statement an_bn_not_regular : ¬ pumpingProperty anBnLang := by
   --Wir zeigen nun: |a| ≥ |b| mit |a| = n+s und |b| = n. Damit liegt z_pumped nicht in anBnLang.
   apply count_a_eq_count_b at z_pumped_in_lang
   have z_pumped_not_in_lang : countCharInWord Character.b z_pumped < countCharInWord Character.a z_pumped := by
-    apply more_as_than_bs u v w z z_pumped n k (z_eq := z_eq) (k_leq_n := k_leq_n) (length_u_v_leq_n := length_u_v) (length_v_geq_1 := length_v)
+    apply more_as_than_bs u v w z z_pumped n k (z_eq := z_eq) (length_u_v_leq_n := length_u_v) (length_v_geq_1 := length_v)
     simp [z]
     simp [k]
     simp [z_pumped]
   linarith [z_pumped_in_lang, z_pumped_not_in_lang]
 
-Conclusion ""
+Conclusion "Well done! You did it! You proved that the language $L = {a^n b^n | n ≥ 0}$ is not
+regular. By, now you should have understood how exactly the pumping lemma is built and how to use it
+to prove that a language is not regular."
 
-NewTactic «exists» «let» linarith specialize unfold
+NewTactic «exists» «let» linarith rcases specialize unfold
 NewDefinition Word.pumpingProperty
