@@ -22,7 +22,7 @@ Multiplication by two is addition with itself.
 For any natural number ```n```, multiplying ```n``` by ```2``` is
 equal to adding ```n``` to itself, i.e. `2 * n = n + n`.
 -/
-TheoremDoc Nat.two_mul as "two_mul"
+TheoremDoc Nat.two_mul as "Nat.two_mul"
 
 Statement length_z_eq_2n (n : Nat) :
 length (replicateChar Character.a n ++ replicateChar Character.b n) = 2 * n := by
