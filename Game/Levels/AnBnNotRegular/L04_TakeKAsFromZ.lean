@@ -17,9 +17,9 @@ with ```k ≤ n```, if a word consists of ```n``` replicas of ```b``` appended t
 ```n``` replicas of ```a```, then taking ```k``` characters from that word results
 in ```k``` replicas of ```a```.
 -/
-TheoremDoc Word.take_replicateChar_append as "take_replicateChar_append" in "AnBnNotRegular"
+TheoremDoc Word.take_k_as_from_z as "take_k_as_from_z" in "AnBnNotRegular"
 
-Statement take_replicateChar_append (n k : Nat) (k_leq_n : k ≤ n) :
+Statement take_k_as_from_z (n k : Nat) (k_leq_n : k ≤ n) :
 take (replicateChar Character.a n ++ replicateChar Character.b n) k = replicateChar Character.a k := by
   Hint "Considering that you proved all theorems used in this proof in earlier worlds, this proof
   should be trivial."

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-21\n"
+"POT-Creation-Date: 2026-01-22\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -819,13 +819,13 @@ msgstr ""
 #. §5: ```a```
 #. §6: ```k```
 #. §7: ```n```
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
 msgid "Very good! You just proved that the first §0 characters of the word, formed by\n"
 "replicating §1 §2 times followed by §3 replicas of §4, are all §5s if\n"
 "§6 is less than §7."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
 msgid "The First k Characters of a Word z Are All a"
 msgstr ""
 
@@ -1438,7 +1438,7 @@ msgstr ""
 #. §9: ```k```
 #. §10: ```k```
 #. §11: ```a```
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
 msgid "For two characters §0 and §1 and two natural number §2 and §3\n"
 "with §4, if a word consists of §5 replicas of §6 appended to\n"
 "§7 replicas of §8, then taking §9 characters from that word results\n"
@@ -1575,7 +1575,7 @@ msgstr ""
 #. §9: ```k```
 #. §10: ```k```
 #. §11: ```a```
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
 msgid "In the following, you will show that for two characters §0 and §1 and two\n"
 "natural numbers §2 and §3, if §4 and a word consists of §5 replicas of\n"
 "§6 followed by §7 replicas of §8, then taking §9 characters from that word\n"
@@ -1870,7 +1870,7 @@ msgstr ""
 msgid "From here, the proof should be easy to solve using the theorems you have proven so far."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
 msgid "Considering that you proved all theorems used in this proof in earlier worlds, this proof\n"
 "should be trivial."
 msgstr ""

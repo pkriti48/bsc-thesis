@@ -1,4 +1,4 @@
-import Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+import Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
 
 namespace Word
 
@@ -36,7 +36,7 @@ left = replicateChar Character.a (length left) := by
     rfl
   Hint "From here, the proof should be easy to solve using the theorems you have proven so far."
   rewrite [h_z] at take_left
-  rewrite [take_replicateChar_append] at take_left
+  rewrite [take_k_as_from_z] at take_left
   exact take_left
   exact length_left_leq_n
 

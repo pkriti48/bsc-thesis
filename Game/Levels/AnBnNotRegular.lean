@@ -1,7 +1,7 @@
 import Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
 import Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
 import Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
-import Game.Levels.AnBnNotRegular.L04_TakeReplicateCharAppend
+import Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
 import Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
 import Game.Levels.AnBnNotRegular.L06_CountAInU
 import Game.Levels.AnBnNotRegular.L07_CountBInU
