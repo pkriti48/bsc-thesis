@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
+import Game.Levels.AjBjNotRegular.L12_WEqRemainingAsNBs
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 13
 Title "The Suffix w Contains (n - k) as"
 

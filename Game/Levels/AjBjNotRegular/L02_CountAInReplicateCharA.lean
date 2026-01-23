@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+import Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 2
 Title "In a Word Formed by Only a, Counting a Returns the Word’s Length"
 

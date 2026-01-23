@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L13_CountAInW
+import Game.Levels.AjBjNotRegular.L13_CountAInW
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 14
 Title "The Suffix w Contains n bs"
 

@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+import Game.Levels.AjBjNotRegular.L02_CountAInReplicateCharA
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 3
 Title "In a Word Formed by Only a, Counting b Returns 0"
 

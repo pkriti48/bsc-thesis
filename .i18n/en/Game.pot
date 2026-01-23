@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22\n"
+"POT-Creation-Date: 2026-01-23\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -15,7 +15,7 @@ msgstr "Project-Id-Version: Game v4.23.0\n"
 #. §4: ```v```
 #. §5: ```n + length v```
 #. §6: ```a```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "In this proof, you will show that after pumping the word §0, which is\n"
 "decomposed as §1, using §2 the number of §3s increases in\n"
 "the word. To be specific, it increases by the factor equal to the length of the middle word\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L15_MoreAsThanBs
+#: Game.Levels.AjBjNotRegular.L15_MoreAsThanBs
 msgid "More as than bs"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgstr ""
 #. §1: ```z = (u ++ v) ++ w```
 #. §2: ```n```
 #. §3: ```b```
-#: Game.Levels.AnBnNotRegular.L14_CountBInW
+#: Game.Levels.AjBjNotRegular.L14_CountBInW
 msgid "Using the theorem proved in level 12, you will show that the suffix §0\n"
 "of §1 contains §2 §3s."
 msgstr ""
@@ -107,7 +107,7 @@ msgstr ""
 #. §3: ```n```
 #. §4: ```h_n```
 #. §5: ```h_word```
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "To remove the quantifiers, you can use the §0 tactic and simplify the hypothesis\n"
 "manually as far as required/possible or you can use the §1 tactic which simplifies the\n"
 "hypothesis recursively as far as possible. When using §2, you can specify the names of\n"
@@ -126,12 +126,12 @@ msgid "You should start with induction on §0 so that you can prove the statemen
 "corresponds to a character (§3) prepended to a word (§4)."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "This statement can mostly be proven using theorems about the associative and the commutative\n"
 "property of natural numbers. It is quite a straightforward proof."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "Length of Pumped Word (i = 2) is (n + length v)"
 msgstr ""
 
@@ -144,7 +144,7 @@ msgstr ""
 #. §0: ```w```
 #. §1: ```a```
 #. §2: ```b```
-#: Game.Levels.AnBnNotRegular.L14_CountBInW
+#: Game.Levels.AjBjNotRegular.L14_CountBInW
 msgid "Again, you start by rewriting the word §0 as a sequence of §1s followed by a\n"
 "sequence of §2s and proceed accordingly thereafter."
 msgstr ""
@@ -154,16 +154,16 @@ msgstr ""
 #. §2: ```n```
 #. §3: ```a```
 #. §4: ```2 * n```
-#: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
+#: Game.Levels.AjBjNotRegular.L10_LengthZEq2n
 msgid "Th word produced by appending §0 replicas of §1 to §2\n"
 "replicas of §3 has the length §4."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
+#: Game.Levels.AjBjNotRegular.L06_CountAInU
 msgid "The Prefix u Consists Only of as"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L09_CountBInV
+#: Game.Levels.AjBjNotRegular.L09_CountBInV
 msgid "The Middle Word v Does Not Contain any bs"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgstr ""
 
 #. §0: ```b```
 #. §1: ```u```
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
+#: Game.Levels.AjBjNotRegular.L06_CountAInU
 msgid "Well done! Next, you will show, how man §0s occur in the word §1."
 msgstr ""
 
@@ -224,7 +224,7 @@ msgstr ""
 #. §0: ```m```
 #. §1: ```n```
 #. §2: ```k```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "States ommutativity on the left operands for addition on natural numbers.\n"
 "\n"
 "For natural numbers §0, §1, and §2, it asserts that:\n"
@@ -257,7 +257,7 @@ msgstr ""
 
 #. §0: ```n```
 #. §1: ```n - n = 0```
-#: Game.Levels.AnBnNotRegular.L13_CountAInW
+#: Game.Levels.AjBjNotRegular.L13_CountAInW
 msgid "Subtracting any natural number from itself.\n"
 "\n"
 "For any natural number §0, it means: §1."
@@ -309,7 +309,7 @@ msgstr ""
 msgid "CountChar and ElemOf"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L02_CountAInReplicateCharA
 msgid "Well done! Let's move forward to the next proof!"
 msgstr ""
 
@@ -332,7 +332,7 @@ msgid "You did it! You just showed that if you use the §0 function with the ful
 msgstr ""
 
 #. §0: ```intro```
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "As you can see, the hypothesis you created using §0 is not in its simplest form\n"
 "yet. In order to simplify it further, remove all quantifiers you can."
 msgstr ""
@@ -341,7 +341,7 @@ msgstr ""
 #. §1: ```n```
 #. §2: ```b > 0```
 #. §3: ```m + n > n```
-#: Game.Levels.AnBnNotRegular.L15_MoreAsThanBs
+#: Game.Levels.AjBjNotRegular.L15_MoreAsThanBs
 msgid "Adding a positive natural number to another natural number strictly increases it.\n"
 "\n"
 "For natural numbers §0 and §1 with §2, it asserts: §3"
@@ -406,7 +406,7 @@ msgid "§0 establishes that the empty word acts as a neutral element for word\n"
 msgstr ""
 
 #. §0: ```count_a_in_replicateChar_a```
-#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L03_CountBInReplicateCharA
 msgid "This proof is analogue to the proof for the theorem §0. So, if\n"
 "at any point, you do not know how to proceed, you can have a look at that proof."
 msgstr ""
@@ -420,7 +420,7 @@ msgstr ""
 #. §0: ```a```
 #. §1: ```b```
 #. §2: ```w```
-#: Game.Levels.AnBnNotRegular.L13_CountAInW
+#: Game.Levels.AjBjNotRegular.L13_CountAInW
 msgid "In the previous level, you showed how many §0s and §1s occur in the word §2,\n"
 "you can use that theorem to simplify your current proof goal."
 msgstr ""
@@ -447,8 +447,8 @@ msgid "The goal of this level is to prove that if a character appears in the rig
 msgstr ""
 
 #. §0: ```z```
-#. §1: ```anBnLang```
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#. §1: ```ajBjLang```
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "At this point, you choose your word §0 with that you are gonna prove that §1\n"
 "is not regular."
 msgstr ""
@@ -470,7 +470,7 @@ msgstr ""
 #. §7: ```more_as_than_bs```
 #. §8: ```a```
 #. §9: ```b```
-#: Game.Levels.AnBnNotRegular.L15_MoreAsThanBs
+#: Game.Levels.AjBjNotRegular.L15_MoreAsThanBs
 msgid "Given a word §0 and a decomposition §1 with\n"
 "§2, §3, §4,\n"
 "§5, and a pumped word §6,\n"
@@ -506,7 +506,7 @@ msgid "*Game Version: 1.0*\n"
 "(or \"local site data\"). Make sure to download your game progress first!"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L08_CountAInV
+#: Game.Levels.AjBjNotRegular.L08_CountAInV
 msgid "The Middle Word v Consists Only of as"
 msgstr ""
 
@@ -545,8 +545,8 @@ msgstr ""
 #. §6: ```a```
 #. §7: ```u```
 #. §8: ```u```
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
-#: Game.Levels.AnBnNotRegular.L08_CountAInV
+#: Game.Levels.AjBjNotRegular.L06_CountAInU
+#: Game.Levels.AjBjNotRegular.L08_CountAInV
 msgid "If a word §0 is decomposed as §1 and the length of §2\n"
 "is at most §3, then  §4 consists only of §5s. That means, the the number of occurrences\n"
 "of §6 in §7 is equal to the length of §8."
@@ -560,8 +560,8 @@ msgstr ""
 #. §5: ```a```
 #. §6: ```b```
 #. §7: ```u```
-#: Game.Levels.AnBnNotRegular.L07_CountBInU
-#: Game.Levels.AnBnNotRegular.L09_CountBInV
+#: Game.Levels.AjBjNotRegular.L07_CountBInU
+#: Game.Levels.AjBjNotRegular.L09_CountBInV
 msgid "In this level, you will show that when you decompose the word §0 as\n"
 "§1 and the length of §2 is at most §3, then §4 is made of\n"
 "only §5s. Following this, the count of §6s in §7 is equal to 0."
@@ -576,7 +576,7 @@ msgstr ""
 #. §0: ```w```
 #. §1: ```z```
 #. §2: ```w```
-#: Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
+#: Game.Levels.AjBjNotRegular.L12_WEqRemainingAsNBs
 msgid "If you do not know, how to retrieve the word §0 form the word §1,\n"
 "you can do that by dropping all the characters occurring before the word §2."
 msgstr ""
@@ -604,11 +604,11 @@ msgstr ""
 
 #. §0: $L = {a^n b^n
 #. | n ≥ 0}$
-#: Game.Levels.AnBnNotRegular.L15_MoreAsThanBs
+#: Game.Levels.AjBjNotRegular.L15_MoreAsThanBs
 msgid "Very good! Now, you will use this theorem in the final proof and show that §0 is not regular."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L07_CountBInU
+#: Game.Levels.AjBjNotRegular.L07_CountBInU
 msgid "The Prefix u Does Not Contain any bs"
 msgstr ""
 
@@ -618,7 +618,7 @@ msgid "Well done! You just proved that using the §0 function with the full leng
 "of a word removes all characters. Let's move forward!"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+#: Game.Levels.AjBjNotRegular.L05_LeftEqReplicateCharA
 msgid "Well done! You are getting closer to the final proof! Let's move on to the next\n"
 "proof!"
 msgstr ""
@@ -644,8 +644,8 @@ msgid "The theorem §0 states that if §1 is greater than\n"
 "of §7."
 msgstr ""
 
-#. §0: ```anBnLang```
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#. §0: ```ajBjLang```
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "Next, you can introduce your pumped word, show that it is an element of §0 and\n"
 "finally derive the contradiction."
 msgstr ""
@@ -665,7 +665,7 @@ msgid "By proving this theorem, you showed that when dropping more characters th
 "first word contains, the entire first word is removed along with the first §0 characters from the second word. Now, let's move forward to the next level!"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
+#: Game.Levels.AjBjNotRegular.L10_LengthZEq2n
 msgid "Length of z Is 2 * n"
 msgstr ""
 
@@ -678,7 +678,7 @@ msgstr ""
 #. §6: ```length v```
 #. §7: ```a```
 #. §8: ```n + length v```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "Pumping a word §0 using §1, which is decomposed as\n"
 "§2, with §3 and §4,\n"
 "increases the number of §5s occurring in the word by the factor\n"
@@ -695,8 +695,8 @@ msgstr ""
 msgid "Element of Left Word is Element of Appended Word"
 msgstr ""
 
-#. §0: $L = {a^n b^n |
-#. n ≥ 0}$
+#. §0: $L = {a^j b^j |
+#. j ≥ 0}$
 #. §1: ```a```
 #. §2: ```b```
 #. §3: ```a```
@@ -725,8 +725,8 @@ msgstr ""
 #. §24: ```b```
 #. §25: ```a```
 #. §26: ```b```
-#. §27: $L = {a^n b^n | n ≥ 0}$
-#: Game.Levels.AnBnNotRegular
+#. §27: $L = {a^j b^j | j ≥ 0}$
+#: Game.Levels.AjBjNotRegular
 msgid "Wuhuu! You have finally reached the final world of the game.\n"
 "\n"
 "So far, you proved many theorem that will now come handy to prove that the language §0 is not regular.\n"
@@ -761,13 +761,13 @@ msgid "At this point, you can simplify the proof goal by using the induction hyp
 "the induction hypothesis and then execute §2."
 msgstr ""
 
-#. §0: ```anBnLang```
+#. §0: ```ajBjLang```
 #. §1: ```a```
 #. §2: ```b```
-#. §3: ```anBnLang```
+#. §3: ```ajBjLang```
 #. §4: ```a```
 #. §5: ```b```
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+#: Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
 msgid "In this level, you will prove that if any word is an element of the language\n"
 "§0, then the number of occurrences of the character §1 equals the number of\n"
 "occurrences of the character §2 in that word. This follows from the definition of\n"
@@ -786,6 +786,10 @@ msgstr ""
 #. §0: ```m```
 #: Game.Levels.AppendAndConcat.L06_AppendReplicateChar
 msgid "You can start with an induction on §0, as it is mostly easier to proceed from left to right."
+msgstr ""
+
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
+msgid "AjBjLang is Not Regular"
 msgstr ""
 
 #: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
@@ -819,13 +823,13 @@ msgstr ""
 #. §5: ```a```
 #. §6: ```k```
 #. §7: ```n```
-#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
+#: Game.Levels.AjBjNotRegular.L04_TakeKAsFromZ
 msgid "Very good! You just proved that the first §0 characters of the word, formed by\n"
 "replicating §1 §2 times followed by §3 replicas of §4, are all §5s if\n"
 "§6 is less than §7."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
+#: Game.Levels.AjBjNotRegular.L04_TakeKAsFromZ
 msgid "The First k Characters of a Word z Are All a"
 msgstr ""
 
@@ -833,7 +837,7 @@ msgstr ""
 msgid "Take from a Sequence of Repeated Characters"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L15_MoreAsThanBs
+#: Game.Levels.AjBjNotRegular.L15_MoreAsThanBs
 msgid "As suggested in the previous level, you can pass all words, natural numbers and the\n"
 "hypotheses to the theorem as parameters to avoid repetitive proofs on correctness of all of them.\n"
 "This shortens your proof a lot."
@@ -850,13 +854,13 @@ msgid "The theorem §0 describes the length of a word created by\n"
 "repeated §2 times using §3, the resulting word has length exactly §4."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L13_CountAInW
+#: Game.Levels.AjBjNotRegular.L13_CountAInW
 msgid "The Suffix w Contains (n - k) as"
 msgstr ""
 
 #. §0: ```a```
 #. §1: ```a```
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L02_CountAInReplicateCharA
 msgid "In this level, you will prove that if §0 occurs at every position of a word, then\n"
 "the number of §1 in the word is equal to the length of the word."
 msgstr ""
@@ -881,7 +885,7 @@ msgstr ""
 #. §1: ```word =
 #. replicateChar Character.a _ ++ replicateChar Character.b _```
 #. §2: ```_```
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+#: Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
 msgid "Next, you can proceed by executing the §0 tactic on your hypothesis introduced\n"
 "in the previous proof step. This will evaluate all possible values of the term in the hypothesis\n"
 "and close the unreachable goals automatically leaving you with a new hypothesis §1, where §2 represents the\n"
@@ -919,6 +923,10 @@ msgstr ""
 #: Game.Levels.TakeAndDrop.L07_TakeReplicateChar
 msgid "As already discussed earlier, §0 is a natural number so it cannot be 0. Thus, it has to\n"
 "be 0 when §1 and §2."
+msgstr ""
+
+#: Game.Levels.AjBjNotRegular
+msgid "AjBj is Not Regular"
 msgstr ""
 
 #. §0: ```append```
@@ -964,7 +972,7 @@ msgstr ""
 #. §3: ```z```
 #. §4: ```z_in_lang```
 #. §5: ```length_z```
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "Now, you decompose your word §0 as §1, by first introducing an\n"
 "auxiliary statement that feeds §2 with the word §3 you chose and the properties\n"
 "§4 and §5. Then you can split the newly introduced logical statement into\n"
@@ -973,7 +981,7 @@ msgstr ""
 
 #. §0: ```b```
 #. §1: ```v```
-#: Game.Levels.AnBnNotRegular.L08_CountAInV
+#: Game.Levels.AjBjNotRegular.L08_CountAInV
 msgid "Very good! Next, you will show, how man §0s occur in the word §1."
 msgstr ""
 
@@ -992,7 +1000,7 @@ msgstr ""
 
 #. §0: ```h```
 #. §1: ```intros```
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L02_CountAInReplicateCharA
 msgid "If you carefully look at your current proof goal, it looks a lot like the hypothesis\n"
 "§0. In order to prove its correctness, simplify your current proof goal using §1\n"
 "tactic."
@@ -1077,8 +1085,8 @@ msgid "In order to solve the current goal, the easiest way to proceed is to exec
 "to simplify the current proof goal further."
 msgstr ""
 
-#. §0: $L = {a^n b^n | n ≥ 0}$
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#. §0: $L = {a^j b^j | j ≥ 0}$
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "This theorem states that the language §0 is not regular."
 msgstr ""
 
@@ -1128,13 +1136,13 @@ msgid "Cancel a common addend in a subtraction.\n"
 "§6."
 msgstr ""
 
-#. §0: $L = {a^n b^n | n
+#. §0: $L = {a^j b^j | j
 #. ≥ 0}$
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "In this final level of the game, you will prove that the language §0 is not regular."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
+#: Game.Levels.AjBjNotRegular.L10_LengthZEq2n
 msgid "Well done! Next, you'll show how the length of the pumped word is calculated."
 msgstr ""
 
@@ -1154,7 +1162,7 @@ msgid "Zero is an absorbing element for multiplication.\n"
 "For any natural number §0, we have §1."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
+#: Game.Levels.AjBjNotRegular.L10_LengthZEq2n
 msgid "To proceed from here, you are given a theorem stating that adding a number\n"
 "to itself is equal to multiplying the same number by 2. Use that!"
 msgstr ""
@@ -1169,7 +1177,7 @@ msgstr ""
 #. §3: ```a```
 #. §4: ```2 * n```
 #. §5: ```n```
-#: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
+#: Game.Levels.AjBjNotRegular.L10_LengthZEq2n
 msgid "In this proof, you will show that appending §0 replicas of §1 to §2\n"
 "replicas of §3 means that the word has a length equal to §4 since each individual word\n"
 "has the length §5."
@@ -1182,7 +1190,7 @@ msgstr ""
 #. §0: ```v```
 #. §1: ```a```
 #. §2: ```v```
-#: Game.Levels.AnBnNotRegular.L07_CountBInU
+#: Game.Levels.AjBjNotRegular.L07_CountBInU
 msgid "Very good! In the next level, you will show that §0 consists of as many §1s as\n"
 "the length of §2 is."
 msgstr ""
@@ -1209,7 +1217,7 @@ msgstr ""
 #. §1: ```z = (u ++ v) ++ w```
 #. §2: ```n - k```
 #. §3: ```a```
-#: Game.Levels.AnBnNotRegular.L13_CountAInW
+#: Game.Levels.AjBjNotRegular.L13_CountAInW
 msgid "Using the theorem proved in the previous level, you will show that the suffix §0\n"
 "of §1 contains §2 §3s."
 msgstr ""
@@ -1217,17 +1225,17 @@ msgstr ""
 #. §0: ```w```
 #. §1: ```n```
 #. §2: ```b```
-#: Game.Levels.AnBnNotRegular.L13_CountAInW
+#: Game.Levels.AjBjNotRegular.L13_CountAInW
 msgid "Very good! Next, you will prove that §0 contains exactly §1 §2s."
 msgstr ""
 
-#. §0: ```anBnLang```
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+#. §0: ```ajBjLang```
+#: Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
 msgid "Well done! You just proved the first theorem, which is part of the final proof for the\n"
 "fact that §0 is not regular. Let's move on to the next proof."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+#: Game.Levels.AjBjNotRegular.L05_LeftEqReplicateCharA
 msgid "Any Prefix of Length at Most n in a Word z Is All a"
 msgstr ""
 
@@ -1239,8 +1247,8 @@ msgstr ""
 #. §5: ```w```
 #. §6: ```n - k```
 #. §7: ```a```
-#: Game.Levels.AnBnNotRegular.L13_CountAInW
-#: Game.Levels.AnBnNotRegular.L14_CountBInW
+#: Game.Levels.AjBjNotRegular.L13_CountAInW
+#: Game.Levels.AjBjNotRegular.L14_CountBInW
 msgid "For a word §0, which is decomposed as §1 with\n"
 "§2, §3 and §4, the remaining\n"
 "suffix §5contains exactly §6 replicas of §7."
@@ -1262,7 +1270,7 @@ msgstr ""
 msgid "The Pumping Lemma Game"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+#: Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
 msgid "Try to remember, which of the theorems proven in the previous worlds is appropriate to\n"
 "proceed with the current proof goal."
 msgstr ""
@@ -1289,10 +1297,14 @@ msgid "For any §0, §1. Appending the empty word §2 to any word\n"
 "This reflects the identity property of the empty word when appending words to one another."
 msgstr ""
 
+#: Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
+msgid "The Number of as is Equal to the Number of bs in ajBjLang"
+msgstr ""
+
 #. §0: ```a```
 #. §1: ```a```
 #. §2: ```b```
-#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L03_CountBInReplicateCharA
 msgid "Well done! With the previous statement and the one in this level you proved that, if a\n"
 "word consists of only §0s then the count §1s in that word is equal to the length of that\n"
 "word, which also results in the count §2 being 0 in that word."
@@ -1302,7 +1314,7 @@ msgstr ""
 #. §1: ```b```
 #. §2: ```w```
 #. §3: ```z```
-#: Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
+#: Game.Levels.AjBjNotRegular.L12_WEqRemainingAsNBs
 msgid "Using this theorem, will prove separately how many §0s and §1s occur in the\n"
 "suffix §2 of §3."
 msgstr ""
@@ -1329,7 +1341,7 @@ msgstr ""
 
 #. §0: ```simp```
 #. §1: ```h```
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L02_CountAInReplicateCharA
 msgid "If you do not know how to proceed from here, try using the §0\n"
 "tactic. It will simplify your expression using all theorems that are available and applicable to\n"
 "your current proof goal along with the hypothesis §1."
@@ -1352,7 +1364,7 @@ msgstr ""
 #. §0: ```m```
 #. §1: ```n```
 #. §2: ```m ≤ m + n```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "Any natural number is less than or equal to itself plus another natural number.\n"
 "\n"
 "For natural numbers §0 and §1, it asserts: §2"
@@ -1420,7 +1432,7 @@ msgstr ""
 #. §7: ```a```
 #. §8: ```n```
 #. §9: ```b```
-#: Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
+#: Game.Levels.AjBjNotRegular.L12_WEqRemainingAsNBs
 msgid "In this proof, you will show that decomposing a word §0 as  §1 with §2, §3 and §4, the\n"
 "suffix §5consists of exactly §6 replicas of §7 followed by §8 replicas\n"
 "of §9."
@@ -1438,7 +1450,7 @@ msgstr ""
 #. §9: ```k```
 #. §10: ```k```
 #. §11: ```a```
-#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
+#: Game.Levels.AjBjNotRegular.L04_TakeKAsFromZ
 msgid "For two characters §0 and §1 and two natural number §2 and §3\n"
 "with §4, if a word consists of §5 replicas of §6 appended to\n"
 "§7 replicas of §8, then taking §9 characters from that word results\n"
@@ -1452,7 +1464,7 @@ msgstr ""
 
 #. §0: ```a```
 #. §1: ```b```
-#: Game.Levels.AnBnNotRegular.L15_MoreAsThanBs
+#: Game.Levels.AjBjNotRegular.L15_MoreAsThanBs
 msgid "In this level, you will prove that the pumped word contains more §0s than it\n"
 "contains §1s."
 msgstr ""
@@ -1529,7 +1541,7 @@ msgid "Welcome to the Pumping Lemma Game!\n"
 msgstr ""
 
 #. §0: ```w```
-#: Game.Levels.AnBnNotRegular.L13_CountAInW
+#: Game.Levels.AjBjNotRegular.L13_CountAInW
 msgid "In order to execute the tactic correctly, you have to pass the word §0 to that theorem\n"
 "as you did in one of the recent proofs and to avoid repetitive proofs for any other words, numbers\n"
 "or the hypotheses that theorem requires, you can pass those to the theorem as well. That makes\n"
@@ -1550,7 +1562,7 @@ msgstr ""
 
 #. §0: ```a```
 #. §1: ```z```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "Very good! You will use this theorem later on to show that the pumped word contains more\n"
 "§0s than the non pumped word §1."
 msgstr ""
@@ -1559,7 +1571,7 @@ msgstr ""
 #. = left ++ right```
 #. §1: ```take```
 #. §2: ```word```
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+#: Game.Levels.AjBjNotRegular.L05_LeftEqReplicateCharA
 msgid "To prove this statement, start by deriving the fact that left can be retrieved from §0 by applying the §1 function to §2."
 msgstr ""
 
@@ -1575,7 +1587,7 @@ msgstr ""
 #. §9: ```k```
 #. §10: ```k```
 #. §11: ```a```
-#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
+#: Game.Levels.AjBjNotRegular.L04_TakeKAsFromZ
 msgid "In the following, you will show that for two characters §0 and §1 and two\n"
 "natural numbers §2 and §3, if §4 and a word consists of §5 replicas of\n"
 "§6 followed by §7 replicas of §8, then taking §9 characters from that word\n"
@@ -1585,7 +1597,7 @@ msgstr ""
 #. §0: ```intro```
 #. §1: ```->```
 #. §2: ```->```
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+#: Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
 msgid "You can start by splitting the implication in your current proof using the §0\n"
 "tactic. By doing this, you will obtain a hypothesis which corresponds to the term on the\n"
 "left-hand side of the §1 sign and your proof goal will correspond to the term on the\n"
@@ -1594,8 +1606,8 @@ msgstr ""
 
 #. §0: ```a```
 #. §1: ```a```
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
-#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L02_CountAInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L03_CountBInReplicateCharA
 msgid "If every character occurring in a word is §0, then the number of §1s in the\n"
 "word is equal to the length of the word."
 msgstr ""
@@ -1612,9 +1624,9 @@ msgid "For a character §0 and natural numbers §1 and §2, appending\n"
 "equivalent to §5."
 msgstr ""
 
-#. §0: ```pumpingProperty anBnLang```
+#. §0: ```pumpingProperty ajBjLang```
 #. §1: ```False```
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "You start by splitting your proof goal into the hypothesis §0\n"
 "and a proof goal §1. This is analogue to specifying 'proof by contradiction' in a\n"
 "pen-and-paper proof."
@@ -1639,7 +1651,7 @@ msgstr ""
 #. §1: ```n```
 #. §2: ```n ≤ m```
 #. §3: ```(m + n) - n = m```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "Adding a natural number and then subtracting the same number results in\n"
 "the original number.\n"
 "\n"
@@ -1652,13 +1664,13 @@ msgid "In this level, you will prove that taking a number of characters equal to
 "length of a word returns the word itself."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
+#: Game.Levels.AjBjNotRegular.L12_WEqRemainingAsNBs
 msgid "The Suffix w Contains All Remaining as And All bs"
 msgstr ""
 
 #. §0: ```w```
 #. §1: ```z```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "If you do not know, how to proceed from here, you can start by writing an auxiliary thoerem,\n"
 "that retrieves the length of the word §0 using the length of the word §1."
 msgstr ""
@@ -1671,8 +1683,8 @@ msgstr ""
 #. §5: ```a```
 #. §6: ```b```
 #. §7: ```u```
-#: Game.Levels.AnBnNotRegular.L07_CountBInU
-#: Game.Levels.AnBnNotRegular.L09_CountBInV
+#: Game.Levels.AjBjNotRegular.L07_CountBInU
+#: Game.Levels.AjBjNotRegular.L09_CountBInV
 msgid "If a word §0 is decomposed as §1 and the length of §2\n"
 "is at most §3, then  §4 consists only of §5s. That means, the the number of occurrences\n"
 "of §6 in §7 is equal to 0."
@@ -1710,7 +1722,7 @@ msgstr ""
 #. §6: ```n```
 #. §7: ```left```
 #. §8: ```a```
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+#: Game.Levels.AjBjNotRegular.L05_LeftEqReplicateCharA
 msgid "In this level, you will prove that if a word consists of §0 replicas of\n"
 "§1 followed by §2 replicas of §3, and that word is written as §4 where the length of §5 is at most §6, then §7 must consist\n"
 "only of §8s."
@@ -1733,7 +1745,7 @@ msgid "In this level, you start with an induction on §0 so that you can easily 
 msgstr ""
 
 #. §0: ```have```
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+#: Game.Levels.AjBjNotRegular.L05_LeftEqReplicateCharA
 msgid "To derive this fact, you can write a helper theorem using the §0 tactic."
 msgstr ""
 
@@ -1741,7 +1753,7 @@ msgstr ""
 #. §1: ```n```
 #. §2: ```n ≤ m```
 #. §3: ```(n + m) - n = m```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "Adding a natural number and then substracting the same number results in\n"
 "the original number.\n"
 "\n"
@@ -1749,19 +1761,15 @@ msgid "Adding a natural number and then substracting the same number results in\
 "§3"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L14_CountBInW
+#: Game.Levels.AjBjNotRegular.L14_CountBInW
 msgid "Well done! You are almost there, one more level to go to the final proof!"
 msgstr ""
 
-#. §0: $L = {a^n b^n | n ≥ 0}$
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
+#. §0: $L = {a^j b^j | j ≥ 0}$
+#: Game.Levels.AjBjNotRegular.L16_AjBjNotRegular
 msgid "Well done! You did it! You proved that the language §0 is not\n"
 "regular. By, now you should have understood how exactly the pumping lemma is built and how to use it\n"
 "to prove that a language is not regular."
-msgstr ""
-
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
-msgid "The Number of as is Equal to the Number of bs in anBnLang"
 msgstr ""
 
 #: Game.Levels.TakeAndDrop.L03_TakeAppendLeft
@@ -1776,7 +1784,7 @@ msgstr ""
 
 #. §0: ```a```
 #. §1: ```b```
-#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L03_CountBInReplicateCharA
 msgid "In the level, you will prove that if §0 occurs at every position of a word, then\n"
 "the number of §1 in the word is equal to 0."
 msgstr ""
@@ -1803,7 +1811,7 @@ msgid "With this, you have successfully proven all the goals of the §0\n"
 "on to the third world!"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L02_CountAInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L02_CountAInReplicateCharA
 msgid "In a Word Formed by Only a, Counting a Returns the Word’s Length"
 msgstr ""
 
@@ -1821,7 +1829,7 @@ msgid "In this game, you prove some facts about the Language structure specifica
 "prove that the provided examples fo languages are not regular languages."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+#: Game.Levels.AjBjNotRegular.L03_CountBInReplicateCharA
 msgid "In a Word Formed by Only a, Counting b Returns 0"
 msgstr ""
 
@@ -1866,11 +1874,11 @@ msgid "In this level, you will prove that if you take §0 characters from\n"
 "word consists of exactly §4 replicas of the character §5."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+#: Game.Levels.AjBjNotRegular.L05_LeftEqReplicateCharA
 msgid "From here, the proof should be easy to solve using the theorems you have proven so far."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
+#: Game.Levels.AjBjNotRegular.L04_TakeKAsFromZ
 msgid "Considering that you proved all theorems used in this proof in earlier worlds, this proof\n"
 "should be trivial."
 msgstr ""
@@ -1880,14 +1888,14 @@ msgstr ""
 #. §2: ```m```
 #. §3: ```n```
 #. §4: ```m + 1 ≤ n```
-#: Game.Levels.AnBnNotRegular.L15_MoreAsThanBs
+#: Game.Levels.AjBjNotRegular.L15_MoreAsThanBs
 msgid "Deduce a strict inequality from a successor-based inequality.\n"
 "\n"
 "For natural numbers §0 and §1, it states that if the successor of\n"
 "§2 is less than or equal to §3: §4."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L14_CountBInW
+#: Game.Levels.AjBjNotRegular.L14_CountBInW
 msgid "The Suffix w Contains n bs"
 msgstr ""
 
@@ -1932,13 +1940,13 @@ msgid "As you can observe in your current proof goal, the term on the right-hand
 "§1 and then proceed with the proof."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+#: Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
 msgid "Finally, you can simplify the current proof goal and complete the first proof in this\n"
 "world."
 msgstr ""
 
 #. §0: ```intros```
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
+#: Game.Levels.AjBjNotRegular.L06_CountAInU
 msgid "As you did earlier, you can split this implication into an hypothesis and proof goal using\n"
 "the §0 tactic."
 msgstr ""
@@ -1948,7 +1956,7 @@ msgstr ""
 #. §2: ```2```
 #. §3: ```n```
 #. §4: `2 * n = n + n`
-#: Game.Levels.AnBnNotRegular.L10_LengthZEq2n
+#: Game.Levels.AjBjNotRegular.L10_LengthZEq2n
 msgid "Multiplication by two is addition with itself.\n"
 "\n"
 "For any natural number §0, multiplying §1 by §2 is\n"
@@ -1959,7 +1967,7 @@ msgstr ""
 #. §1: ```=```
 #. §2: ```w```
 #. §3: ```z```
-#: Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
+#: Game.Levels.AjBjNotRegular.L12_WEqRemainingAsNBs
 msgid "To retrieve an equality between the §0 and the term on the right-hand side of the\n"
 "§1 sign, you could start by introducing an auxiliary theorem, which states how the word\n"
 "§2 can be retrieved from the word §3. After that, the procedure is trivial."
@@ -1974,7 +1982,7 @@ msgstr ""
 #. §6: ```n```
 #. §7: ```left```
 #. §8: ```a```
-#: Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+#: Game.Levels.AjBjNotRegular.L05_LeftEqReplicateCharA
 msgid "This lemma states that if a word consists of §0 replicas of §1 followed\n"
 "by §2 replicas of §3, and that word is written as §4 where\n"
 "the length of §5 is at most §6, then §7 must consist only of\n"
@@ -2002,15 +2010,11 @@ msgstr ""
 msgid "Dropping Characters Beyond the First Word in an Appended Word"
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L16_AnBnNotRegular
-msgid "AnBnLang is Not Regular"
-msgstr ""
-
 #. §0: ```m```
 #. §1: ```n```
 #. §2: ```k```
 #. §3: ```n ≤ m```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "States an associativity property involving addition and subtraction\n"
 "for natural numbers.\n"
 "\n"
@@ -2057,10 +2061,10 @@ msgid "To observe all possible values of §0, you can either proceed\n"
 "§4 does not produce any (induction) hypothesis."
 msgstr ""
 
-#. §0: ```anBnLang```
+#. §0: ```ajBjLang```
 #. §1: ```a```
 #. §2: ```b```
-#: Game.Levels.AnBnNotRegular.L01_CountAEqCountBInLang
+#: Game.Levels.AjBjNotRegular.L01_CountAEqCountBInLang
 msgid "This lemma states that if a word is an element of the language §0, then the number of\n"
 "occurrences of the character §1 equals the number of occurrences of the character §2 in\n"
 "that word."
@@ -2075,14 +2079,14 @@ msgstr ""
 #. §6: ```a```
 #. §7: ```u```
 #. §8: ```u```
-#: Game.Levels.AnBnNotRegular.L06_CountAInU
-#: Game.Levels.AnBnNotRegular.L08_CountAInV
+#: Game.Levels.AjBjNotRegular.L06_CountAInU
+#: Game.Levels.AjBjNotRegular.L08_CountAInV
 msgid "In this level, you will show that when you decompose the word §0 as\n"
 "§1 and the length of §2 is at most §3, then §4 is made of\n"
 "only §5s. Following this, the count of §6s in §7 is equal to the length of §8."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular.L09_CountBInV
+#: Game.Levels.AjBjNotRegular.L09_CountBInV
 msgid "Well done! In the next level, let's move on to the next proof!"
 msgstr ""
 
@@ -2101,10 +2105,6 @@ msgid "Now, you can proceed by simplifying your hypothesis §0. Any other simpli
 "currently not possible with the given theorems."
 msgstr ""
 
-#: Game.Levels.AnBnNotRegular
-msgid "AnBn is Not Regular"
-msgstr ""
-
 #. §0: $z = a^n b^n$
 #. §1: ```z = (u ++ v) ++ w```
 #. §2: ```k = length u + length v```
@@ -2115,7 +2115,7 @@ msgstr ""
 #. §7: ```a```
 #. §8: ```n```
 #. §9: ```b```
-#: Game.Levels.AnBnNotRegular.L12_WEqRemainingAsNBs
+#: Game.Levels.AjBjNotRegular.L12_WEqRemainingAsNBs
 msgid "For a word §0, which is decomposed as §1 with\n"
 "§2, §3 and §4, the remaining\n"
 "suffix §5consists of exactly §6 replicas of §7 followed by\n"
@@ -2132,7 +2132,7 @@ msgstr ""
 
 #. §0: ```apply Nat.le_add_right n n```
 #. §1: ```n```
-#: Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+#: Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 msgid "Now, you can execute §0. This theorem states, that any natural\n"
 "number is less than or equal to itself plus another natural number. However, in your case both\n"
 "numbers are same so you can pass §1 twice."

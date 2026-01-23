@@ -199,14 +199,14 @@ def pumpingProperty (lang : Lang) :=
 
 
 /--
-The language ```anBnLang``` consists of all words of the form ```$a^n b^n$```.
+The language ```ajBjLang``` consists of all words of the form ```$a^j b^j$```.
 
-A word is an element of ```anBnLang``` if there exists a number ```j``` such that the
+A word is an element of ```ajBjLang``` if there exists a number ```j``` such that the
 word is equal to ```j``` replicas of the character ```b``` appended to ```j``` replicas
 of the character ```a```. To be precise, all words in this language contain the same
 number of ```a```s and ```b```s, with all ```a```s appearing before any ```b```.
 -/
-def anBnLang : Lang :=
+def ajBjLang : Lang :=
   {l := { z | ∃ j : Nat, z = (replicateChar Character.a j) ++ (replicateChar Character.b j)}}
 
 /--

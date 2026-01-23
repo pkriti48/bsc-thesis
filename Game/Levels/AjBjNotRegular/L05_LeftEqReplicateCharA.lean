@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L04_TakeKAsFromZ
+import Game.Levels.AjBjNotRegular.L04_TakeKAsFromZ
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 5
 Title "Any Prefix of Length at Most n in a Word z Is All a"
 

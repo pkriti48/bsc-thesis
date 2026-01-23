@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L14_CountBInW
+import Game.Levels.AjBjNotRegular.L14_CountBInW
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 15
 Title "More as than bs"
 

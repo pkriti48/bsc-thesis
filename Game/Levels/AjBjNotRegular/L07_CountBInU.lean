@@ -1,9 +1,9 @@
-import Game.Levels.AnBnNotRegular.L06_CountAInU
+import Game.Levels.AjBjNotRegular.L06_CountAInU
 
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 7
 Title "The Prefix u Does Not Contain any bs"
 

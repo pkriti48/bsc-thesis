@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L11_NumberOfAsInPumpedWord
+import Game.Levels.AjBjNotRegular.L11_NumberOfAsInPumpedWord
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 12
 Title "The Suffix w Contains All Remaining as And All bs"
 

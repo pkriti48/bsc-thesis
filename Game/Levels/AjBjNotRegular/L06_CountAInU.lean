@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L05_LeftEqReplicateCharA
+import Game.Levels.AjBjNotRegular.L05_LeftEqReplicateCharA
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 6
 Title "The Prefix u Consists Only of as"
 

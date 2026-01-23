@@ -2,25 +2,25 @@ import Game.Levels.CountCharAndElemOf
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 1
-Title "The Number of as is Equal to the Number of bs in anBnLang"
+Title "The Number of as is Equal to the Number of bs in ajBjLang"
 
 Introduction "In this level, you will prove that if any word is an element of the language
-```anBnLang```, then the number of occurrences of the character ```a``` equals the number of
+```ajBjLang```, then the number of occurrences of the character ```a``` equals the number of
 occurrences of the character ```b``` in that word. This follows from the definition of
-```anBnLang```, where each word is constructed using an equal number of replicas of ```a```
+```ajBjLang```, where each word is constructed using an equal number of replicas of ```a```
 followed by the same number of replicas of ```b```."
 
 /--
-This lemma states that if a word is an element of the language ```anBnLang```, then the number of
+This lemma states that if a word is an element of the language ```ajBjLang```, then the number of
 occurrences of the character ```a``` equals the number of occurrences of the character ```b``` in
 that word.
 -/
 TheoremDoc Word.count_a_eq_count_b as "count_a_eq_count_b" in "AnBnNotRegular"
 
 Statement count_a_eq_count_b (word : Word) :
-word ∈ anBnLang.l -> countCharInWord Character.a word = countCharInWord Character.b word := by
+word ∈ ajBjLang.l -> countCharInWord Character.a word = countCharInWord Character.b word := by
   Hint "You can start by splitting the implication in your current proof using the ```intro```
   tactic. By doing this, you will obtain a hypothesis which corresponds to the term on the
   left-hand side of the ```->``` sign and your proof goal will correspond to the term on the
@@ -42,7 +42,7 @@ word ∈ anBnLang.l -> countCharInWord Character.a word = countCharInWord Charac
   simp
 
 Conclusion "Well done! You just proved the first theorem, which is part of the final proof for the
-fact that ```anBnLang``` is not regular. Let's move on to the next proof."
+fact that ```ajBjLang``` is not regular. Let's move on to the next proof."
 
 NewTactic intro
-NewDefinition Word.anBnLang
+NewDefinition Word.ajBjLang

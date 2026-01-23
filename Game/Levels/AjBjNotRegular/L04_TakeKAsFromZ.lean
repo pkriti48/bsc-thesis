@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L03_CountBInReplicateCharA
+import Game.Levels.AjBjNotRegular.L03_CountBInReplicateCharA
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 4
 Title "The First k Characters of a Word z Are All a"
 

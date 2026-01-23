@@ -1,8 +1,8 @@
-import Game.Levels.AnBnNotRegular.L10_LengthZEq2n
+import Game.Levels.AjBjNotRegular.L10_LengthZEq2n
 
 namespace Word
 
-World "AnBnNotRegular"
+World "AjBjNotRegular"
 Level 11
 Title "Length of Pumped Word (i = 2) is (n + length v)"
 
