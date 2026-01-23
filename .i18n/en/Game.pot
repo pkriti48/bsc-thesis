@@ -1525,6 +1525,44 @@ msgid "Welcome to the second world of this game: **The Take and Drop World**!\n"
 "Let's start!"
 msgstr ""
 
+#. §0: `rfl`
+#. §1: `X = X`
+#. §2: `rfl`
+#. §3: `A = B`
+#. §4: `A`
+#. §5: `B`
+#. §6: ```
+#.   Objects: a b c : ℕ
+#.   Goal: a + (b + c) = a + (b + c)
+#.   ```
+#. §7: `rfl`
+#. §8: `rfl`
+#. §9: `A = B`
+#. §10: `A`
+#. §11: `B`
+#. §12: ```a + 0 = a```
+#: Game.Doc.Docs
+msgid "TacticDoc rfl\n"
+"  \"\n"
+"  ## Summary\n"
+"\n"
+"  §0 proves goals of the form §1.\n"
+"\n"
+"  ## Details\n"
+"\n"
+"  The §2 tactic closes goals of the form §3 where §4 and §5 have *exactly the same value*.\n"
+"\n"
+"  ### Example\n"
+"\n"
+"  If the current state of the proof looks as follows:\n"
+"  §6\n"
+"  then §7 closes the goal.\n"
+"  \"\n"
+"\n"
+"  §8 also closes the goal of the form §9 when §10 and §11 are not *exactly identical*\n"
+"  but merely *definitionally equal*, e.g. §12."
+msgstr ""
+
 #: Game
 msgid "Welcome to the Pumping Lemma Game!\n"
 "\n"
@@ -2136,4 +2174,21 @@ msgstr ""
 msgid "Now, you can execute §0. This theorem states, that any natural\n"
 "number is less than or equal to itself plus another natural number. However, in your case both\n"
 "numbers are same so you can pass §1 twice."
+msgstr ""
+
+#: Game.Levels.AppendConcatWorld.L01_AppendNil
+msgid "At this point, you can simplify the proof goal by using the induction\n"
+"hypothesis."
+msgstr ""
+
+#. §0: ```nil```
+#. §1: ```word```
+#. §2: ```word```
+#: Game.Levels.AppendConcatWorld.L01_AppendNil
+msgid "In the first level of this game, you will prove that appending the empty word §0\n"
+"to a non-empty word §1 results into §2."
+msgstr ""
+
+#: Game.Levels.AppendConcatWorld
+msgid "The Append and Concat World"
 msgstr ""
