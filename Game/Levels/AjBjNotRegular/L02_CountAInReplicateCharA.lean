@@ -14,7 +14,7 @@ the number of ```a``` in the word is equal to the length of the word."
 If every character occurring in a word is ```a```, then the number of ```a```s in the
 word is equal to the length of the word.
 -/
-TheoremDoc Word.count_a_in_replicateChar_a as "count_a_in_replicateChar_a" in "AnBnNotRegular"
+TheoremDoc Word.count_a_in_replicateChar_a as "count_a_in_replicateChar_a" in "AjBjNotRegular"
 
 Statement count_a_in_replicateChar_a (char : Character) (word : Word)
 (h : ∀ char : Character, elemOf char word -> char = Character.a) :

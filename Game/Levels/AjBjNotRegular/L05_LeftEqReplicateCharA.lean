@@ -18,7 +18,7 @@ by ```n``` replicas of ```b```, and that word is written as `left ++ right` wher
 the length of ```left``` is at most ```n```, then ```left``` must consist only of
 ```a```s.
 -/
-TheoremDoc Word.left_eq_replicateChar_a as "left_eq_replicateChar_a" in "AnBnNotRegular"
+TheoremDoc Word.left_eq_replicateChar_a as "left_eq_replicateChar_a" in "AjBjNotRegular"
 
 Statement left_eq_replicateChar_a (left right word : Word) (n : Nat)
 (h_z : word = replicateChar Character.a n ++ replicateChar Character.b n)

@@ -15,7 +15,7 @@ Given a word $z = a^n b^n$ and a decomposition ```z = (u ++ v) ++ w``` with
 ```length v ≥ 1```, and a pumped word ```z_pumped = (u ++ (replicateWord v 2)) ++ w```,
 ```more_as_than_bs``` shows that the pumped word contains more ```a```s than ```b```s.
 -/
-TheoremDoc Word.more_as_than_bs as "more_as_than_bs" in "Word"
+TheoremDoc Word.more_as_than_bs as "more_as_than_bs" in "AjBjNotRegular"
 
 /--
 Adding a positive natural number to another natural number strictly increases it.

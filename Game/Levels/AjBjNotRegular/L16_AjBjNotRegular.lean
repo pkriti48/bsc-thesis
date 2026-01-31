@@ -12,7 +12,7 @@ Introduction "In this final level of the game, you will prove that the language 
 /--
 This theorem states that the language $L = {a^j b^j | j ≥ 0}$ is not regular.
 -/
-TheoremDoc Word.aj_bj_not_regular as "aj_bj_not_regular" in "Word"
+TheoremDoc Word.aj_bj_not_regular as "aj_bj_not_regular" in "AjBjNotRegular"
 
 Statement aj_bj_not_regular : pumpingProperty ajBjLang → False := by
   Hint "You start by splitting your proof goal into the hypothesis ```pumpingProperty ajBjLang```

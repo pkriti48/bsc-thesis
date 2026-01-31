@@ -17,7 +17,7 @@ with ```k ≤ n```, if a word consists of ```n``` replicas of ```b``` appended t
 ```n``` replicas of ```a```, then taking ```k``` characters from that word results
 in ```k``` replicas of ```a```.
 -/
-TheoremDoc Word.take_k_as_from_z as "take_k_as_from_z" in "AnBnNotRegular"
+TheoremDoc Word.take_k_as_from_z as "take_k_as_from_z" in "AjBjNotRegular"
 
 Statement take_k_as_from_z (n k : Nat) (k_leq_n : k ≤ n) :
 take (replicateChar Character.a n ++ replicateChar Character.b n) k = replicateChar Character.a k := by

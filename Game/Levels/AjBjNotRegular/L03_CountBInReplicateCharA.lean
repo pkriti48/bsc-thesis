@@ -13,7 +13,7 @@ the number of ```b``` in the word is equal to 0."
 If every character occurring in a word is ```a```, then the number of ```b```s in the
 word is equal to the length of the word.
 -/
-TheoremDoc Word.count_b_in_replicateChar_a as "count_b_in_replicateChar_a" in "AnBnNotRegular"
+TheoremDoc Word.count_b_in_replicateChar_a as "count_b_in_replicateChar_a" in "AjBjNotRegular"
 
 Statement count_b_in_replicateChar_a {char : Character} {word : Word}
 {h : ∀ char : Character, elemOf char word -> char = Character.a} :

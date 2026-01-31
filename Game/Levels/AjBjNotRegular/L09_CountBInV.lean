@@ -16,7 +16,7 @@ If a word ```z = $a^n b^n$``` is decomposed as ```z = (u ++ v) ++ w``` and the l
 is at most ```n```, then  ```v``` consists only of ```a```s. That means, the the number of occurrences
 of ```b``` in ```v``` is equal to 0.
 -/
-TheoremDoc Word.count_b_in_v as "count_b_in_v" in "AnBnNotRegular"
+TheoremDoc Word.count_b_in_v as "count_b_in_v" in "AjBjNotRegular"
 
 Statement count_b_in_v (u v w z : Word) (n : Nat)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)

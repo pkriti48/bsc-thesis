@@ -15,7 +15,7 @@ If a word ```z = $a^n b^n$``` is decomposed as ```z = (u ++ v) ++ w``` and the l
 is at most ```n```, then  ```u``` consists only of ```a```s. That means, the the number of occurrences
 of ```a``` in ```u``` is equal to the length of ```u```.
 -/
-TheoremDoc Word.count_a_in_u as "count_a_in_u" in "AnBnNotRegular"
+TheoremDoc Word.count_a_in_u as "count_a_in_u" in "AjBjNotRegular"
 
 Statement count_a_in_u (u v w z : Word) (n : Nat)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)

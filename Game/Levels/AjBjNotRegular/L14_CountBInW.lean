@@ -14,7 +14,7 @@ For a word $z = a^n b^n$, which is decomposed as ```z = (u ++ v) ++ w``` with
 ```k = length u + length v```, ```k ≤ n``` and ```length u < k```, the remaining
 suffix ```w```contains exactly ```n``` replicas of ```b```.
 -/
-TheoremDoc Word.count_b_in_w as "count_b_in_w" in "Word"
+TheoremDoc Word.count_b_in_w as "count_b_in_w" in "AjBjNotRegular"
 
 Statement count_b_in_w (u v w z : Word) (n k : Nat)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)

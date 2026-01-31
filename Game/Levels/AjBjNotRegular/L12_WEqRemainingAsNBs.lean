@@ -17,7 +17,7 @@ For a word $z = a^n b^n$, which is decomposed as ```z = (u ++ v) ++ w``` with
 suffix ```w```consists of exactly ```n - k``` replicas of ```a``` followed by
 ```n``` replicas of ```b```.
 -/
-TheoremDoc Word.w_eq_remaining_as_n_bs as "w_eq_remaining_as_n_bs" in "Word"
+TheoremDoc Word.w_eq_remaining_as_n_bs as "w_eq_remaining_as_n_bs" in "AjBjNotRegular"
 
 Statement w_eq_remaining_as_n_bs (u v w z : Word) (n k : Nat)
 (h_z : z = replicateChar Character.a n ++ replicateChar Character.b n)

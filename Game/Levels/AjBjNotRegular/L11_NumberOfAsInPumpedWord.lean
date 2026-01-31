@@ -18,7 +18,7 @@ increases the number of ```a```s occurring in the word by the factor
 ```length v```. So, the final length of the prefix consisting of ```a```s
 is ```n + length v```.
 -/
-TheoremDoc Word.number_of_as_in_pumped_word as "number_of_as_in_pumped_word" in "Word"
+TheoremDoc Word.number_of_as_in_pumped_word as "number_of_as_in_pumped_word" in "AjBjNotRegular"
 
 /--
 States ommutativity on the left operands for addition on natural numbers.

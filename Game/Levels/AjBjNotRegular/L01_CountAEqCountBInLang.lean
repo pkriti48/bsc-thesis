@@ -17,7 +17,7 @@ This lemma states that if a word is an element of the language ```ajBjLang```, t
 occurrences of the character ```a``` equals the number of occurrences of the character ```b``` in
 that word.
 -/
-TheoremDoc Word.count_a_eq_count_b as "count_a_eq_count_b" in "AnBnNotRegular"
+TheoremDoc Word.count_a_eq_count_b as "count_a_eq_count_b" in "AjBjNotRegular"
 
 Statement count_a_eq_count_b (word : Word) :
 word ∈ ajBjLang.l -> countCharInWord Character.a word = countCharInWord Character.b word := by

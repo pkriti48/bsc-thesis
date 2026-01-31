@@ -14,7 +14,7 @@ has the length ```n```."
 Th word produced by appending ```n``` replicas of ```b``` to ```n```
 replicas of ```a``` has the length ```2 * n```.
 -/
-TheoremDoc Word.length_z_eq_2n as "length_z_eq_2n" in "AnBnNotRegular"
+TheoremDoc Word.length_z_eq_2n as "length_z_eq_2n" in "AjBjNotRegular"
 
 /--
 Multiplication by two is addition with itself.
